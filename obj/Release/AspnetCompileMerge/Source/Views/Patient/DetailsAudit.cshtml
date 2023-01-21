@@ -1,0 +1,413 @@
+﻿@model RIS.ViewModels.PatientDetails
+@using RIS.Resources
+@using GridMvc.Html
+@{
+    ViewBag.Title = @RIS.Resources.Res.patDetails.ToString();
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.patDetails.ToString()</title>
+
+<div style="margin-top:1%" >
+    <h2>@RIS.Resources.Res.patDetails.ToString()</h2>
+    <center>
+        <table style="margin-top:3px; border:double; background-color:white; ">
+           
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.firstname, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.middlename, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.lastname, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.mothername, htmlAttributes: new { @class = "" })</td>
+
+            </tr>
+        
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.patient.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.patient.middlename, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.patient.lastname, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.patient.mothername, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+            </tr>
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.givenid, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.insertdate, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.insertUser, htmlAttributes: new { @class = "" })</td>
+
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.patient.givenid, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td style="direction: ltr;">
+                    @Html.DisplayFor(model => model.patient.insertdate, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    <a title=" @Html.DisplayFor(model => model.patient.insUser.firstName) &nbsp; @Html.DisplayFor(model => model.patient.insUser.lastName)"><strong> @Html.DisplayFor(model => model.patient.insUser.username) </strong></a>
+                </td>
+                <td></td>
+
+            </tr>
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.regStatus, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.updateDate, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.updateUser, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.updateDeleteReason, htmlAttributes: new { @class = "" })</td>
+
+
+            </tr>
+
+            <tr>
+               
+                <td>
+                    @{
+                        var ss = int.Parse(Html.ValueFor(model => model.patient.regStatus).ToString());
+                        if (ss == (int)RegStatus.delete)
+                        {
+                            <strong style="color:red;">@RIS.Resources.Res.Delete</strong>
+                        }
+                        else
+                        {
+                            @RIS.Resources.Res.edit
+                        }
+
+                    }
+                </td>
+                <td style="direction: ltr;">
+                    @Html.DisplayFor(model => model.patient.updateDate)
+                </td>
+                <td>
+                    <a title=" @Html.DisplayFor(model => model.patient.updUser.firstName ) &nbsp; @Html.DisplayFor(model => model.patient.updUser.lastName)"><strong> @Html.DisplayFor(model => model.patient.updUser.username) </strong></a>
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.patient.updateDeleteReason)
+                </td>
+
+
+
+            </tr>
+            
+
+
+
+
+            <tr style="background-color:wheat;">
+
+                <td>@Html.LabelFor(model => model.patient.gendre, htmlAttributes: new { @class = "" })</td>
+
+                <td> @Html.LabelFor(model => model.patient.martialstatus, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @{
+                        int g = Int16.Parse(Html.ValueFor(model => model.patient.gendre).ToString());
+                        //  string selected = "selected";
+                        if (g == 1)
+                        {
+                            @RIS.Resources.Res.male
+
+                        }
+                        else
+                        {
+                            @RIS.Resources.Res.female
+                        }
+                    }
+                    @* @Html.DisplayFor(model => model.gendre, new { htmlAttributes = new { @class = "form-control" } })*@
+                </td>
+
+                <td>
+                    @{
+                        int ms = Int16.Parse(Html.ValueFor(model => model.patient.martialstatus).ToString());
+                        //  string selected = "selected";
+                        if (ms == 1)
+                        {
+                            @RIS.Resources.Res.martialMar
+                        }
+                        else
+                        {
+                            @RIS.Resources.Res.martialSing
+
+                        }
+
+
+                    }
+
+
+                </td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.birthdate, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.nationalidnumber, htmlAttributes: new { })</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.patient.birthdate, new { htmlAttributes = new { } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.patient.nationalidnumber, new { htmlAttributes = new { } })
+
+
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.age, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.nationality, htmlAttributes: new { @class = "" })</td>
+
+                <td>@Html.LabelFor(model => model.patient.birthplace, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.patient.age, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.patient.nationality, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+
+
+
+
+                <td>
+                    @Html.DisplayFor(model => model.patient.birthplace, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td></td>
+            </tr>
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.currentaddress, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.residentaddress, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.patient.currentaddress, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.patient.residentaddress, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.mobilephone, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.landphone, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.patient.mobilephone, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.patient.landphone, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr style="background-color:wheat;">
+
+                <td>@Html.LabelFor(model => model.patient.workphone, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.workaddress, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.worktype, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+            </tr>
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(model => model.patient.workphone, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.patient.workaddress, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.patient.worktype, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td></td>
+
+            </tr>
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.nearestperson, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.patient.nearestpersonphone, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.patient.nearestperson, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.patient.nearestpersonphone, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.patient.notes, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.patient.notes, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </center>
+    <br />
+</div>
+
+<br />
+@*<center>
+    <div style="width:90%">
+        @Html.Grid(Model.patientOrders).Columns(columns =>
+   {
+
+       columns.Add(c => c.DocumnetId).Titled(Res.docId).Filterable(true);
+       columns.Add(c => c.StartDate).Titled(Res.STARTDATEParameter);
+       columns.Add(c => c.EndDate).Titled(Res.OrderEndDate);
+
+       columns.Add(c => c.parentDep.name).Titled(Res.depName);
+       columns.Add(c => c.parentMod.name).Titled(Res.RadMod);
+       columns.Add(c => c.parentProc.name).Titled(Res.RadProce);
+       columns.Add(c => c.Status).Titled(Res.OrderStatus).RenderValueAs(c => RadStatus(c.Status));
+
+       columns.Add().Encoded(false).Sanitized(false).SetWidth(50)
+       .RenderValueAs(c => Html.ActionLink(" ", "Details", "Radiology", new { id=c.ID}, new { @title = RIS.Resources.Res.RadiologyDetails, @class = "btn btn-default fa fa-info", onclick = "PrintPanel();" })  );
+
+
+   }).WithPaging(5).Sortable()
+    </div>
+</center>*@
+
+<br />
+
+<table align="center">
+    <tr>
+        <td>
+            <div class="form-group">
+                <div class="btn btn-primary" style="width:250px;">
+                    @Html.ActionLink(Res.NewInfo.ToString(), "Details", new { id = Model.patient.id })
+                </div> 
+                @*<div class="btn btn-primary" style="width:250px;">
+                    @Html.ActionLink(RIS.Resources.Res.AddRad.ToString(), "Create", "Radiology", new { pId = Model.patient.num }, null)
+                </div>|
+
+                <div class="btn btn-primary" style="width:250px;">
+
+                    @Html.ActionLink(RIS.Resources.Res.patList.ToString(), "Index")
+                </div>
+                <br />
+                <br />
+                <div class="btn btn-primary" style="width:250px; background-color:#3fbbc0;">
+                    <a href="#" onclick="ClientSidePrint('pp');">
+                        @RIS.Resources.Res.BarCodePrint.ToString()
+                    </a>
+                </div>*@
+
+            </div>
+        </td>
+    </tr>
+</table>
+<p>
+
+
+
+</p>
+
+<br /><br />
+<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        
+        $('#infoToShow').toggle();
+        $('#otherInfo').click(function () {
+            $('#infoToShow').toggle();
+        });
+    })
+</script>
+@*@{
+
+    var base64 = Convert.ToBase64String(Model.patient.barCode);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+}
+
+<div id="pp" style="display:none;">
+    <img src="@imgSrc" />
+</div>
+
+<script type="text/javascript">
+
+    function ClientSidePrint(idDiv) {
+        var w = 700;
+        var h = 360;
+        var l = (window.screen.availWidth - w) / 2;
+        var t = (window.screen.availHeight - h) / 2;
+
+        var sOption = "toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,width=" + w + ",height=" + h + ",left=" + l + ",top=" + t;
+        // Get the HTML content of the div
+        var sDivText = window.document.getElementById(idDiv).innerHTML;
+        // Open a new window
+        var objWindow = window.open("", "Print", sOption);
+        // Write the div element to the window
+        objWindow.document.write(sDivText);
+        objWindow.document.close();
+        // Print the window
+        objWindow.print();
+        // Close the window
+        objWindow.close();
+    }
+</script>
+
+@helper RadStatus(string i)
+{
+Dictionary<string, string> stat =
+        new Dictionary<string, string>();
+stat.Add(ConnectionConfigs.SCHEDUALED, Res.SCHEDUALED);
+stat.Add(ConnectionConfigs.STARTED, Res.STARTED);
+stat.Add(ConnectionConfigs.COMPLETED, Res.COMPLETED);
+stat.Add(ConnectionConfigs.Waiting, Res.Waiting);
+String st = "";
+stat.TryGetValue(i.ToString(), out st);
+    @st;
+}*@
+

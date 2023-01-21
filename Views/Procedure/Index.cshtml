@@ -1,0 +1,35 @@
+﻿@model IEnumerable<RIS.Models.Procedure>
+@using GridMvc.Html
+@using RIS.Resources;
+@{
+    ViewBag.Title = ViewData["PageName"].ToString();
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    let activeLink1 = document.querySelector(".navbar ul.navbar-nav li.nav-item button.nav-link#modalityLink");
+    let activeLink2 = document.querySelector(".navbar ul.navbar-nav li.nav-item .dropdown-menu li a.dropdown-item#procedureLink");
+    activeLink1.classList.add("active");
+    activeLink2.classList.add("active");
+</script>
+<title>@RIS.Resources.Res.procedure</title>
+
+<div style="margin-top: 130px;">
+    <h2 class="main-title">@RIS.Resources.Res.procedure</h2>
+
+    <div class="btn create-btn">@Html.ActionLink(RIS.Resources.Res.addProc, "Create") <i class="fa fa-plus"></i></div>
+    <hr />
+
+    <div style="padding-left: 5%;padding-right: 5%;">
+        @Html.Grid(Model).Columns(columns =>
+        {
+            columns.Add(c => c.name).Titled(Res.procedureName).Filterable(true);
+            columns.Add(c => c.code).Titled(Res.procedureCode);
+            columns.Add(c => c.englishName).Titled(Res.procEnName);
+
+            columns.Add().Encoded(false).Sanitized(false).SetWidth(50)
+            .RenderValueAs(c => "<div class='table-buttons'><a href='" + @Url.Action("Edit", "Procedure", new { i = c.num }) + "' class='btn icon-btn edit-o-btn' title='" + RIS.Resources.Res.edit + "'><i class='fa fa-pencil'></i></a>" +
+                     "<a href='" + @Url.Action("Delete", "Procedure", new { i = c.num }) + "' class='btn icon-btn delete-o-btn' title='" + RIS.Resources.Res.Delete + "'><i class='fa fa-trash'></i></a></div>").Css("position-relative overflow-hidden").Encoded(false).Titled(Res.controlKey);
+        }).WithPaging(5).Sortable()
+    </div>
+</div>

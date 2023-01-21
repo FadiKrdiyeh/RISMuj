@@ -1,0 +1,137 @@
+﻿@model RIS.Models.Bills
+
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 style="color:green;">
+    Test
+</h1>
+<span class="fa fa-plus-circle" id="AddInput" onclick="AddNewTextInput()"></span>
+
+    Username: <input id="uname" type="text"><br>
+    Password: <input id="pass" type="password"><br>
+    Password: <select id="pass0" type="select" onchange="myFunction()">
+    <option>text</option>
+    <option>radio</option>
+    <option>checkbox</option>
+</select><br>
+
+<button id="GFG_Button">Submit</button>
+@Html.HiddenFor(model => model.billId)<div id="new">
+    <p id="p1">Tutorix</p>
+    <p id="p2">Tutorialspoint</p>
+</div>
+<script>
+    var tag = document.createElement("div");
+    tag.innerHTML("sadkldsajk;ld");
+    var text = document.createTextNode("<h1>Tutorix is the best e-learning platform</h1>");
+    
+   tag.appendChild(text);
+   var element = document.getElementById("new");
+   element.appendChild(tag);
+</script>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script>
+    function AddNewTextInput() {
+        let string_of_html = '<div><input type="text"> <input type="num"></div>';
+        document.body.innerHTML += string_of_html;
+    }
+
+    $("#pass").keypress(function (event) {
+        if (event.keyCode === 13) {
+            $("#GFG_Button").click();
+        }
+    });
+
+    $("#GFG_Button").click(function () {
+        alert("Button clicked");
+    });
+    function myFunction() {
+        let string_of_html = '<div><input type="text"></div>';
+        document.body.innerHTML += string_of_html;
+        var btn = document.createElement("input");
+        btn.innerHTML = "CLICK ME";
+        document.getElementById("new").appendChild(btn);
+        document.getElementById("new").innerHTML('<br />');
+
+    }
+
+    function addAllInputs(divName, inputType) {
+        debugger;
+        var newdiv = document.createElement('div');
+        newdiv.innerHTML = "<h1>fdklsjkfldsjldfs</h1>";
+        switch (inputType) {
+            case 'text':
+                newdiv.innerHTML =" <input type=\"text\">";
+                break;
+            case 'radio':
+                newdiv.innerHTML =" <input type=\"radio\">";
+                break;
+            case 'checkbox':
+                newdiv.innerHTML = " <input type=\"checkbox\">";
+                break;
+            case 'textarea':
+                newdiv.innerHTML = " <input type=\"textarea\">";
+                break;
+        }
+        document.getElementById(divName).appendChild(newdiv);
+    }
+</script>
+
+<h2>Test</h2>
+<table style="width:100%;background:white;">
+    <tr class="no-boeder" id="SavingButtons">
+        <td style="background:white;color:black">
+            <input type="button"  onclick="addToTotal1()" class="btn btn-default" />
+        </td>
+    </tr>
+</table>
+<td id="totalValue">0</td>
+<div id="AddCostsDiv">
+    <div><input type="text"> <input id="wow" type="number" min="0"></div>
+</div>
+
+<script>
+                function addToTotal1() {
+                    var x = document.getElementById('totalValue').innerText;
+                    x = +document.getElementById('wow').value + +x;
+                    $('#totalValue').html(x);
+
+                }
+</script>
+
+<br />
+<br />
+<table id="abc" class="display">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+</table>
+<br />
+<br />
+<link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script>
+$(document).ready(function () {
+$('#abc').DataTable({
+"ajax": {
+    "url": "/Bills/getPatientApps",
+"type": "GET",
+"datatype": "json",
+"data": { patientId: @Model.billId },
+},
+"columns": [
+{ "data": "appID", "autoWidth": true },
+{ "data": "appDate", "autoWidth": true },
+{ "data": "Doctor", "autoWidth": true }
+]
+});
+});
+    </script>

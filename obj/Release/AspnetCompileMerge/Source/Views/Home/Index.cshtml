@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link href="/assets/css/main.css" rel="stylesheet" />
+<!--[if lte IE 9]><link href="~/assets/css/ie9.css" rel="stylesheet" /><![endif]-->
+<noscript><link href="/assets/css/noscript.css" rel="stylesheet" /></noscript>
+<title>@RIS.Resources.Res.homeTitle</title>
+
+
+<section id="intro" class="intro">
+    <div class="intro-content" style="height: 600px;padding: 3px 0 60px;">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-6">
+                    <div class="form-wrapper">
+                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+                            <br />
+                            <div class="panel panel-skin">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> @RIS.Resources.Res.login.ToString()</h3>
+                                    <h4 style="color:red;">@Html.ValidationMessage("")
+                                    @TempData["message"] 
+                                    </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                    <div id="errormessage"></div>
+                                   
+                                    <form action="" method="post" role="form" class="contactForm lead" onsubmit="return checkValidation();">
+                                        <div class="row">
+                                           
+                                                <div class="form-group" style="width: 75%;padding: 10px 10px;">
+
+
+                                             
+
+                                                        <label>@RIS.Resources.Res.UserName.ToString()</label>
+
+
+                                                        <input id="first_name" type="text" name="logUserName" class="form-control input-md" />
+                                                        <div class="validation">
+                                                            <label id="userValid"></label>
+                                                        </div>
+                                                
+                                                </div>
+                                           
+                                           </div>
+                                        <div class="row">
+                                           
+                                                <div class="form-group" style="width: 75%;padding: 10px 10px;">
+                                                    <label>@RIS.Resources.Res.Password.ToString()</label>
+                                                    <input id="Text2" type="password" name="logInPassword" class="form-control input-md" />
+
+                                                    <div class="validation">
+                                                        <label id="passValid"></label>
+                                                    </div>
+
+                                                </div>
+                                          
+
+
+                                        </div>
+                                        <div class="">
+                                           <input id="Submit1" style="width:50%;" type="submit" class="btn btn-skin btn-block btn-lg" value="@RIS.Resources.Res.login" />
+                                        </div>
+                                    </form>
+                                    
+                                  
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                        <img src="~/assets/img/dummy/img-1.png" class="img-responsive" alt="" />
+                    </div>
+                </div>	
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Scripts -->
+<script src="~/assets/js/jquery.min.js"></script>
+<script src="~/assets/js/bootstrap.min.js"></script>
+<script src="~/assets/js/jquery.easing.min.js"></script>
+<script src="~/assets/js/wow.min.js"></script>
+<script src="~/assets/js/jquery.scrollTo.js"></script>
+<script src="~/assets/js/jquery.appear.js"></script>
+<script src="~/assets/js/stellar.js"></script>
+<script src="~/assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script src="~/assets/js/owl.carousel.min.js"></script>
+<script src="~/assets/js/nivo-lightbox.min.js"></script>
+<script src="~/assets/js/custom.js"></script>
+<script src="~/assets/contactform/contactform.js"></script>
+
+
+<script type="text/javascript">
+    function checkValidation() {
+        if ($('#first_name').val() === '') {
+            alert('أدخل اسم المستخدم');
+          //  $("#userValid").Text = 'enter first_name';
+            $('#first_name').focus();
+            return false;
+        } else if ($('#Text2').val() === '') {
+            alert('أدخل كلمة المرور');
+            $('#Text2').focus();
+            return false;
+        } else return true;
+    }
+
+    window.onload = function () {
+        document.getElementById("first_name").focus();
+    };
+</script>
+

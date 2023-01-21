@@ -1,0 +1,53 @@
+﻿@model RIS.Models.SendHL7ViewModel
+@{
+    ViewBag.Title = "Send Orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/HL7Send.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Scripts/HL7Send.js"></script>
+<script>
+    $(function () {
+        SetMessageToUser("@ViewBag.Message");
+        ForceNumericOnlyInputs();
+    });
+</script>
+@*<h2>@Html.RouteLink("Send Orders", "Home")</h2>*@
+
+<div class="back hl7">
+<fieldset>
+    @using (Html.BeginRouteForm("SendHL7Message", FormMethod.Post))
+    {
+        <legend>Send Order</legend>
+        <ul>
+            <li><label for="destinationServer">Destination Server:</label>@Html.TextBoxFor(model => model.DestinationServer, new { id = "destinationServer" })</li>
+            <li><label for="destinationPort">Destination Port:</label>@Html.TextBoxFor(model => model.DestinationPort, new { id = "destinationPort" })</li>
+            <li><label for="numMsgsToSend"># Messages To Send:</label>@Html.TextBoxFor(model => model.NumMessages, new { id = "numMsgsToSend" })</li>
+            <li><label for="patientId">Patient Id:</label>@Html.TextBoxFor(model => model.patientId, new { id = "patientId" })</li>
+            <li><label for="patientIdList">Given Id:</label>@Html.TextBoxFor(model => model.patientIdList, new { id = "patientIdList" })</li>
+            <li><label for="patientGivenName">First name:</label>@Html.TextBoxFor(model => model.patientGivenName, new { id = "patientGivenName" })</li>
+            <li><label for="patientFamilyName">Last name:</label>@Html.TextBoxFor(model => model.patientFamilyName, new { id = "patientFamilyName" })</li>
+            <li><label for="commOrderPONum">Order Number:</label>@Html.TextBoxFor(model => model.commOrderPONum, new { id = "commOrderPONum" })</li>
+
+            <li><label for="aeTitle">AE Title:</label>@Html.TextBoxFor(model => model.aeTitle, new { id = "aeTitle" })</li>
+            <li><label for="sStationName">Schedual station name:</label>@Html.TextBoxFor(model => model.sStationName, new { id = "sStationName" })</li>
+            
+            
+            <li>
+                    <label for="startDateTime">Order Date:</label>@Html.TextBoxFor(model => model.startDateTime, new { id = "startDateTime", Value = DateTime.Now.ToString("yyyyMMddHmmss") })
+           
+                    </li>
+            <li><label for="obsOrderPFNum">observation Number:</label>@Html.TextBoxFor(model => model.obsOrderPFNum, new { id = "obsOrderPFNum" })</li>
+            <li><br/><label for="submit"></label><input type="submit" id="submit" value="Send It" /></li>
+
+        </ul>
+    }
+</fieldset>
+   </div>
+<p></p>
+<span id="msg"></span>
+
+    <!-- Scripts -->
+<script src="~/assets/js/util.js"></script>
+<script src="~/assets/js/skel.min.js"></script>
+<script src="~/assets/js/main.js"></script>
+<script src="~/assets/js/jquery.min.js"></script>

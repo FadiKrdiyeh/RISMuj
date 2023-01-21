@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    let activeLink = document.querySelector(".navbar ul.navbar-nav li.nav-item a.nav-link#auditLink");
+    activeLink.classList.add("active");
+</script>
+
+<title>@RIS.Resources.Res.audit</title>
+<div class="container" style="margin-top: 150px;">
+    <div class="row mt-5 d-flex justify-content-center align-items-center">
+        <div class="col-md-4">
+            <a href="@Url.Action("IndexAudit", "Radiology")" title="@RIS.Resources.Res.ordersAudit">
+                <div class="person">
+                    <img src="~/assets/img/radAudit.png" alt="@RIS.Resources.Res.navUse" style="width:170px;height:170px;" />
+                    <div class="main-page-titles">@RIS.Resources.Res.ordersAudit</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="@Url.Action("IndexAudit", "Patient", new {})" title="@RIS.Resources.Res.patAudit">
+                <div class="person">
+                    <img src="~/assets/img/patAudit.png" alt="@RIS.Resources.Res.navMod" style="width:170px;height:170px;" />
+                    <div class="main-page-titles">@RIS.Resources.Res.patAudit</div>
+                </div>
+            </a>
+        </div>
+        @if (TempData["clinicPerm"].Equals(1))
+        {
+            <div class="col-md-4">
+                <a href="@Url.Action("IndexAudit", "Appoinments", new { })" title="@RIS.Resources.Res.AppAudit">
+                    <div class="person">
+                        <img src="~/assets/img/radAudit.png" alt="@RIS.Resources.Res.AppAudit" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.AppAudit</div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

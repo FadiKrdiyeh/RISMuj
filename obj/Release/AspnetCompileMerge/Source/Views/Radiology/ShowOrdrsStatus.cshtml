@@ -1,0 +1,303 @@
+﻿@model IEnumerable<RIS.Models.Radiology>
+
+@{
+    ViewBag.Title = "Show Ordres Status";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.indexRadStatus</title>
+@using RIS.Resources;
+<link href="~/assets/css/style.css" rel="stylesheet" />
+@{ 
+    Dictionary<string, string> stat =
+            new Dictionary<string, string>();
+    stat.Add(ConnectionConfigs.SCHEDUALED, Res.SCHEDUALED);
+    stat.Add(ConnectionConfigs.STARTED, Res.STARTED);
+    stat.Add(ConnectionConfigs.COMPLETED, Res.COMPLETED);
+    stat.Add(ConnectionConfigs.Waiting, Res.Waiting);
+}
+
+<div class="back">
+    @using (Html.BeginForm())
+    {
+        @Html.Hidden("PageCnt", ViewData["PageCnt"])
+        @Html.Hidden("pageNBr", ViewData["pageNBr"])
+        @Html.Hidden("count", ViewData["count"])
+        @Html.Hidden("page", ViewData["page"])
+
+        <fieldset style="margin-top:3px;">
+
+            <a id="otherInfo" href="#" title="@RIS.Resources.Res.patSearch.ToString()" class="btn btn-info btn-l">
+                <span class="fa fa-search"></span>
+            </a>
+
+
+
+
+            <div id="infoToShow">
+                <center>
+                    <div style="font-size:x-large; color:black;font-weight:400">
+                        @RIS.Resources.Res.searchParas
+                    </div>
+                </center>
+
+                <table class="table table-bordred table-striped">
+
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.DocumnetId) @Html.TextBox("docId")  </td>
+                        <td>@RIS.Resources.Res.PatientFirstname.ToString() @Html.TextBox("firstname")  </td>
+                        <td>@RIS.Resources.Res.PatientLastname.ToString() @Html.TextBox("lastname")  </td>
+                        <td>@Html.DisplayNameFor(model => model.DepartementName) @Html.DropDownList("departments")</td>
+                        <td>@Html.DisplayNameFor(model => model.ModalityID) @Html.DropDownList("modalities")</td>
+                        
+                    </tr>
+
+                    <tr style="background-color: #f9f9f9e6;">
+                        <td style="padding-top: 30px;float: left;" >@RIS.Resources.Res.OrderStartDate</td>
+                        <td >@RIS.Resources.Res.From  @Html.TextBox("beginDate",null, new {  @class = "flatpickr" })  </td>
+                        <td >@RIS.Resources.Res.To @Html.TextBox("endDate", null, new {  @class = "flatpickr" })  </td>
+                        <td colspan="3"></td>
+                    </tr>
+
+                    <tr style="align-content:center;">
+                        <td colspan="6">
+                            <input type="submit" value="@RIS.Resources.Res.radSearch" class="btn btn-primary btn-xs" onclick="resetPageNum()" />
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </fieldset>
+
+        <br /> <hr />
+        <h2>
+            @Html.ActionLink(RIS.Resources.Res.indexRadStatus.ToString(), "ShowOrdrsStatus")
+        </h2>
+
+        <center>
+            <ul class="pagination" style="display: -webkit-box;">
+                @{
+                    if (!ViewData["pageNBr"].ToString().Equals(ViewData["PageCnt"].ToString()) && !ViewData["count"].ToString().Equals("0"))
+                    {
+                        <li>
+                            @Html.ActionLink("<", "ShowOrdrsStatus", new { page = (double.Parse((ViewData["page"]).ToString()) + 1).ToString(), count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") }, new { title = RIS.Resources.Res.nextPage.ToString() })
+                        </li>
+                        <li>
+                            @Html.ActionLink("<<", "ShowOrdrsStatus", new { page = ViewData["count"], count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") }, new { title = RIS.Resources.Res.lastPage.ToString() })
+                        </li>
+                    }
+                    
+                    <li>
+                        &nbsp;
+                    </li>
+                    <li style="font-weight: bold;color: black;">
+                        @RIS.Resources.Res.page.ToString()  @Html.Encode(ViewData["pageNBr"])  /  @Html.Encode(ViewData["PageCnt"])
+                    </li>
+                    <li>
+                        &nbsp;
+                    </li>
+                    
+
+                    if (!ViewData["pageNBr"].ToString().Equals("1") && !ViewData["count"].ToString().Equals("0"))
+                    {
+                        <li>
+                            @Html.ActionLink(">>", "ShowOrdrsStatus", new { page = 1, count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") }, new { title = RIS.Resources.Res.firstPage.ToString() })
+                        </li>
+                        <li>
+                            @Html.ActionLink(">", "ShowOrdrsStatus", new { page = (double.Parse((ViewData["page"]).ToString()) - 1).ToString(), count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") }, new { title = RIS.Resources.Res.previousPage.ToString() })
+                        </li>
+                    }
+
+
+                }
+            </ul>
+
+
+
+
+        </center>
+                    }
+    <table style="width:100%; text-align:center; align-items:center; " align="center">
+        <tr style="background-color:cadetblue">
+
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.DocumnetId)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.parentR.firstname)
+            </th>
+            <th id="th1">
+                @Res.OrderStartDate
+            </th>
+          
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.ModalityID)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.ProcedureID)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.Status)
+                
+                
+            </th>
+            <th id="th1" colspan="4">
+                @RIS.Resources.Res.controlKey
+            </th>
+
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            var bc = "tomato";
+            if (item.Status == ConnectionConfigs.STARTED)
+            {
+                bc = "lightgreen";
+            }
+            <tr style="border:solid; width:100%; background-color:@bc">
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocumnetId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.parentR.firstname) @Html.DisplayFor(modelItem => item.parentR.lastname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.parentMod.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.parentProc.name)
+                </td>
+                <td>
+                    @{
+                        String st = "";
+                        stat.TryGetValue(Html.ValueFor(modelItem => item.Status).ToString(), out st);
+
+                    }
+                    <p>@st</p>
+                </td>
+
+
+
+                @*<td style="width:1%;">
+                    <a href="@Url.Action( "Edit","Radiology", new { pId = item.ID }) " title="@RIS.Resources.Res.edit" class="btn btn-default">
+                        <em class="fa fa-pencil">
+                        </em>
+                    </a>
+                </td>*@
+
+
+
+
+                <td style="width:1%;">
+                    <a href="@Url.Action("Details", "Radiology", new { id = item.ID })" title="@RIS.Resources.Res.patDetails" class="btn btn-info btn-l">
+                        <span class="fa fa-info"></span>
+
+                    </a>
+                </td>
+                @{
+                    if (item.Status == ConnectionConfigs.SCHEDUALED)
+                    {
+                <td style="width:1%;">
+                    <input id="Button1" type="button" onclick="javascript:startOrder(@item.ID); " value="@RIS.Resources.Res.StartOrder" style="margin-top: 7px;" />
+                    
+                </td>
+                    }
+                    else
+                    {
+                        <td style="width:1%;">
+                           &nbsp;
+
+                        </td>
+                    }
+                }
+                
+                @*@{
+                    string t = HttpContext.Current.Session["userType"].ToString();
+                    if (t == "1")
+                    {
+                        <td style="width:1%;">
+                            <a href="@Url.Action( "Delete","Radiology", new { id = item.ID })" title="@RIS.Resources.Res.Delete" class="btn btn-danger">
+                                <em class="fa fa-trash">
+                                </em>
+                            </a>
+                        </td>
+                    }
+                }*@
+
+
+                @*<td style="width:1%;">
+                        <a href="@Url.Action( "Create","Radiology", new { pId= item.num })" title="@RIS.Resources.Res.CreateRad" class="btn btn-info btn-l">
+                            <span class="fa fa-plus"></span>
+                        </a>
+                    </td>*@
+
+
+
+            </tr>
+                    }
+
+    </table>
+</div>
+<br /><br />
+<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+<script>
+
+    $(document).ready(function (){
+        $('#infoToShow').toggle();
+
+      $('#otherInfo').click(function(){
+          $('#infoToShow').toggle();
+
+      });
+      //$("#patLink").on("click", function (event) {
+      //    alert("oh nana");
+
+      //});
+      $("#patLink").innerhtml = ("class", "active");
+    })
+
+    function resetPageNum()
+    {
+        document.getElementById('page').value = 1;
+      //  alert(document.getElementById('page').value);
+        document.getElementById('pageNBr').value = 1;
+        //pageNBr = 1;
+    }
+
+    function startOrder(id) {
+       // alert(id);
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/Radiology/ChangeStatus',
+
+            data: '{ "orderId" : "'+id+'","orderStatus":"'+@ConnectionConfigs.STARTED+'"}',
+
+            contentType: 'application/json; charset=utf-8',
+
+            dataType: 'json',
+
+            success: function () {
+                location.reload(); // reloading Parent page
+            },
+            error: function (e) {
+                alert(e.error);
+                location.reload(); // reloading Parent page
+            }
+
+        });
+    }
+
+
+</script>
+
+<script type="text/javascript">
+    
+    flatpickr('.flatpickr', { dateFormat: 'YmdH:i:ss', enableTime: true, altInput: true });
+</script>

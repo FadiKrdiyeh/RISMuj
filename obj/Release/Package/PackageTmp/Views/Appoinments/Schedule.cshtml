@@ -1,0 +1,261 @@
+﻿@model RIS.Models.Appoinments
+
+@{
+    ViewBag.Title = "Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.AppCalender</title>
+
+<div style="margin-top:1%">
+
+    <h2>@RIS.Resources.Res.AppCalender</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <center>
+            <button onclick="showCalendar()" type="button" style="border-radius: 5px;font-size: x-large;box-shadow: 4px 3px 0 0;">
+                <span class="fa fa-calendar"></span>@RIS.Resources.Res.AppCalenderView
+            </button>
+            <div id="schCalendar">
+                <center>
+                    <div>
+                        <fieldset>
+
+                            <center>
+                                <div id="mnmAlert" style="font-size:xx-large; color:red;display:none">@RIS.Resources.Res.mnmAlert</div>
+                                <div id="mnmAlert1" style="font-size:xx-large; color:red;display:none">@RIS.Resources.Res.mnmAlert1</div>
+                                <table style="overflow-y:scroll">
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="mnmfrom" class="form-control flatpickr" name="mnmfrom" placeholder="@RIS.Resources.Res.mnmSince" />
+                                        </td>
+                                        <td>
+                                            <input type="text" id="mnmto" class="form-control flatpickr" name="mnmto" placeholder="@RIS.Resources.Res.mnmTo" />
+                                        </td>
+                                        <td>
+                                            <select class="form-control" id="mmnmClinic">
+                                                <option value="">@RIS.Resources.Res.ChooseClinic</option>
+                                                @{
+                                                    foreach (var m in ViewBag.clinics)
+                                                    {
+                                                        <option value="@m.num"> @m.name </option>
+                                                    }
+                                                }
+
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="calStep" class="form-control" onchange="drawCalender()">
+                                                <option value="10">10 @RIS.Resources.Res.mnmMin</option>
+                                                <option value="15">15 @RIS.Resources.Res.mnmMin</option>
+                                                <option value="20">20 @RIS.Resources.Res.mnmMin</option>
+                                                <option value="30">30 @RIS.Resources.Res.mnmMin</option>
+
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="form-control" onclick="drawCalender()" style="width:35px;height:35px">
+                                                <span class="fa fa-search"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                                @*<input type="button" onclick="drawCalender()" />*@
+
+                            </center>
+                            <center>
+                                <div id="fastPreview">
+                                    <center>
+                                        <table>
+                                            <tr>
+                                                <td id="mnmFastPat">.</td>
+                                                @*<td id="mnmFastDat"></td>*@
+                                            </tr>
+                                        </table>
+                                    </center>
+                                </div>
+                            </center>
+
+                        </fieldset>
+
+                        <br />
+                        <div style="display:none">
+                            <input type="text" id="mnmSu" value="@RIS.Resources.Res.mnmSun" />
+                            <input type="text" id="mnmMo" value="@RIS.Resources.Res.mnmMon" />
+                            <input type="text" id="mnmTues" value="@RIS.Resources.Res.mnmTues" />
+                            <input type="text" id="mnmWed" value="@RIS.Resources.Res.mnmWed" />
+                            <input type="text" id="mnmTh" value="@RIS.Resources.Res.mnmTh" />
+                            <input type="text" id="mnmFr" value="@RIS.Resources.Res.mnmFr" />
+                            <input type="text" id="mnmSat" value="@RIS.Resources.Res.mnmSat" />
+                        </div>
+
+                        <center>
+                            <div id="mnmNext" style="display:none">
+                            </div>
+                            <div id="mnmCalenderContaines" style="width:95%;max-height:400px;overflow-x:scroll;overflow-y:scroll;display:none;">
+
+                                <fieldset id="mnmCalender">
+
+                                    <div id="scheduleTable" style="display:none;width:100%;height:100%">
+
+                                    </div>
+                                    <div id="loadingDiv" style="display:none">
+                                        <center>
+                                            <b style="font:600">@RIS.Resources.Res.mnmRetrieve</b>
+                                        </center>
+                                    </div>
+                                </fieldset>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div id='myModal' class='modal'>
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <center>
+                                                <h4 class="modal-title" id="myModalLabel">@RIS.Resources.Res.mnmOrderInfo</h4>
+                                            </center>
+                                        </div>
+                                        <center>
+                                            <div class="modal-body">
+                                                <p id="mnmPat"></p>
+                                                <p>@RIS.Resources.Res.mnmCurrentDate</p>
+                                                <p id="mnmDatOld"></p>
+                                                @*<p id="mnmDat"></p>*@
+                                                <p style="display:none">@RIS.Resources.Res.mnmNextDate</p>
+
+                                                <input class="form-control flatpickr " style="width: 50%;text-align: center;display:none" id="mnmDat" onchange="enableEdit()" />
+                                                <input type="text" id="mnmOrderId" style="display:none" />
+                                            </div>
+                                        </center>
+                                        <center>
+                                            <div class="modal-body" style="display:none">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="button" class="btn btn-danger" onclick="deleteOrder()" style="width:100%;background-color:red;border-color:red" value="حذف" />
+                                                            @*<button class="btn btn-danger" onclick="deleteOrder()" style="width:35%" value="حذف">
+                                                                </button>*@
+                                                        </td>
+                                                        <td>
+                                                            <input type="button" id="mnmEdit" class="btn btn-default" onclick="editOrder_()" style="width:100%" disabled value="تعديل" />
+                                                            @*<button id="mnmEdit" class="btn btn-default" onclick="editOrder_()" style="width:35%" disabled value="تعديل">
+                                                                </button>*@
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </center>
+                                        <div class="modal-footer">
+                                            <center>
+                                                <button class="form-control" onclick="hideMe()" style="width:25%" type="button">
+                                                    <span class="glyphicon"></span>موافق
+                                                </button>
+                                            </center>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </center>
+                    </div>
+
+                </center>
+
+            </div>
+        </center>
+        <center>
+
+            @*<div style="display:none">
+                    <input name="appPayReason" id="appPayReason" value="123456" />
+                </div>*@
+            <div id="mnmCalenderContaines" style="width:95%;max-height:400px;overflow-x:scroll;overflow-y:scroll;display:none;">
+
+                <fieldset id="mnmCalender">
+
+                    <div id="scheduleTable" style="display:none;width:100%;height:100%">
+
+                    </div>
+                    <div id="loadingDiv" style="display:none">
+                        <center>
+                            <b style="font:600">@RIS.Resources.Res.mnmRetrieve</b>
+                        </center>
+                    </div>
+                </fieldset>
+                <div>
+
+                </div>
+            </div>
+            <div id='myModal' class='modal'>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <center>
+                                <h4 class="modal-title" id="myModalLabel">@RIS.Resources.Res.mnmOrderInfo</h4>
+                            </center>
+                        </div>
+                        <center>
+                            <div class="modal-body">
+                                <p id="mnmPat"></p>
+                                <p>@RIS.Resources.Res.mnmCurrentDate</p>
+                                <p id="mnmDatOld"></p>
+                                @*<p id="mnmDat"></p>*@
+                                <p style="display:none">@RIS.Resources.Res.mnmNextDate</p>
+
+                                <input class="form-control flatpickr " style="width: 50%;text-align: center;display:none" id="mnmDat" onchange="enableEdit()" />
+                                <input type="text" id="mnmOrderId" style="display:none" />
+                            </div>
+                        </center>
+                        <center>
+                            <div class="modal-body" style="display:none">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="button" class="btn btn-danger" onclick="deleteOrder()" style="width:100%;background-color:red;border-color:red" value="حذف" />
+                                            @*<button class="btn btn-danger" onclick="deleteOrder()" style="width:35%" value="حذف">
+                                                </button>*@
+                                        </td>
+                                        <td>
+                                            <input type="button" id="mnmEdit" class="btn btn-default" onclick="editOrder_()" style="width:100%" disabled value="تعديل" />
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </center>
+                        <div class="modal-footer">
+                            <center>
+                                <button class="form-control" onclick="hideMe()" style="width:25%" type="button">
+                                    <span class="glyphicon"></span>موافق
+                                </button>
+                            </center>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </center>
+
+
+                                                    }
+</div>
+
+
+<script type="text/javascript">
+    flatpickr('.flatpickr', { dateFormat: 'YmdH:i:ss', enableTime: true, altInput: true, minDate: "today"});
+</script>
+
+@*<script>
+    function showCalendar() {
+        $("#schCalendar").toggle();
+    }
+</script>*@
+
+<script src="~/mnmCalenderApps.js"></script>
+

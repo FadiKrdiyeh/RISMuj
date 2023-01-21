@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ConnectionConfigs>
+  
+    <pacsIp>192.168.3.50</pacsIp>
+    <pacsPort>2575</pacsPort>
+
+    <oracleIp>192.168.3.9</oracleIp>
+    <oraclePort>1521</oraclePort>
+
+  
+</ConnectionConfigs>

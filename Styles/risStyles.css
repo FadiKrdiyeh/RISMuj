@@ -1,0 +1,49 @@
+﻿body {
+}
+
+                    /*******************************************/
+                    /* This Styles are Designed For Log In Page*/
+                    /*******************************************/
+
+
+
+/* Navigator*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #626D7D33;
+    /*position: fixed;*/
+
+}
+
+li {
+    float: left;
+    font-size:xx-large;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+
+/* Log In Div*/
+
+.logIn_Container{
+    margin-left:40%;
+    margin-top:10%;
+    border-radius: 15px;
+    background-color:#3b46831a;
+    opacity:0.9;
+    width:20%
+
+}

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<News>
+  <NewsElement ID="4">
+    <Title>الأشعة: </Title>
+    <Text>ااااااااااااااااااااااااااااااااااااا</Text>
+    <URL>www.google.com</URL>
+    <Dept>0</Dept>
+  </NewsElement>
+  <NewsElement ID="5">
+    <Title>عيادات</Title>
+    <Text>ااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااا</Text>
+    <URL>www.google.com</URL>
+    <Dept>101</Dept>
+  </NewsElement>
+  <NewsElement ID="6">
+    <Title>إسعاف</Title>
+    <Text>ااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااااا</Text>
+    <URL>www.google.com</URL>
+    <Dept>102</Dept>
+  </NewsElement>
+  <NewsElement ID="7">
+    <Title>jksdajkdsa</Title>
+    <Text>dklsajkldasj</Text>
+    <URL>ksdajklsjl</URL>
+    <Dept>0</Dept>
+  </NewsElement>
+  <NewsElement ID="8">
+    <Title>aaaaaaaaaaaaaaaaaaaaaaaa</Title>
+    <Text>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Text>
+    <URL>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</URL>
+    <Dept>0</Dept>
+  </NewsElement>
+</News>

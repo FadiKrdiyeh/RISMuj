@@ -1,0 +1,221 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+<br />
+<br/>
+<title>@RIS.Resources.Res.systemStat</title>
+<center>
+    <table >
+        <tr>
+            <td style="display: inherit;">
+                <h2>
+                    <label style="color:red">
+                        @RIS.Resources.Res.PacsStatus :
+                    </label>
+                </h2>
+            </td>
+            <td>
+                <h3>
+                    @ViewData["PacsStatus"]
+                    &nbsp;
+                    @{
+                        if (ViewData["PacsStatus"] == RIS.Resources.Res.PacsServiceOn.ToString())
+                        {
+                            <img src="/images/ok.png" style=" width: 20px;" />
+                        }
+                        else
+                        {
+                            <img src="/images/error.png" style=" width: 20px;" />
+                        }
+
+                    }
+                    <br />
+
+                </h3>
+            </td>
+
+        </tr>
+        <tr>
+            <td style="display: inherit;">
+                <h2>
+                    <label style="color:red">
+                        @RIS.Resources.Res.RISStatus :
+
+                    </label>
+                </h2>
+            </td>
+            <td>
+                <h3>
+                    
+                    @ViewData["RISStatus"]
+                    &nbsp;
+
+                    @{
+                        if (ViewData["RISStatus"] == RIS.Resources.Res.PacsServiceOn.ToString())
+                        {
+                            <img src="/images/ok.png" style=" width: 20px;" />
+                        }
+                        else
+                        {
+                            <img src="/images/error.png" style=" width: 20px;" />
+                        }
+
+                    }
+
+
+                </h3>
+
+            </td>
+        </tr>
+        <tr>
+            <td style="display: inherit;">
+                <h2>
+                    <label style="color:red">
+                        @RIS.Resources.Res.DBStatus :
+                    </label>
+                </h2>
+            </td>
+            <td>
+                <h3>
+                    @ViewData["OracleStatus"]
+                    &nbsp;
+                    @{ if (ViewData["OracleStatus"] == RIS.Resources.Res.PacsServiceOn.ToString())
+            {
+                            <img src="/images/ok.png" style=" width: 20px;" />
+                        }
+                        else
+                        {
+                            <img src="/images/error.png" style=" width: 20px;" />
+                        }
+
+                    }
+
+                    <br />
+
+                </h3>
+            </td>
+        </tr>
+    </table>
+</center>
+
+
+<center><h5>
+    @RIS.Resources.Res.details :
+</h5>
+    <table>
+        <tr>
+            <th style="padding-right: 25%;">@RIS.Resources.Res.server</th>
+            <th>&nbsp;</th>
+            <th style="padding-right: 20%;">@RIS.Resources.Res.status</th>
+
+
+        </tr>
+
+        <tr>
+            <td>Pacs1 127.0.0.1</td>
+            <td>&nbsp;</td>
+            <td>@ViewData["pacs1"] 
+                @{ if (ViewData["pacs1"] == RIS.Resources.Res.PacsServiceOn.ToString())
+            {
+                        <img src="/images/ok.png" style=" width: 15px;" />
+                    }
+                    else
+                    {
+                        <img src="/images/error.png" style=" width: 15px;" />
+                    }
+
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Pacs2 192.168.3.251</td>
+            <td>&nbsp;</td>
+
+            <td>@ViewData["pacs2"] 
+            @{ if (ViewData["pacs2"] == RIS.Resources.Res.PacsServiceOn.ToString())
+            {
+                    <img src="/images/ok.png" style=" width: 15px;" />
+                }
+                else
+                {
+                    <img src="/images/error.png" style=" width: 15px;" />
+                }
+
+            }
+            </td>
+        </tr>
+
+        <tr>
+            <td>RIS1 192.168.3.249</td>
+            <td>&nbsp;</td>
+
+            <td>@ViewData["ris1"] 
+            @{ if (ViewData["ris1"] == RIS.Resources.Res.PacsServiceOn.ToString())
+            {
+                    <img src="/images/ok.png" style=" width: 15px;" />
+                }
+                else
+                {
+                    <img src="/images/error.png" style=" width: 15px;" />
+                }
+
+            }
+            </td>
+        </tr>
+        <tr>
+            <td>RIS2 192.168.3.248</td>
+            <td>&nbsp;</td>
+
+            <td>@ViewData["ris2"] 
+            @{ if (ViewData["ris2"] == RIS.Resources.Res.PacsServiceOn.ToString())
+            {
+                    <img src="/images/ok.png" style=" width: 15px;" />
+                }
+                else
+                {
+                    <img src="/images/error.png" style=" width: 15px;" />
+                }
+
+            }
+            </td>
+        </tr>
+
+        <tr>
+            <td>DB1 192.168.3.9</td>
+            <td>&nbsp;</td>
+
+            <td>@ViewData["oracle1"] 
+            @{ if (ViewData["oracle1"] == RIS.Resources.Res.PacsServiceOn.ToString())
+            {
+                    <img src="/images/ok.png" style=" width: 15px;" />
+                }
+                else
+                {
+                    <img src="/images/error.png" style=" width: 15px;" />
+                }
+
+            }</td>
+        </tr>
+        <tr>
+            <td>DB2 192.168.3.242</td>
+            <td>&nbsp;</td>
+
+            <td>@ViewData["oracle2"] 
+            @{ if (ViewData["oracle2"] == RIS.Resources.Res.PacsServiceOn.ToString())
+            {
+                    <img src="/images/ok.png" style=" width: 15px;" />
+                }
+                else
+                {
+                    <img src="/images/error.png" style=" width: 15px;" />
+                }
+
+            }
+            </td>
+        </tr>
+    </table>
+
+</center>

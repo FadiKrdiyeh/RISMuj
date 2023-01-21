@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ConnectionConfigs>
+  
+  <pacsIp>127.0.0.1</pacsIp>
+  <!--<pacsIp>192.168.3.50</pacsIp>-->
+  <pacsPort>2575</pacsPort>
+  
+  <!--<oracleIp>192.168.3.9</oracleIp>-->
+  <oracleIp>127.0.0.1</oracleIp>
+  <!--<oracleIp>DESKTOP-Q57QGS2</oracleIp>-->
+  <oraclPort>1521</oraclPort>
+
+  
+</ConnectionConfigs>

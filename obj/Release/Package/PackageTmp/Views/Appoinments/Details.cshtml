@@ -1,0 +1,75 @@
+﻿@model RIS.Models.Appoinments
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appoinments</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.appID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.patientID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.patientID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.accNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.accNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appInsertDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appInsertDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clinicName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clinicName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

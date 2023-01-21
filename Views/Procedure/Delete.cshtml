@@ -1,0 +1,70 @@
+﻿@model RIS.Models.Procedure
+
+@{
+    ViewBag.Title = ViewData["PageName"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.deleteProc</title>
+<div style="margin-top:1%">
+
+<h2>@RIS.Resources.Res.deleteProc</h2>
+
+
+
+<center>
+    <h3>@RIS.Resources.Res.surDelProc</h3>
+
+
+    <div style="background-color:white; margin-top:3px; width:500px;">
+        <table>
+            <tr>
+                <td>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger", @style = "background-color: yellow;display: table - footer - group;list-style-type: none; " })
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.name, htmlAttributes: new { })</td>
+                <td>@Html.LabelFor(model => model.code, htmlAttributes: new { })</td>
+                <td>@Html.LabelFor(model => model.englishName, htmlAttributes: new { })</td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    
+                    @Html.DisplayFor(model => model.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.code)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.englishName)
+                </td>
+            </tr>
+
+        </table>
+
+
+
+    </div>
+</center>
+
+
+
+
+    
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <table align="center">
+            <tr>
+                <td><input type="submit" value=@RIS.Resources.Res.deleteProc class="btn btn-default" /></td>
+                <td>@Html.ActionLink(RIS.Resources.Res.backToProcList, "Index")</td>
+            </tr>
+        </table>
+    }
+
+</div>

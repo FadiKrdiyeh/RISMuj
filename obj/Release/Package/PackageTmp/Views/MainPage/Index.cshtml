@@ -1,0 +1,337 @@
+﻿@model RIS.Models.SendHL7ViewModel
+@using HL7_TCP.Web;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<style>
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#FFF;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:10px;
+}
+</style>*@
+<title>@RIS.Resources.Res.mainPage.ToString()</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+<link href="~/Content/HL7Send.css" rel="stylesheet" />
+
+
+@*<section class="our_team">
+    <center>
+        <div class="team"  style="margin-top: -205px;" >
+
+            <br/>
+            <div class="container">
+                <div class="row" >
+                    <br/>
+@if (HttpContext.Current.Session["UserPerm"].ToString() == "1")
+{
+                    <div class="col-lg-3">
+
+
+
+                        <div class="person">
+                            <a href="@Url.Action("Index", "User")" title="@RIS.Resources.Res.navUse">
+                                
+                                <img src="~/assets/img/user.png" alt="@RIS.Resources.Res.navUse" style="width:150px;height:150px;">
+                                <br />
+                                <center>  <strong style="font-size:larger; color:black;">     @RIS.Resources.Res.navUse</strong></center>
+</a>
+                        </div>
+
+                    </div>
+
+}
+
+@if (HttpContext.Current.Session["ModalityPerm"].ToString() == "1")
+{
+                    <div class="col-lg-3">
+
+
+
+                        <div class="person">
+                            <a href="@Url.Action("Index", "Modality")" title="@RIS.Resources.Res.navMod">
+                               
+                                <img src="~/assets/img/modality.png" alt="@RIS.Resources.Res.navMod" style="width:150px;height:150px;">
+                                <br />
+                                <center>
+                                    <strong style="font-size:larger; color:black;">
+                                        @RIS.Resources.Res.navMod
+                                    </strong>
+                                </center>    
+</a>
+                    </div>
+
+                </div>
+}
+
+@if (HttpContext.Current.Session["PatientPerm"].ToString() == "1")
+{
+
+                <div class="col-lg-3">
+
+
+
+                    <div class="person">
+                        <a href="@Url.Action("Index", "Patient")" title="@RIS.Resources.Res.navPat">
+                           
+                                <img src="~/assets/img/patient.png" alt="@RIS.Resources.Res.navPat" style="width:150px;height:150px;">
+                            <br />
+                            <center>
+                                <strong style="font-size:larger; color:black;">
+                                    @RIS.Resources.Res.navPat
+                                </strong>
+                            </center>
+</a>
+                </div>
+
+            </div>
+}
+
+@if (HttpContext.Current.Session["ProcedurePerm"].ToString() == "1")
+{
+            <div class="col-lg-3">
+
+
+
+                <div class="person">
+                    <a href="@Url.Action("Index", "Procedure")" title="@RIS.Resources.Res.navProc">
+                        
+                            <img src="~/assets/img/procedure.png" alt="@RIS.Resources.Res.navProc" style="width:150px;height:150px;">
+                        <br />
+                        <center>
+                            <strong style="font-size:larger; color:black;">
+                                @RIS.Resources.Res.navProc
+                            </strong>
+                        </center>
+</a>
+            </div>
+
+        </div>
+}
+
+
+
+    </div>
+</div>
+</div>
+</center>
+</section>*@
+
+<div class="row" dir="@RIS.Resources.Res.mnm_dir0">
+    <div class="col-md-2">&nbsp;</div>
+    <div class="col-md-8">
+        <div class="row space-16">&nbsp;</div>
+        <div class="row" style="display: table; width:100%" >
+
+
+
+            @if (HttpContext.Current.Session["PatientPerm"].ToString() == "1")
+            {
+
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+                        <div class="caption text-center" onclick="location.href='@Url.Action("Index", "Patient" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/patient.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.navPat</a></h8>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+            @if (HttpContext.Current.Session["StatsPerm"].ToString() == "1")
+            {
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+
+                        <div class="caption text-center" onclick="location.href='@Url.Action("Index", "Statistics" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/statisticsNav.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.ordersSt</a></h8>
+                        </div>
+
+                    </div>
+                </div>
+            }
+            @if (HttpContext.Current.Session["AppStatsPerm"].ToString() == "1")
+            {
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+
+                        <div class="caption text-center" onclick="location.href='@Url.Action("Index", "Statistics" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/AppStatisticsNav.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.appsSt</a></h8>
+                        </div>
+
+                    </div>
+                </div>
+            }
+            @if (HttpContext.Current.Session["PermsPerm"].ToString() == "1")
+            {
+
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+
+                        <div class="caption text-center" onclick="location.href='@Url.Action("Index", "Audit" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/auditingNav.svg" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.audit</a></h8>
+                        </div>
+
+                    </div>
+                </div>
+
+            }
+
+
+
+
+
+
+
+
+            @if (HttpContext.Current.Session["RadiologyPerm"].ToString() == "1")
+            {
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+                        <div class="caption text-center" onclick="location.href='@Url.Action("Waiting", "Radiology" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/waitingScheduledNav.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.WaitingRad</a></h8>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @*@if (Html.IsVisible(new List<string> { "OrdersStatus", "Radiology" }) == "block")
+
+            {
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+
+                        <div class="caption text-center" onclick="location.href='@Url.Action("OrdersStatus", "Radiology" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/patient_Proccessing.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.tshOrderStatu</a></h8>
+                        </div>
+
+                    </div>
+                </div>
+            }*@
+
+
+            @*@if (Html.IsVisible(new List<string>
+                    { "RadiologyOrdersStatusProcc", "Radiology" }) == "block")
+            {
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+
+                        <div class="caption text-center" onclick="location.href='@Url.Action("ShowOrdrsStatus", "Radiology" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/patient-treatment.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.navRadStat</a></h8>
+                        </div>
+
+                    </div>
+                </div>
+            }*@
+            @if (HttpContext.Current.Session["RadiologyPerm"].ToString() == "1")
+            {
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+                        <div class="caption text-center" onclick="location.href='@Url.Action("Index", "Schedule" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/CalenderNav.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.mnmRadiologyCalendar</a></h8>
+                        </div>
+                    </div>
+                </div>
+            }
+            @if (HttpContext.Current.Session["AppsPerm"].ToString() == "1")
+            {
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+                        <div class="caption text-center" onclick="location.href='@Url.Action("Schedule", "Appoinments" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/AppCalenderNav.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.AppCalender</a></h8>
+                        </div>
+                    </div>
+                </div>
+            }
+            @if (HttpContext.Current.Session["RadiologyPerm"].ToString() == "1")
+            {
+                <div class="col-sm-3">
+                    <div class="thumbnail" style="border-top-left-radius:22px;border-bottom-right-radius:33px">
+
+                        <div class="caption text-center" onclick="location.href='@Url.Action("Index", "Radiology" )'">
+                            <div class="position-relative">
+                                <img src="~/assets/img/radiologyNav.png" style="width:170px;height:170px;" />
+                            </div>
+                            <h8 id="thumbnail-label"><a href="#">@RIS.Resources.Res.navRad</a></h8>
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+
+
+            <div class="col-sm-3">
+                &nbsp;
+            </div>
+            <div class="col-sm-3">
+                &nbsp;
+            </div>
+            @*<div class="col-sm-3">
+                &nbsp;
+            </div>
+            <div class="col-sm-3">
+                &nbsp;
+            </div>
+            <div class="col-sm-3">
+                &nbsp;
+            </div>*@
+        </div>
+
+    </div>
+    <div class="col-md-2">&nbsp;</div>
+
+</div>
+
+
+
+
+<script type="text/javascript" src="~/Scripts/HL7Send.js"></script>
+
+

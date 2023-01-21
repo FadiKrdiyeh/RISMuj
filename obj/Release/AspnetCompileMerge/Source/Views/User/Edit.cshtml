@@ -1,0 +1,150 @@
+﻿@model RIS.Models.User
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.edituser.ToString()</title>
+@using RIS.Models;
+
+<div style="margin-top:1%">
+    <h2>@RIS.Resources.Res.edituser.ToString()</h2>
+    @{
+        bool isAdmin = false;
+        string userNm = Html.ValueFor(model => model.username).ToString();
+        if (userNm == ConfigVar.adminUser)
+        {
+            isAdmin = true;
+        }
+
+    }
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.num)
+
+
+
+        <center>
+            <div class="form-horizontal" style="margin-top:3px;background-color:white;width:600px;border-radius:4px;">
+
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+
+                        @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control",@readonly= "readonly" } })
+
+
+                        @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.pass, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.pass, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.pass, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.language, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+
+                        <select name="language">
+                            <option value="ar">العربية </option>
+                            <option value="en">English </option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.firstName, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.firstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.firstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.lastName, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.departement, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.DropDownList("departement")
+                        @Html.ValidationMessageFor(model => model.departement, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <table width="90%">
+                        <tr style="background-color:wheat;">
+                            <td>@RIS.Resources.Res.userGroups</td>
+                        </tr>
+                    </table>
+                    @{var tmpP = "";
+                var gId = 0;
+                    }
+                    <div class="scroll">
+                        <table width="100%">
+
+                            @foreach (var item in ViewBag.gList)
+                        {
+                            tmpP = "";
+                            gId = item.num;
+                            if (((List<Group>)ViewBag.uGroupPList).Any(c => c.num == item.num))
+                            {
+                                tmpP = "checked";
+                            }
+
+                        <tr style="background-color: #e9e1d4;">
+                            <td>@item.name</td>
+                            <td>
+                                @if (isAdmin)
+                                    {
+                                    <input type="checkbox" DISABLED @tmpP name="uGroups0" value="@gId">
+                                    <input type="hidden" name="uGroups" value="@gId">
+
+
+                                }
+                                else
+                                {
+                                    <input type="checkbox" @tmpP name="uGroups" value="@gId">
+
+                                    }
+
+                            </td>
+
+                        </tr>
+                        }
+                        </table>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </center>
+        <table align="center">
+            <tr>
+                <td><input type="submit" id="Save" value=@RIS.Resources.Res.Save class="btn btn-default" /></td>
+                <td>@Html.ActionLink(RIS.Resources.Res.Backtouserslist, "Index")</td>
+            </tr>
+        </table>
+
+                        }
+</div>

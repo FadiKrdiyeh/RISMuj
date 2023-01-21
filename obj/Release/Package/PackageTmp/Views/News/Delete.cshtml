@@ -1,0 +1,58 @@
+﻿@model RIS.Models.NewsElement
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>حذف خبر</title>
+
+<div style="margin-top:1%">    
+    <center>
+        <h2>حذف خبر</h2>
+        <h3>هل تريد تأكيد حذف هذا الخبر؟</h3>
+        <div style="margin-top:3px;background-color:white;width:600px; height:300px;border-radius:4px;">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Text)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Text)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.URL)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.URL)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DepartementName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DepartementName)
+                </dd>
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="حذف" class="btn btn-default" /> |
+                    @Html.ActionLink("عودة إلى قائمة الأخبار", "Index")
+                </div>
+            }
+        </div>
+    </center>
+</div>

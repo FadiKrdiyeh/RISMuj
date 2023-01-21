@@ -1,0 +1,111 @@
+﻿@model RIS.Models.Group
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using RIS.Models;
+
+<title>@RIS.Resources.Res.editGroup</title>
+
+<div style="margin-top:1%">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <center>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.num)
+            <h2>@RIS.Resources.Res.editGroup</h2>
+
+
+            <div style="margin-top:3px;background-color:white;width:600px;border-radius:4px; padding: 1%;">
+
+                <div class="form-group">
+
+                    <div class="form-group">
+
+                        @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-6">
+                            @Html.EditorFor(model => model.name, new { htmlAttributes = new { } })
+                            @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <table width="90%">
+                            <tr style="background-color:wheat;">
+                                <td style="width:92%;">@RIS.Resources.Res.groupPerms</td>
+                                <td style="width:8%;">
+                                    <input id="chkAll" style="float:inline-start;" type="checkbox" />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div class="scroll">
+                            <table>
+                                @{var tmpP = "";
+                                var gId = 0;
+                                }
+
+                                @foreach (var item in ViewBag.pList)
+                            {
+                                tmpP = "";
+                                gId = item.num;
+                                if (((List<Permission>)ViewBag.groupPList).Any(c => c.num == item.num))
+                                {
+                                    tmpP = "checked";
+                                }
+                            <tr style="background-color: #e9e1d4;">
+
+                                <td style="width: 100%;"> @RIS.Resources.Res.ResourceManager.GetString(item.name) </td>
+                                <td>
+                                    <input style="float:inline-start;" type="checkbox" @tmpP name="gPerms" value="@gId">
+                                </td>
+
+                            </tr>
+                            }
+
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table align="center">
+                <tr>
+                    <td><input type="submit" value=@RIS.Resources.Res.Save class="btn btn-default" /></td>
+                    <td>@Html.ActionLink(RIS.Resources.Res.backtoGroups, "Index")</td>
+
+                </tr>
+
+
+
+            </table>
+
+        </center>
+                                    }
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("[id*=chkAll]").click(function () {
+            //  alert("checked" + $(this).is(":checked"));
+            if ($(this).is(":checked")) {
+                $("[name*=gPerms] ").attr("checked", "checked");
+            } else {
+                $("[name*=gPerms] ").removeAttr("checked");
+            }
+        });
+        $("[name*=gPerms]").click(function () {
+            if ($("[name*=gPerms]").length == $("[name*=gPerms]:checked").length) {
+                $("[id*=chkAll]").attr("checked", "checked");
+            } else {
+                $("[id*=chkAll]").removeAttr("checked");
+            }
+        });
+    });
+</script>

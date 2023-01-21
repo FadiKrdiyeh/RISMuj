@@ -1,0 +1,50 @@
+﻿@model RIS.Models.ModalityProcedure
+
+@{
+    ViewBag.Title = @RIS.Resources.Res.addProc;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.addProc</title>
+
+<h2>@RIS.Resources.Res.addProc</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ModalityId)
+
+    <center>
+        <div style="background-color:white;width:350px; height:150px;border-radius:4px;  margin-top:3px;">
+            <center>
+                <table>
+
+                    <tr>
+                        <td colspan="2">@ViewData["ModalityName"]</td>
+
+                    </tr>
+
+                    <tr style=" width:100%;">
+                        <td>@Html.LabelFor(model => model.ProcedureId, htmlAttributes: new { })</td>
+                        <td>
+                            @Html.DropDownList("ProcedureID")
+                            @Html.ValidationMessageFor(model => model.ProcedureId, "", new { @class = "text-danger" })
+                        </td>
+
+                    </tr>
+
+                </table>
+            </center>
+        </div>
+    </center>
+    <table align="center">
+        <tr>
+            <td><input type="submit" value=@RIS.Resources.Res.add.ToString() class="btn btn-default" /></td>
+            <td>@Html.ActionLink(RIS.Resources.Res.backToModProc.ToString(), "Index", new { mid = Int32.Parse(ViewData["ModalityID_"].ToString()) })</td>
+        </tr>
+    </table>
+}
+
+

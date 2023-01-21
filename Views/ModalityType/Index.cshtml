@@ -1,0 +1,35 @@
+﻿@model IEnumerable<RIS.Models.ModalityType>
+@using GridMvc.Html
+@using RIS.Resources;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    let activeLink1 = document.querySelector(".navbar ul.navbar-nav li.nav-item button.nav-link#modalityLink");
+    let activeLink2 = document.querySelector(".navbar ul.navbar-nav li.nav-item .dropdown-menu li a.dropdown-item#modTypeLink");
+    activeLink1.classList.add("active");
+    activeLink2.classList.add("active");
+</script>
+<title>@RIS.Resources.Res.modTypList</title>
+
+<div style="margin-top: 130px;">
+    <h2 class="main-title">@RIS.Resources.Res.modTypList</h2>
+
+    <div class="btn create-btn">@Html.ActionLink(RIS.Resources.Res.addNewType.ToString(), "Create") <i class="fa fa-plus"></i></div>
+    <hr />
+
+    <div class="container">
+        @Html.Grid(Model).Columns(columns =>
+        {
+            columns.Add(c => c.name).Titled(Res.ModalityTypename).Filterable(true);
+            
+            columns.Add().Encoded(false).Sanitized(false).SetWidth(50)
+               //  .RenderValueAs(c => Html.ActionLink(" ", "Edit", new { id = c.num }, new { @title = RIS.Resources.Res.edit, @class = "btn btn-default fa fa-pencil" }) + "&nbsp;&nbsp;" +
+               //Html.ActionLink(" ", "Delete", new { id = c.num }, new { @title = RIS.Resources.Res.Delete, @class = "btn btn-danger fa fa-trash" })).Encoded(false).Css("flexy").Titled(Res.controlKey);
+               .RenderValueAs(c => "<div class='table-buttons'><a href='" + @Url.Action("Edit", "ModalityType", new { id = c.num }) + "' class='btn icon-btn edit-o-btn' title='" + RIS.Resources.Res.edit + "'><i class='fa fa-pencil'></i></a>" +
+                      "<a href='" + @Url.Action("Delete", "ModalityType", new { id = c.num }) + "' class='btn icon-btn delete-o-btn' title='" + RIS.Resources.Res.Delete + "'><i class='fa fa-trash'></i></a></div>").Css("position-relative overflow-hidden").Encoded(false).Titled(Res.controlKey);
+        }).WithPaging(5).Sortable()
+    </div>
+</div>

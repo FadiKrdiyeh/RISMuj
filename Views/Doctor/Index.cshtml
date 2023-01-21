@@ -1,0 +1,46 @@
+﻿@model IEnumerable<RIS.Models.Doctor>
+@using GridMvc.Html
+@using RIS.Resources;
+@{
+    ViewBag.Title = @RIS.Resources.Res.navDoctors;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    let activeLink1 = document.querySelector(".navbar ul.navbar-nav li.nav-item button.nav-link#manageLink");
+    let activeLink2 = document.querySelector(".navbar ul.navbar-nav li.nav-item .dropdown-menu li a.dropdown-item#doctorLink");
+    activeLink1.classList.add("active");
+    activeLink2.classList.add("active");
+</script>
+<title>@RIS.Resources.Res.navDoctors</title>
+
+<div style="margin-top: 130px;">
+    <h2 class="main-title">@RIS.Resources.Res.navDoctors</h2>
+
+    @*<table align="center" style="margin-top:3px;">
+        <tr>
+            <td class="btn btn-primary btn-xs c">
+                @Html.ActionLink(RIS.Resources.Res.addDoctor.ToString(), "Create")
+            </td>
+        </tr>
+    </table>*@
+    <div class="btn create-btn">@Html.ActionLink(RIS.Resources.Res.addDoctor.ToString(), "Create") <i class="fa fa-plus"></i></div>
+    <hr />
+
+    <div style="padding-left: 5%;padding-right: 5%;">
+        @Html.Grid(Model).Columns(columns =>
+   {
+       columns.Add(c => c.name).Titled(Res.DoctorName).Filterable(true);
+       columns.Add(c => c.description).Titled(Res.DoctorDescription).Filterable(true);
+       columns.Add(c => c.docDepartmentName).Titled(Res.Departement);
+       columns.Add(c => c.insertDate).Titled(Res.InsertDateParameter);
+       columns.Add(c => c.insertUserName).Titled(Res.InsertUser);
+
+       columns.Add().Encoded(false).Sanitized(false).SetWidth(50)
+           //.RenderValueAs(c => Html.ActionLink(" ", "Edit", new { id = c.num }, new { @title = RIS.Resources.Res.edit, @class = "btn btn-default fa fa-pencil" }) + "&nbsp;&nbsp;" +
+           //  Html.ActionLink(" ", "Delete", new { id = c.num }, new { @title = RIS.Resources.Res.Delete, @class = "btn btn-danger fa fa-trash" })).Encoded(false).Css("flexy").Titled(Res.controlKey);
+           .RenderValueAs(c => "<div class='table-buttons'><a href='" + @Url.Action("Edit", "Doctor", new { id = c.num }) + "' class='btn icon-btn edit-o-btn' title='" + RIS.Resources.Res.edit + "'><i class='fa fa-pencil'></i></a>" +
+          "<a href='" + @Url.Action("Delete", "Doctor", new { id = c.num }) + "' class='btn icon-btn delete-o-btn' title='" + RIS.Resources.Res.Delete + "'><i class='fa fa-trash'></i></a></div>").Css("position-relative overflow-hidden").Encoded(false).Titled(Res.controlKey);
+   }).WithPaging(5).Sortable()
+    </div>
+</div>

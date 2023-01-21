@@ -1,0 +1,130 @@
+﻿@model RIS.Models.Modality
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.deleteMod.ToString()</title>
+
+<div style="margin-top:1%">
+    <h2>@ViewData["PageName"]</h2>
+
+
+    <center>
+        <h3>@RIS.Resources.Res.surDelMod.ToString()</h3>
+        <div style="margin-top:3px;background-color:white;width:600px; height:300px;border-radius:4px;">
+            
+            <table>
+                <tr>
+                    <td class="col-md-8">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger", @style = "background-color: yellow;display: table - footer - group;list-style-type: none; " })
+                    </td>
+                </tr>
+            </table>
+            <dl class="dl-horizontal">
+                @*<dt>
+                        @Html.DisplayNameFor(model => model.num)
+                    </dt>*@
+
+                @*<dd>
+                        @Html.DisplayFor(model => model.num)
+                    </dd>*@
+                
+                <dt class="col-md-4">
+                    @Html.DisplayNameFor(model => model.name)
+                </dt>
+
+                <dd class="col-md-4">
+                    @Html.DisplayFor(model => model.name)
+                </dd>
+
+                <dt class="col-md-4">
+                    @Html.DisplayNameFor(model => model.aeTitle)
+                </dt>
+
+                <dd class="col-md-4">
+                    @Html.DisplayFor(model => model.aeTitle)
+                </dd>
+
+                <dt class="col-md-4">
+                    @Html.DisplayNameFor(model => model.ipAddress)
+                </dt>
+
+                <dd class="col-md-4">
+                    @Html.DisplayFor(model => model.ipAddress)
+                </dd>
+
+                <dt class="col-md-4">
+                    @Html.DisplayNameFor(model => model.port)
+                </dt>
+
+                <dd class="col-md-4">
+                    @Html.DisplayFor(model => model.port)
+                </dd>
+
+                <dt class="col-md-4">
+                    @Html.DisplayNameFor(model => model.type)
+                </dt>
+
+                <dd class="col-md-4">
+                    @Html.DisplayFor(model => model.parentMT.name)
+                </dd>
+
+                <dt class="col-md-4">
+                    @Html.DisplayNameFor(model => model.description)
+                </dt>
+
+                <dd class="col-md-4">
+                    @Html.DisplayFor(model => model.description)
+                </dd>
+                <dt class="col-md-4">
+                    @Html.DisplayNameFor(model => model.departement)
+                </dt>
+
+                <dd class="col-md-4">
+                    @{
+                    string depName = "";
+                    try
+                    {
+                        depName =Model.modalityDepartement.name;
+                    }
+                    catch
+                    {
+
+                    }
+                @Html.Label(depName)
+                    }
+                </dd>
+
+            </dl>
+
+
+
+
+        </div>
+    </center>
+    <table align="center">
+        <tr>
+
+            @using (Html.BeginForm())
+
+            {
+        @Html.AntiForgeryToken()
+
+
+        <td> <input type="submit" value=@RIS.Resources.Res.Delete.ToString() class="btn btn-default" /></td>
+
+        <td> @Html.ActionLink(RIS.Resources.Res.BackToModalityList.ToString(), "Index")</td>
+        }
+
+
+
+
+        </tr>
+
+    </table>
+
+</div>
+
+

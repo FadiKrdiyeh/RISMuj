@@ -1,0 +1,48 @@
+﻿@model RIS.Models.Departement
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.addDep</title>
+<div style="margin-top:1%">
+    <h2>@RIS.Resources.Res.addDep</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.num)
+
+
+        <center>
+            <div style="background-color:white;width:350px; height:75px;border-radius:4px;  margin-top:3px;">
+                <center>
+                    <table>
+
+
+                        <tr style=" width:100%;">
+                            <td>@Html.LabelFor(model => model.name, htmlAttributes: new { })</td>
+                            <td>
+                                @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                            </td>
+
+                        </tr>
+
+                    </table>
+                </center>
+            </div>
+        </center>
+        <table align="center">
+            <tr>
+                <td><input type="submit" value=@RIS.Resources.Res.add.ToString() class="btn btn-default" /></td>
+                <td>@Html.ActionLink(RIS.Resources.Res.backToDepList.ToString(), "Index", new { })</td>
+            </tr>
+        </table>
+
+    }
+
+</div>

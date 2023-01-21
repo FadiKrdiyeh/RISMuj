@@ -1,0 +1,329 @@
+﻿@model IEnumerable<RIS.Models.Radiology>
+
+@{
+    ViewBag.Title = "Show Ordres Status";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    let activeLink1 = document.querySelector(".navbar ul.navbar-nav li.nav-item button.nav-link#orderLink");
+    let activeLink2 = document.querySelector(".navbar ul.navbar-nav li.nav-item .dropdown-menu li a.dropdown-item#orderStatLink");
+    activeLink1.classList.add("active");
+    activeLink2.classList.add("active");
+</script>
+
+<title>@RIS.Resources.Res.indexRadStatus</title>
+@using RIS.Resources;
+<link href="~/assets/css/style.css" rel="stylesheet" />
+@{
+    Dictionary<string, string> stat =
+            new Dictionary<string, string>();
+    stat.Add(ConnectionConfigs.SCHEDUALED, Res.SCHEDUALED);
+    stat.Add(ConnectionConfigs.STARTED, Res.STARTED);
+    stat.Add(ConnectionConfigs.COMPLETED, Res.COMPLETED);
+    stat.Add(ConnectionConfigs.Waiting, Res.Waiting);
+}
+
+<div class="back">
+    <h2 class="main-title">@Html.ActionLink(RIS.Resources.Res.indexRadStatus.ToString(), "ShowOrdrsStatus")</h2>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        @Html.Hidden("PageCnt", ViewData["PageCnt"])
+        @Html.Hidden("pageNBr", ViewData["pageNBr"])
+        @Html.Hidden("count", ViewData["count"])
+        @Html.Hidden("page", ViewData["page"])
+
+        <fieldset style="margin-top:3px;">
+            <button type="button" id="otherInfo" title="@Res.patSearch.ToString()" class="btn search-o-btn icon-btn">
+                <span class="fa fa-search"></span>
+            </button>
+
+            <div id="infoToShow" class="justify-content-center align-items-center flex-column">
+                <div style="font-size: 26px; color:black; font-weight:400;" class="mb-3">@RIS.Resources.Res.searchParas</div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="docId" class="col-4 form-label text-nowrap text-dark">
+                                @Html.DisplayNameFor(model => model.DocumnetId)
+                            </label>
+                            @Html.TextBox("docId", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="firstname" class="col-4 form-label text-nowrap text-dark">
+                                @RIS.Resources.Res.PatientFirstname.ToString()
+                            </label>
+                            @Html.TextBox("firstname", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="lastname" class="col-4 form-label text-nowrap text-dark">
+                                @RIS.Resources.Res.PatientLastname.ToString()
+                            </label>
+                            @Html.TextBox("lastname", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="departments" class="col-4 form-label text-nowrap text-dark">
+                                @Html.DisplayNameFor(model => model.DepartementName)
+                            </label>
+                            @Html.DropDownList("departments", null, new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="modalities" class="col-4 form-label text-nowrap text-dark">
+                                @Html.DisplayNameFor(model => model.ModalityID)
+                            </label>
+                            @Html.DropDownList("modalities", null, new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-75">
+                    <div class="col-md-2 px-5 mb-4 d-flex justify-content-center align-items-center text-dark text-nowrap" style="font-size: 24px;">
+                        <div class="form-group row">
+                            <span>@RIS.Resources.Res.OrderStartDate: </span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="beginDate" class="col-4 form-label text-nowrap text-dark">
+                                @RIS.Resources.Res.From
+                            </label>
+                            @Html.TextBox("beginDate", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-5 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="endDate" class="col-4 form-label text-nowrap text-dark">
+                                @RIS.Resources.Res.To
+                            </label>
+                            @Html.TextBox("endDate", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" value="@RIS.Resources.Res.radSearch" class="btn search-btn mb-2 mt-2" onclick="resetPageNum()">@RIS.Resources.Res.radSearch <i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <hr class="w-100" />
+            </div>
+        </fieldset>
+        
+        <div class="pagination-container">
+            <div class="controls">
+                @{
+                    if (!ViewData["pageNBr"].ToString().Equals("1") && !ViewData["count"].ToString().Equals("0"))
+                    {
+                        <div class="left double-left">
+                            @*<a href="#" class="prev"><i class="fa fa-angle-double-left"></i></a>*@
+                            <a class="prev" href="@Url.Action("Waiting", "Radiology", new { page = 1, count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") })" title="@Res.lastPage.ToString()"><i class="fa fa-angle-double-left"></i></a>
+                        </div>
+                        <div class="left">
+                            @*<a href="#" class="prev"><i class="fa fa-angle-left"></i></a>*@
+                            <a class="prev" href="@Url.Action("Waiting", "Radiology", new { page = (double.Parse((ViewData["page"]).ToString()) - 1).ToString(), count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") })" title="@Res.nextPage.ToString()"><i class='fa fa-angle-left'></i></a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="left double-left noPrev">
+                            @*<a href="#" class="prev"><i class="fa fa-angle-double-left"></i></a>*@
+                            <a class="prev" href="@Url.Action("Waiting", "Radiology", new { page = 1, count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") })" title="@Res.lastPage.ToString()"><i class="fa fa-angle-double-left"></i></a>
+                        </div>
+                        <div class="left noPrev">
+                            @*<a href="#" class="prev"><i class="fa fa-angle-left"></i></a>*@
+                            <a class="prev" href="@Url.Action("Waiting", "Radiology", new { page = (double.Parse((ViewData["page"]).ToString()) - 1).ToString(), count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") })" title="@Res.nextPage.ToString()"><i class='fa fa-angle-left'></i></a>
+                        </div>
+                    }
+                    <div>
+                        <div class="page">
+                            @Res.page.ToString()  @Html.Encode(ViewData["pageNBr"])  /  @Html.Encode(ViewData["PageCnt"])
+                        </div>
+                    </div>
+                    if (!ViewData["pageNBr"].ToString().Equals(ViewData["PageCnt"].ToString()) && !ViewData["count"].ToString().Equals("0"))
+                    {
+                        <div class="right">
+                            @*<a href="#" class="next"><i class="fa fa-angle-right"></i></a>*@
+                            <a class="next" href="@Url.Action("ShowOrdrsStatus", "Radiology", new { page = (double.Parse((ViewData["page"]).ToString()) + 1).ToString(), count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") })" title="@Res.previousPage.ToString()"><i class='fa fa-angle-right'></i></a>
+                        </div>
+                        <div class="right double-right">
+                            @*<a href="#" class="next"><i class="fa fa-angle-double-right"></i></a>*@
+                            <a class="next" href="@Url.Action("ShowOrdrsStatus", "Radiology", new { page = ViewData["count"], count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") })" title="@Res.firstPage.ToString()"><i class='fa fa-angle-double-right'></i></a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="right noNext">
+                            @*<a href="#" class="next"><i class="fa fa-angle-right"></i></a>*@
+                            <a class="next" href="@Url.Action("ShowOrdrsStatus", "Radiology", new { page = (double.Parse((ViewData["page"]).ToString()) + 1).ToString(), count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") })" title="@Res.previousPage.ToString()"><i class='fa fa-angle-right'></i></a>
+                        </div>
+                        <div class="right double-right noNext">
+                            @*<a href="#" class="next"><i class="fa fa-angle-double-right"></i></a>*@
+                            <a class="next" href="@Url.Action("ShowOrdrsStatus", "Radiology", new { page = ViewData["count"], count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities") })" title="@Res.firstPage.ToString()"><i class='fa fa-angle-double-right'></i></a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    }
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DocumnetId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.parentR.firstname)
+                </th>
+                <th>
+                    @Res.OrderStartDate
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.ModalityID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProcedureID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @RIS.Resources.Res.controlKey
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(Model.Any())
+            { 
+                foreach (var item in Model)
+                {
+                    var bc = "tomato";
+                    if (item.Status == ConnectionConfigs.STARTED)
+                    {
+                        bc = "lightgreen";
+                    }
+                    <tr style="background-color:@bc" class="show-buttons">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DocumnetId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.parentR.firstname) @Html.DisplayFor(modelItem => item.parentR.lastname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartDate)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.parentMod.name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.parentProc.name)
+                        </td>
+                        <td>
+                            @{
+                                String st = "";
+                                stat.TryGetValue(Html.ValueFor(modelItem => item.Status).ToString(), out st);
+                            }
+                            @st
+                        </td>
+                        @*<td style="width:1%;">
+                        <a href="@Url.Action( "Edit","Radiology", new { pId = item.ID }) " title="@RIS.Resources.Res.edit" class="btn btn-default">
+                            <em class="fa fa-pencil">
+                            </em>
+                        </a>
+                    </td>*@
+                        <td class="position-relative overflow-hidden">
+                            <div class="table-buttons">
+                                <a href="@Url.Action("Details", "Radiology", new { id = item.ID })" title="@RIS.Resources.Res.patDetails" class="btn details-o-btn icon-btn"><i class="fa fa-info"></i></a>
+                                @if (item.Status == ConnectionConfigs.SCHEDUALED)
+                                {
+                                    @*<input id="Button1" type="button" onclick="javascript:startOrder(@item.ID); " value="@RIS.Resources.Res.StartOrder" style="margin-top: 7px;" />*@
+                                    <button id="Button1" type="button" onclick="javascript:startOrder(@item.ID);" value="@RIS.Resources.Res.StartOrder" title="@RIS.Resources.Res.StartOrder" class="btn other-o-btn icon-btn" style="--other-color: #000;"><i class="fa fa-business-time"></i></button>
+                                }
+                            </div>
+                        </td>
+                        @*@{
+                        string t = HttpContext.Current.Session["userType"].ToString();
+                        if (t == "1")
+                        {
+                            <td style="width:1%;">
+                                <a href="@Url.Action( "Delete","Radiology", new { id = item.ID })" title="@RIS.Resources.Res.Delete" class="btn btn-danger">
+                                    <em class="fa fa-trash">
+                                    </em>
+                                </a>
+                            </td>
+                        }
+                    }*@
+                        @*<td style="width:1%;">
+                        <a href="@Url.Action( "Create","Radiology", new { pId= item.num })" title="@RIS.Resources.Res.CreateRad" class="btn btn-info btn-l">
+                            <span class="fa fa-plus"></span>
+                        </a>
+                    </td>*@
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center" style="font-size: 26px;">@Res.NoDataMsg!</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</div>
+
+<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#infoToShow').toggle();
+        $('#otherInfo').click(function () {
+            $('#infoToShow').toggleClass('d-flex');
+        });
+        //$("#patLink").on("click", function (event) {
+        //    alert("oh nana");
+
+        //});
+        $("#patLink").innerhtml = ("class", "active");
+    });
+
+    function resetPageNum()
+    {
+        document.getElementById('page').value = 1;
+      //  alert(document.getElementById('page').value);
+        document.getElementById('pageNBr').value = 1;
+        //pageNBr = 1;
+    }
+
+    function startOrder(id) {
+       // alert(id);
+        $.ajax({
+            type: 'POST',
+            url: '/Radiology/ChangeStatus',
+            data: '{ "orderId" : "'+id+'","orderStatus":"'+@ConnectionConfigs.STARTED+'"}',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+
+            success: function () {
+                location.reload(); // reloading Parent page
+            },
+            error: function (e) {
+                alert(e.error);
+                location.reload(); // reloading Parent page
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    flatpickr('.flatpickr', { dateFormat: 'YmdH:i:ss', enableTime: true, altInput: true });
+</script>

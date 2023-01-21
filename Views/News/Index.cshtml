@@ -1,0 +1,41 @@
+﻿@model IEnumerable<RIS.Models.NewsElement>
+@using GridMvc.Html
+@{
+    ViewBag.Title = @RIS.Resources.Res.BreakingNewsList;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    let activeLink = document.querySelector(".navbar ul.navbar-nav li.nav-item a.nav-link#newsLink");
+    activeLink.classList.add("active");
+</script>
+
+<title>@RIS.Resources.Res.BreakingNewsList</title>
+
+<div style="margin-top: 150px;">
+    <h2 class="main-title">@RIS.Resources.Res.BreakingNewsList</h2>
+    @*<table align="center" style="margin-top:3px;">
+        <tr>
+            <td class="btn btn-primary btn-xs c">
+                @Html.ActionLink(RIS.Resources.Res.AddNewNews, "Create")
+            </td>
+        </tr>
+    </table>*@
+    <div class="btn create-btn">@Html.ActionLink(RIS.Resources.Res.AddNewNews, "Create") <i class="fa fa-plus"></i></div>
+    <hr />
+    <div style="padding-left: 5%;padding-right: 5%;">
+        @Html.Grid(Model).Columns(columns =>
+        {
+        columns.Add(c => c.Title).Titled(Html.DisplayNameFor(x => x.Title).ToString()).Filterable(true);
+        columns.Add(c => c.Text).Titled(Html.DisplayNameFor(x => x.Text).ToString()).Filterable(true);
+        columns.Add(c => c.URL).Titled(Html.DisplayNameFor(x => x.URL).ToString()).Filterable(true);
+        columns.Add(c => c.DepartementName).Titled(Html.DisplayNameFor(x => x.DepartementName).ToString()).Filterable(true);
+        columns.Add().Encoded(false).Sanitized(false).SetWidth(50)
+             //.RenderValueAs(c => Html.ActionLink(" ", "Edit", new { id = c.ID }, new { @title = RIS.Resources.Res.edit, @class = "btn btn-default fa fa-pencil" }) + "&nbsp;&nbsp;" +
+             //     Html.ActionLink(" ", "Delete", new { id = c.ID }, new { @title = RIS.Resources.Res.Delete, @class = "btn btn-danger fa fa-trash" }) + "&nbsp;&nbsp;"
+                  //).Encoded(false).Css("flexy").Titled("");
+             .RenderValueAs(c => "<div class='table-buttons'><a href='" + @Url.Action("Edit", "News", new { id = c.ID }) + "' class='btn icon-btn edit-o-btn' title='" + RIS.Resources.Res.edit + "'><i class='fa fa-pencil'></i></a>" +
+               "<a href='" + @Url.Action("Delete", "News", new { id = c.ID }) + "' class='btn icon-btn delete-o-btn' title='" + RIS.Resources.Res.Delete + "'><i class='fa fa-trash'></i></a></div>").Css("position-relative overflow-hidden").Encoded(false).Titled("");
+        }).WithPaging(5).Sortable()
+    </div>
+</div>

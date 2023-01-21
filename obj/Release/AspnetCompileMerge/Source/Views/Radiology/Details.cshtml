@@ -1,0 +1,230 @@
+﻿@model RIS.Models.Radiology
+@using RIS.Resources;
+@{
+    ViewBag.Title = @RIS.Resources.Res.radDetails.ToString();
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+
+    Dictionary<string, string> stat =
+            new Dictionary<string, string>();
+    stat.Add(ConnectionConfigs.SCHEDUALED, Res.SCHEDUALED);
+    stat.Add(ConnectionConfigs.STARTED, Res.STARTED);
+    stat.Add(ConnectionConfigs.COMPLETED, Res.COMPLETED);
+    stat.Add(ConnectionConfigs.Waiting, Res.Waiting);
+
+}
+<title>@RIS.Resources.Res.radDetails.ToString()</title>
+<div style="margin-top:1%">
+
+<h2>@RIS.Resources.Res.radDetails.ToString()</h2>
+
+
+<center>
+    <div id="pnlContents">
+        <table style="margin-top:3px; border:double; background-color:white; ">
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.parentR.givenid, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.parentR.firstname, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.parentR.middlename, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.parentR.lastname, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.parentR.mothername, htmlAttributes: new { @class = "" })</td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.parentR.givenid, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.parentR.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.parentR.middlename, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.parentR.lastname, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.parentR.mothername, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+            </tr>
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.DepartementName, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.ModalityID, htmlAttributes: new { @class = "" })</td>
+
+                <td>@Html.LabelFor(model => model.ProcedureID, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.parentDep.name, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.parentMod.name, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.parentProc.name, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+            <tr style="background-color:wheat;">
+                <td>@Html.LabelFor(model => model.DocumnetId, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.AccessionNumber, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.StudyID, htmlAttributes: new { @class = "" })</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.DocumnetId, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.AccessionNumber, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.StudyID, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr style="background-color:wheat;">
+                <td>
+                    @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "" })
+                </td>
+                <td>@Html.LabelFor(model => model.StartDate, htmlAttributes: new { @class = "" })</td>
+                <td>@Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "" })</td>
+
+                <td>
+                @Html.LabelFor(model => model.Doctor, htmlAttributes: new { @class = "" })
+                </td>
+               
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    @{
+                        String st = "";
+                        try
+                        {
+                            stat.TryGetValue(Html.ValueFor(model => model.Status).ToString(), out st);
+
+
+                        }
+                        catch(Exception ee)
+                        {
+                            string xx = ee.ToString();
+                            st = "";
+                        }
+
+                    }
+                    <p>@st</p>
+                </td>
+                @{
+                    DateTime dateValue;
+
+                    DateTime.TryParse(Html.ValueFor(model => model.StartDate).ToString(), out dateValue);
+
+                    DateTime dateEndValue;
+
+                    DateTime.TryParse(Html.ValueFor(model => model.EndDate).ToString(), out dateEndValue);
+                }
+                <td>
+                    @dateValue
+                </td>
+                <td>
+                    @{ 
+                        if (st == ConnectionConfigs.COMPLETED)
+                        {
+                            <p>@dateEndValue</p>
+                        }
+                    }
+                   
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Doctor, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                
+                <td></td>
+            </tr>
+
+            
+
+        </table>
+    </div>
+</center>
+<br />
+
+
+
+<table align="center">
+    <tr>
+        <td>
+            <div class="form-group">
+                <div class="btn btn-primary" style="width:250px;">
+                    @Html.ActionLink(RIS.Resources.Res.edit.ToString(), "Edit", new { pID = Model.ID })
+                </div> |
+
+                <div class="btn btn-primary" style="width:250px;">
+
+                    @Html.ActionLink(RIS.Resources.Res.backToRadList.ToString(), "Index")
+                </div> |
+
+                <div class="btn btn-primary" style="width:250px;">
+                    <input type="button" class="btn btn-default fa fa-print" style="background-color:#428bca" value="طباعة" onclick = "PrintPanel();"  />
+                </div>
+
+
+            </div>
+        </td>
+    </tr>
+</table>
+
+</div>
+<p>
+
+
+
+</p>
+
+<br /><br />
+<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $('#infoToShow').toggle();
+        $('#otherInfo').click(function () {
+            $('#infoToShow').toggle();
+        });
+    })
+</script>
+
+
+<script type="text/javascript">
+        function PrintPanel(OrderDiv) {
+            var panel = document.getElementById("pnlContents");
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>طباعة الطلب</title>');
+            printWindow.document.write('</head><body dir="rtl" >');
+            printWindow.document.write(panel.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            setTimeout(function () {
+                printWindow.print();
+            }, 500);
+            return false;
+        }
+</script>

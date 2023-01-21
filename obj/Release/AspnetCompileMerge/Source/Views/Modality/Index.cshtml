@@ -1,0 +1,55 @@
+﻿@model IEnumerable<RIS.Models.Modality>
+@using GridMvc.Html
+@using RIS.Resources;
+@{
+    ViewBag.Title = @RIS.Resources.Res.Modalities;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.Modalities</title>
+<div style="margin-top:1%">
+<h2>@RIS.Resources.Res.Modalities</h2>
+
+
+
+<table align="center" style="margin-top:3px;">
+    <tr>
+        <td class="btn btn-primary btn-xs c">
+            @Html.ActionLink(RIS.Resources.Res.addMod.ToString(), "Create")
+        </td>
+    </tr>
+</table>
+
+<hr />
+<div style="padding-left: 5%;padding-right: 5%;">
+    @Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(c => c.name).Titled(Res.Modalityname).Filterable(true);
+    columns.Add(c => c.aeTitle).Titled(Res.AeTitle);
+    columns.Add(c => c.ipAddress).Titled(Res.ipAddress);
+    columns.Add(c => c.port).Titled(Res.port);
+    columns.Add(c => c.type).Titled(Res.ModalityTypename);
+    columns.Add(c => c.description).Titled(Res.description);
+    columns.Add(c => c.modalityDepartement.name).Titled(Res.Departement).RenderValueAs(m => CustomRenderingOfColumn(m));
+
+    columns.Add().Encoded(false).Sanitized(false).SetWidth(50)
+     .RenderValueAs(c => Html.ActionLink(" ", "Edit", new { id = c.num }, new { @title = RIS.Resources.Res.edit, @class = "btn btn-default fa fa-pencil" }) + "&nbsp;&nbsp;" +
+   Html.ActionLink(" ", "Delete", new { id = c.num }, new { @title = RIS.Resources.Res.Delete, @class = "btn btn-danger fa fa-trash" }) + "&nbsp;&nbsp;"
+   ).Encoded(false).Css("flexy").Titled(Res.controlKey);
+
+
+}).WithPaging(5).Sortable()
+</div>
+</div>
+<hr />
+
+@helper CustomRenderingOfColumn(RIS.Models.Modality m)
+{
+if (m.modalityDepartement == null)
+{
+        
+}
+else
+{
+        @m.modalityDepartement.name  
+}
+}

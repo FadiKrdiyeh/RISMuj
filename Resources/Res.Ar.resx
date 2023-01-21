@@ -1,0 +1,1839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="add" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="addDep" xml:space="preserve">
+    <value>إضافة قسم جديد</value>
+  </data>
+  <data name="addMod" xml:space="preserve">
+    <value>إضافة آلة</value>
+  </data>
+  <data name="addNewMod" xml:space="preserve">
+    <value>إضافة نوع آلات جديد</value>
+  </data>
+  <data name="addNewType" xml:space="preserve">
+    <value>إضافة نوع جديد</value>
+  </data>
+  <data name="AddPatient" xml:space="preserve">
+    <value>إضافة مريض</value>
+  </data>
+  <data name="addPatientError" xml:space="preserve">
+    <value>حدث خطأ في إضافة المريض</value>
+  </data>
+  <data name="addProc" xml:space="preserve">
+    <value>إضافة وضعية تصوير</value>
+  </data>
+  <data name="AddRad" xml:space="preserve">
+    <value>إضافة طلب تصوير</value>
+  </data>
+  <data name="AddRadiology" xml:space="preserve">
+    <value>إضافة طلب تصوير</value>
+  </data>
+  <data name="AddUser" xml:space="preserve">
+    <value>إضافة مستخدم جديد</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>مدير نظام</value>
+  </data>
+  <data name="AeTitle" xml:space="preserve">
+    <value>تطبيق الآلة</value>
+  </data>
+  <data name="AeTitleError" xml:space="preserve">
+    <value>يجب إدخال تطبيق الآلة</value>
+  </data>
+  <data name="alreadyExists" xml:space="preserve">
+    <value>هذا المريض موجود مسبقا</value>
+  </data>
+  <data name="backToDepList" xml:space="preserve">
+    <value>رجوع إلى قائمة الأقسام</value>
+  </data>
+  <data name="BackToModalityList" xml:space="preserve">
+    <value>العودة إلى قائمة الآلات</value>
+  </data>
+  <data name="backToModProc" xml:space="preserve">
+    <value>رجوع إلى صفحة وضعيات الآلة</value>
+  </data>
+  <data name="backtoModType" xml:space="preserve">
+    <value>رجوع إلى قائمة أنواع الآلات</value>
+  </data>
+  <data name="backToProcList" xml:space="preserve">
+    <value>العودة إلى قائمة الوضعيات</value>
+  </data>
+  <data name="backToRadList" xml:space="preserve">
+    <value>عودة إلى قائمة الطلبات</value>
+  </data>
+  <data name="Backtouserslist" xml:space="preserve">
+    <value>العودة إلى قائمة المستخدمين</value>
+  </data>
+  <data name="conn" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>الحساب</value>
+  </data>
+  <data name="controlKey" xml:space="preserve">
+    <value>التحكم</value>
+  </data>
+  <data name="CreateRad" xml:space="preserve">
+    <value>إنشاء طلب تصوير</value>
+  </data>
+  <data name="CreateSchRad" xml:space="preserve">
+    <value>إضافة طلب مجدول</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="deleteMod" xml:space="preserve">
+    <value>حذف آلة</value>
+  </data>
+  <data name="deletePat" xml:space="preserve">
+    <value>حذف مريض</value>
+  </data>
+  <data name="deleteProc" xml:space="preserve">
+    <value>حذف وضعية تصوير</value>
+  </data>
+  <data name="deleteuser" xml:space="preserve">
+    <value>حذف مستخدم</value>
+  </data>
+  <data name="delModType" xml:space="preserve">
+    <value>حذف نوع آلة</value>
+  </data>
+  <data name="Departement" xml:space="preserve">
+    <value>القسم</value>
+  </data>
+  <data name="depList" xml:space="preserve">
+    <value>قائمة الأقسام</value>
+  </data>
+  <data name="depName" xml:space="preserve">
+    <value>اسم القسم</value>
+  </data>
+  <data name="depReq" xml:space="preserve">
+    <value>يجب عليك إدخال اسم القسم</value>
+  </data>
+  <data name="deps" xml:space="preserve">
+    <value>الأقسام</value>
+  </data>
+  <data name="DEPTNAMEParameter" xml:space="preserve">
+    <value>القسم</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>تفاصيل الآلة</value>
+  </data>
+  <data name="DID" xml:space="preserve">
+    <value>يوم الإدخال</value>
+  </data>
+  <data name="docId" xml:space="preserve">
+    <value>رقم الوثيقة</value>
+  </data>
+  <data name="DOCIDParameter" xml:space="preserve">
+    <value>رقم الوثيقة</value>
+  </data>
+  <data name="docNum" xml:space="preserve">
+    <value>رقم الوثيقة</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="editMod" xml:space="preserve">
+    <value>تعديل آلة</value>
+  </data>
+  <data name="editModProc" xml:space="preserve">
+    <value>تعديل وضعية الآلة</value>
+  </data>
+  <data name="editModTyp" xml:space="preserve">
+    <value>تعديل نوع آلة</value>
+  </data>
+  <data name="editPat" xml:space="preserve">
+    <value>تعديل بيانات المريض</value>
+  </data>
+  <data name="editPrco" xml:space="preserve">
+    <value>تعديل وضعية تصوير</value>
+  </data>
+  <data name="EditRad" xml:space="preserve">
+    <value>تعديل طلب</value>
+  </data>
+  <data name="edituser" xml:space="preserve">
+    <value>تعديل بيانات مستخدم</value>
+  </data>
+  <data name="EditUserData" xml:space="preserve">
+    <value>تعديل بيانات مستخدم</value>
+  </data>
+  <data name="emergencyOrder" xml:space="preserve">
+    <value>إسعاف</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>موظف</value>
+  </data>
+  <data name="enter" xml:space="preserve">
+    <value>دخول</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>حدث خطأ</value>
+  </data>
+  <data name="errorProc" xml:space="preserve">
+    <value>يجب عليك إضافة اسم الوضعية</value>
+  </data>
+  <data name="female" xml:space="preserve">
+    <value>أنثى</value>
+  </data>
+  <data name="FindPatient" xml:space="preserve">
+    <value>بحث عن مريض</value>
+  </data>
+  <data name="firstPage" xml:space="preserve">
+    <value>الصفحة الأولي</value>
+  </data>
+  <data name="groupByAge" xml:space="preserve">
+    <value>إحصاء حسب العمر</value>
+  </data>
+  <data name="groupByDailyId" xml:space="preserve">
+    <value>إحصاء حسب تاريخ الإدخال بشكل يومي</value>
+  </data>
+  <data name="groupByGendre" xml:space="preserve">
+    <value>إحصائيات حسب الجنس</value>
+  </data>
+  <data name="groupByMonthlyId" xml:space="preserve">
+    <value>إحصاء حسب تاريخ الإدخال بشكل شهري</value>
+  </data>
+  <data name="groupByYearlyId" xml:space="preserve">
+    <value>إحصاء حسب تاريخ الإدخال بشكل سنوي</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="homeTitle" xml:space="preserve">
+    <value>نظام تسجيل طلبات التصوير</value>
+  </data>
+  <data name="hos" xml:space="preserve">
+    <value>الهيئة العامة لمستشفى دمشق</value>
+  </data>
+  <data name="indexPat" xml:space="preserve">
+    <value>سجل المرضى</value>
+  </data>
+  <data name="indexRad" xml:space="preserve">
+    <value>سجل طلبات التصوير</value>
+  </data>
+  <data name="infoChart" xml:space="preserve">
+    <value>عرض الإحصائيات على شكل مخططات</value>
+  </data>
+  <data name="infoTable" xml:space="preserve">
+    <value>عرض النتائج ضمن جدول تفصيلي</value>
+  </data>
+  <data name="insertDate" xml:space="preserve">
+    <value>تاريخ الدخول</value>
+  </data>
+  <data name="insuranceOrder" xml:space="preserve">
+    <value>تأمين/منظمات</value>
+  </data>
+  <data name="Introduction" xml:space="preserve">
+    <value>مقدمة</value>
+  </data>
+  <data name="ipAddress" xml:space="preserve">
+    <value>عنوان الآلة</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="lastPage" xml:space="preserve">
+    <value>الصفحة الأخيرة</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="mainPage" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="male" xml:space="preserve">
+    <value>ذكر</value>
+  </data>
+  <data name="martialMar" xml:space="preserve">
+    <value>متزوج</value>
+  </data>
+  <data name="martialSing" xml:space="preserve">
+    <value>أعزب</value>
+  </data>
+  <data name="MID" xml:space="preserve">
+    <value>شهر الإدخال</value>
+  </data>
+  <data name="Modalities" xml:space="preserve">
+    <value>الآلات</value>
+  </data>
+  <data name="ModalityDepNameError" xml:space="preserve">
+    <value>يتوجب عليك اختيار القسم</value>
+  </data>
+  <data name="Modalityname" xml:space="preserve">
+    <value>اسـم الآلـة</value>
+  </data>
+  <data name="ModalitynameError" xml:space="preserve">
+    <value>يجب إدخال اسم الآلة</value>
+  </data>
+  <data name="MODALITYNAMEParameter" xml:space="preserve">
+    <value>جهاز التصوير</value>
+  </data>
+  <data name="ModalityTypename" xml:space="preserve">
+    <value>نوع الآلة</value>
+  </data>
+  <data name="ModalityTypenameError" xml:space="preserve">
+    <value>يجب إدخال نوع الآلة</value>
+  </data>
+  <data name="modList" xml:space="preserve">
+    <value>قائمة الآلات</value>
+  </data>
+  <data name="modProcError" xml:space="preserve">
+    <value>يتوجب عليك اختيار وضعية تصوير</value>
+  </data>
+  <data name="modProcs" xml:space="preserve">
+    <value>وضعيات الآلة</value>
+  </data>
+  <data name="ModRad" xml:space="preserve">
+    <value>جهاز التصوير</value>
+  </data>
+  <data name="mods" xml:space="preserve">
+    <value>آلات التصوير</value>
+  </data>
+  <data name="modTypeList" xml:space="preserve">
+    <value>قائمة أنواع الآلات</value>
+  </data>
+  <data name="modTypList" xml:space="preserve">
+    <value>قائمة أنواع الآلات</value>
+  </data>
+  <data name="nationalWarn" xml:space="preserve">
+    <value>يجب أن يكون الرقم الوطني 11 خانة فقط</value>
+  </data>
+  <data name="navMod" xml:space="preserve">
+    <value>قائمة الآلات</value>
+  </data>
+  <data name="navPat" xml:space="preserve">
+    <value>قائمة المرضى</value>
+  </data>
+  <data name="navProc" xml:space="preserve">
+    <value>قائمة الوضعيات</value>
+  </data>
+  <data name="navRad" xml:space="preserve">
+    <value>قائمة الطلبات</value>
+  </data>
+  <data name="navType" xml:space="preserve">
+    <value>قائمة أنواع الآلات</value>
+  </data>
+  <data name="navUse" xml:space="preserve">
+    <value>قائمة المستخدمين</value>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>إضافة مستخدم جديد</value>
+  </data>
+  <data name="nextPage" xml:space="preserve">
+    <value>الصفحة التالية</value>
+  </data>
+  <data name="normalOrder" xml:space="preserve">
+    <value>عادي</value>
+  </data>
+  <data name="oderInsertDate" xml:space="preserve">
+    <value>تاريخ إنشاء الطلب</value>
+  </data>
+  <data name="OrderReportTitle" xml:space="preserve">
+    <value>قائمة طلبات التصوير</value>
+  </data>
+  <data name="OrdersNumber" xml:space="preserve">
+    <value>عدد طلبات التصوير</value>
+  </data>
+  <data name="ordersSt" xml:space="preserve">
+    <value>إحصائيات طلبات التصوير</value>
+  </data>
+  <data name="orderType" xml:space="preserve">
+    <value>نوع الطلب</value>
+  </data>
+  <data name="orderTypeReq" xml:space="preserve">
+    <value>يجب عليك اختيار نوع الطلب</value>
+  </data>
+  <data name="page" xml:space="preserve">
+    <value>الصفحة</value>
+  </data>
+  <data name="pass" xml:space="preserve">
+    <value>كــلـمـــة الــمـرور</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كــلـمـــة الــمـرور</value>
+  </data>
+  <data name="Password1" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="patDetails" xml:space="preserve">
+    <value>بيانات المريض</value>
+  </data>
+  <data name="PatientAge" xml:space="preserve">
+    <value>العمر</value>
+  </data>
+  <data name="PatientBirhtDate" xml:space="preserve">
+    <value>تاريخ الولادة</value>
+  </data>
+  <data name="PatientBirthplace" xml:space="preserve">
+    <value>مكان الولادة</value>
+  </data>
+  <data name="PatientCurrentaddress" xml:space="preserve">
+    <value>العنوان الحالي</value>
+  </data>
+  <data name="PatientFirstname" xml:space="preserve">
+    <value>الاسم </value>
+  </data>
+  <data name="PatientFirstnameError" xml:space="preserve">
+    <value>يتوجب إدخال اسم المريض</value>
+  </data>
+  <data name="PatientGendre" xml:space="preserve">
+    <value>الجنس</value>
+  </data>
+  <data name="PatientGivenId" xml:space="preserve">
+    <value>رقم المريض</value>
+  </data>
+  <data name="PatientGivenIdError" xml:space="preserve">
+    <value>يتوجب إدخال رقم المريض</value>
+  </data>
+  <data name="PatientInsertdate" xml:space="preserve">
+    <value>تاريخ تسجيل المريض</value>
+  </data>
+  <data name="patientLable" xml:space="preserve">
+    <value>المريض</value>
+  </data>
+  <data name="PatientLandphone" xml:space="preserve">
+    <value>الهاتف الأرضي</value>
+  </data>
+  <data name="PatientLastname" xml:space="preserve">
+    <value>الكنية</value>
+  </data>
+  <data name="PatientLastnameError" xml:space="preserve">
+    <value>يتوجب إدخال كنية المريض</value>
+  </data>
+  <data name="PatientMartialstatus" xml:space="preserve">
+    <value>الحالة العائلية</value>
+  </data>
+  <data name="PatientMiddlename" xml:space="preserve">
+    <value>اسم الأب</value>
+  </data>
+  <data name="PatientMobilephone" xml:space="preserve">
+    <value>رقم الموبايل</value>
+  </data>
+  <data name="PatientMothername" xml:space="preserve">
+    <value>اسم الأم</value>
+  </data>
+  <data name="PATIENTNAMEParameter" xml:space="preserve">
+    <value>المريض</value>
+  </data>
+  <data name="PatientNationalidnumber" xml:space="preserve">
+    <value>الرقم الوطني</value>
+  </data>
+  <data name="PatientNationality" xml:space="preserve">
+    <value>الجنسية</value>
+  </data>
+  <data name="PatientNearestperson" xml:space="preserve">
+    <value>اسم أقرب شخص</value>
+  </data>
+  <data name="PatientNearestpersonphone" xml:space="preserve">
+    <value>رقم هاتف أقرب شخص</value>
+  </data>
+  <data name="PatientNotes" xml:space="preserve">
+    <value>الملاحظات الأولية والتشخيص المبدئي</value>
+  </data>
+  <data name="PatientOtherInfo" xml:space="preserve">
+    <value>معلومات أخرى</value>
+  </data>
+  <data name="PatientResidentaddress" xml:space="preserve">
+    <value>عنوان الإقامة</value>
+  </data>
+  <data name="PatientsNumber" xml:space="preserve">
+    <value>عدد المرضى</value>
+  </data>
+  <data name="PatientWorkaddress" xml:space="preserve">
+    <value>عنوان العمل</value>
+  </data>
+  <data name="PatientWorkphone" xml:space="preserve">
+    <value>هاتف العمل</value>
+  </data>
+  <data name="PatientWorktype" xml:space="preserve">
+    <value>طبيعة العمل</value>
+  </data>
+  <data name="patList" xml:space="preserve">
+    <value>رجوع إلى قائمة المرضى</value>
+  </data>
+  <data name="PatRepTitle" xml:space="preserve">
+    <value>قائمة المرضى</value>
+  </data>
+  <data name="patSearch" xml:space="preserve">
+    <value>بحث عن مريض</value>
+  </data>
+  <data name="patStat" xml:space="preserve">
+    <value>إحصائيات المرضى</value>
+  </data>
+  <data name="port" xml:space="preserve">
+    <value>بوابة الآلة</value>
+  </data>
+  <data name="previousPage" xml:space="preserve">
+    <value>الصفحة السابقة</value>
+  </data>
+  <data name="procedure" xml:space="preserve">
+    <value>وضعيات التصوير</value>
+  </data>
+  <data name="procedureCode" xml:space="preserve">
+    <value>كلفة هذه الصورة</value>
+  </data>
+  <data name="procedureName" xml:space="preserve">
+    <value>وضعية التصوير</value>
+  </data>
+  <data name="procEnName" xml:space="preserve">
+    <value>المصطلح باللغة الإنكليزية</value>
+  </data>
+  <data name="procs" xml:space="preserve">
+    <value>وضعيات التصوير</value>
+  </data>
+  <data name="radDetails" xml:space="preserve">
+    <value>بيانات طلب التصوير</value>
+  </data>
+  <data name="RadDoc" xml:space="preserve">
+    <value>اسم الطبيب</value>
+  </data>
+  <data name="RadiologyOrder" xml:space="preserve">
+    <value>طلب تصوير</value>
+  </data>
+  <data name="RadMod" xml:space="preserve">
+    <value>جهاز التصوير</value>
+  </data>
+  <data name="RadModError" xml:space="preserve">
+    <value>يجب عليك تحديد جهاز التصوير</value>
+  </data>
+  <data name="RadProce" xml:space="preserve">
+    <value>وضعية التصوير</value>
+  </data>
+  <data name="RadProceError" xml:space="preserve">
+    <value>يجب عليك اختيار وضعية التصوير</value>
+  </data>
+  <data name="radSearch" xml:space="preserve">
+    <value>بحث في الطلبات</value>
+  </data>
+  <data name="RadSendError" xml:space="preserve">
+    <value>حدث خطأ في إرسال الطلب</value>
+  </data>
+  <data name="RadSubmit" xml:space="preserve">
+    <value>تسليم الطلب</value>
+  </data>
+  <data name="referralOrder" xml:space="preserve">
+    <value>إحالة</value>
+  </data>
+  <data name="regPage" xml:space="preserve">
+    <value>رجوع إلى صفحة التسجيل</value>
+  </data>
+  <data name="requiredfirstname" xml:space="preserve">
+    <value>يجب إدخال الاسم </value>
+  </data>
+  <data name="requiredlastname" xml:space="preserve">
+    <value>يجب إدخال الكنية</value>
+  </data>
+  <data name="requiredrole" xml:space="preserve">
+    <value>يجب تحديد صلاحيات المستخدم</value>
+  </data>
+  <data name="requiredusername" xml:space="preserve">
+    <value>يجب إدخال اسم المستخدم</value>
+  </data>
+  <data name="requireduserpass" xml:space="preserve">
+    <value>يجب إدخال كلمة المرور</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>صلاحيات المستخدم</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="searchParas" xml:space="preserve">
+    <value>معاملات البحث</value>
+  </data>
+  <data name="showChart" xml:space="preserve">
+    <value>عرض المخطط</value>
+  </data>
+  <data name="similarPatient" xml:space="preserve">
+    <value>مرضى مشابهين</value>
+  </data>
+  <data name="sinceDate" xml:space="preserve">
+    <value>منذ</value>
+  </data>
+  <data name="STARTDATEParameter" xml:space="preserve">
+    <value>تاريخ البدء</value>
+  </data>
+  <data name="statistics" xml:space="preserve">
+    <value>الإحصائيات</value>
+  </data>
+  <data name="studyID" xml:space="preserve">
+    <value>رقم الدراسة</value>
+  </data>
+  <data name="surDelDep" xml:space="preserve">
+    <value>هل تريد حذف هذا القسم؟</value>
+  </data>
+  <data name="surDelMod" xml:space="preserve">
+    <value>هل تريد حذف هذه الآلة؟</value>
+  </data>
+  <data name="surDelModTyp" xml:space="preserve">
+    <value>هل تريد حذف نوع الآلة هذا ؟</value>
+  </data>
+  <data name="surDelProc" xml:space="preserve">
+    <value>هل تريد حذف وضعية التصوير هذه؟</value>
+  </data>
+  <data name="surDelTyp" xml:space="preserve">
+    <value>هل تريد حذف هذا النوع من الآلات؟</value>
+  </data>
+  <data name="sureDeletePat" xml:space="preserve">
+    <value>هل تريد حذف هذا المريض؟</value>
+  </data>
+  <data name="suredeleteuser" xml:space="preserve">
+    <value>هل أنت متأكد؟</value>
+  </data>
+  <data name="toDate" xml:space="preserve">
+    <value>حتى</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>مستخدم</value>
+  </data>
+  <data name="userDupl" xml:space="preserve">
+    <value>اسم المستخدم المدخل موجود مسبقا</value>
+  </data>
+  <data name="userFn" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="userLn" xml:space="preserve">
+    <value>الكنية</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>اســم المســتخدم</value>
+  </data>
+  <data name="UserName1" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>صلاحيات المستخدم</value>
+  </data>
+  <data name="UsersList" xml:space="preserve">
+    <value>قائمة المستخدمين</value>
+  </data>
+  <data name="wel" xml:space="preserve">
+    <value>أهلاً</value>
+  </data>
+  <data name="YID" xml:space="preserve">
+    <value>سنة الإدخال</value>
+  </data>
+  <data name="ConnectError" xml:space="preserve">
+    <value>خطأ في الاتصال بالمخدم</value>
+  </data>
+  <data name="OrderStartDate" xml:space="preserve">
+    <value>وقت الطلب</value>
+  </data>
+  <data name="StartOrder" xml:space="preserve">
+    <value>بدء</value>
+  </data>
+  <data name="COMPLETED" xml:space="preserve">
+    <value>منجز</value>
+  </data>
+  <data name="SCHEDUALED" xml:space="preserve">
+    <value>مجدول</value>
+  </data>
+  <data name="STARTED" xml:space="preserve">
+    <value>قيد التنفيذ</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>إلى</value>
+  </data>
+  <data name="indexRadStatus" xml:space="preserve">
+    <value>معالجة طلبات التصوير</value>
+  </data>
+  <data name="sureDeleteRad" xml:space="preserve">
+    <value>هل تريد حذف هذا الطلب؟</value>
+  </data>
+  <data name="navRadStat" xml:space="preserve">
+    <value>معالجة الطلبات</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>اسم المجموعة</value>
+  </data>
+  <data name="addNewGroup" xml:space="preserve">
+    <value>إضافة مجموعة</value>
+  </data>
+  <data name="backtoGroups" xml:space="preserve">
+    <value>عودة إلى قائمة المجموعات</value>
+  </data>
+  <data name="delGroup" xml:space="preserve">
+    <value>حذف مجموعة</value>
+  </data>
+  <data name="editGroup" xml:space="preserve">
+    <value>تعديل مجموعة</value>
+  </data>
+  <data name="groupList" xml:space="preserve">
+    <value>قائمة المجموعات</value>
+  </data>
+  <data name="GroupNameError" xml:space="preserve">
+    <value>يجب إدخال اسم المجموعة</value>
+  </data>
+  <data name="surDelGroup" xml:space="preserve">
+    <value>هل تريد حذف هذه المجموعة؟</value>
+  </data>
+  <data name="groupDetails" xml:space="preserve">
+    <value>تفاصيل المجموعة</value>
+  </data>
+  <data name="groupPermissions" xml:space="preserve">
+    <value>صلاحيات المجموعة</value>
+  </data>
+  <data name="PermissionName" xml:space="preserve">
+    <value>اسم الصلاحية</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>قائمة الصلاحيات</value>
+  </data>
+  <data name="UserCreate" xml:space="preserve">
+    <value>اضافة مستخدم جديد</value>
+  </data>
+  <data name="UserDelete" xml:space="preserve">
+    <value>حذف مستخدم</value>
+  </data>
+  <data name="UserEdit" xml:space="preserve">
+    <value>تعديل بيانات مستخدم</value>
+  </data>
+  <data name="UserIndex" xml:space="preserve">
+    <value>عرض المستخدمين</value>
+  </data>
+  <data name="UnsPermErrorMessage" xml:space="preserve">
+    <value>لا تملك صلاحية إتمام هذا الإجراء. أعد تسجيل الدخول بحساب آخر يملك الصلاحيات الكافية لإتمام هذا الإجراء</value>
+  </data>
+  <data name="groupPerms" xml:space="preserve">
+    <value>صلاحيات المجموعة</value>
+  </data>
+  <data name="userDetails" xml:space="preserve">
+    <value>تفاصيل المستخدم</value>
+  </data>
+  <data name="userGroups" xml:space="preserve">
+    <value>مجموعات المستخدم</value>
+  </data>
+  <data name="requireddepartment" xml:space="preserve">
+    <value>يجب تحديد قسم المستخدم</value>
+  </data>
+  <data name="DepartmentCreate" xml:space="preserve">
+    <value>إضافة قسم</value>
+  </data>
+  <data name="DepartmentDelete" xml:space="preserve">
+    <value>حذف قسم</value>
+  </data>
+  <data name="DepartmentEdit" xml:space="preserve">
+    <value>تعديل قسم</value>
+  </data>
+  <data name="DepartmentIndex" xml:space="preserve">
+    <value>عرض قائمة الأقسام</value>
+  </data>
+  <data name="GroupCreate" xml:space="preserve">
+    <value>إنشاء مجموعة</value>
+  </data>
+  <data name="GroupDelete" xml:space="preserve">
+    <value>حذف مجموعة</value>
+  </data>
+  <data name="GroupEdit" xml:space="preserve">
+    <value>تعديل مجموعة</value>
+  </data>
+  <data name="GroupIndex" xml:space="preserve">
+    <value>عرض قائمة المجموعات</value>
+  </data>
+  <data name="ModalityCreate" xml:space="preserve">
+    <value>إضافة آلة</value>
+  </data>
+  <data name="ModalityDelete" xml:space="preserve">
+    <value>حذف آلة</value>
+  </data>
+  <data name="ModalityEdit" xml:space="preserve">
+    <value>تعديل آلة</value>
+  </data>
+  <data name="ModalityIndex" xml:space="preserve">
+    <value>عرض قائمة الآلات</value>
+  </data>
+  <data name="ModalityTypeCreate" xml:space="preserve">
+    <value>إضافة نوع آلة</value>
+  </data>
+  <data name="ModalityTypeDelete" xml:space="preserve">
+    <value>حذف نوع آلة</value>
+  </data>
+  <data name="ModalityTypeEdit" xml:space="preserve">
+    <value>تعديل نوع آلة</value>
+  </data>
+  <data name="ModalityTypeIndex" xml:space="preserve">
+    <value>عرض قائمة أنواع الآلات</value>
+  </data>
+  <data name="PatientCreate" xml:space="preserve">
+    <value>إضافة مريض جديد</value>
+  </data>
+  <data name="PatientDelete" xml:space="preserve">
+    <value>حذف مريض</value>
+  </data>
+  <data name="PatientDetails" xml:space="preserve">
+    <value>عرض تفاصيل مريض</value>
+  </data>
+  <data name="PatientEdit" xml:space="preserve">
+    <value>تعديل بيانات مريض</value>
+  </data>
+  <data name="PatientIndex" xml:space="preserve">
+    <value>عرض قائمة المرضى</value>
+  </data>
+  <data name="PermsIndex" xml:space="preserve">
+    <value>عرض قائمة الصلاحيات</value>
+  </data>
+  <data name="ProcedureCreate" xml:space="preserve">
+    <value>إضافة وضعية تصوير</value>
+  </data>
+  <data name="ProcedureDelete" xml:space="preserve">
+    <value>حذف وضعية تصوير</value>
+  </data>
+  <data name="ProcedureEdit" xml:space="preserve">
+    <value>تعديل وضعية تصوير</value>
+  </data>
+  <data name="ProcedureIndex" xml:space="preserve">
+    <value>عرض قائمة وضعيات التصوير</value>
+  </data>
+  <data name="RadiologyCreate" xml:space="preserve">
+    <value>إضافة طلب تصوير</value>
+  </data>
+  <data name="RadiologyCreateSchedualed" xml:space="preserve">
+    <value>إضافة طلب تصوير مجدول</value>
+  </data>
+  <data name="RadiologyDelete" xml:space="preserve">
+    <value>حذف طلب تصوير</value>
+  </data>
+  <data name="RadiologyDetails" xml:space="preserve">
+    <value>عرض تفاصيل طلب تصوير</value>
+  </data>
+  <data name="RadiologyEdit" xml:space="preserve">
+    <value>تعديل طلب تصوير</value>
+  </data>
+  <data name="RadiologyIndex" xml:space="preserve">
+    <value>عرض قائمة طلبات التصوير</value>
+  </data>
+  <data name="RadiologyOrderStatus" xml:space="preserve">
+    <value>عرض حالة طلبات التصوير</value>
+  </data>
+  <data name="StatsIndex" xml:space="preserve">
+    <value>عرض الإحصائيات</value>
+  </data>
+  <data name="StatsOrders" xml:space="preserve">
+    <value>عرض إحصائيات طلبات التصوير</value>
+  </data>
+  <data name="StatsPatient" xml:space="preserve">
+    <value>عرض إحصائيات المرضى</value>
+  </data>
+  <data name="GroupDetailsPerm" xml:space="preserve">
+    <value>عرض تفاصيل مجموعة</value>
+  </data>
+  <data name="UserDtails" xml:space="preserve">
+    <value>عرض تفاصيل مستخدم</value>
+  </data>
+  <data name="LoginFaild" xml:space="preserve">
+    <value>تأكد من اسم المستخدم وكلمة المرور!</value>
+  </data>
+  <data name="ErrorYouCant" xml:space="preserve">
+    <value>لا يمكنك القيام بهذه العملية</value>
+  </data>
+  <data name="groups" xml:space="preserve">
+    <value>المجموعات</value>
+  </data>
+  <data name="modies" xml:space="preserve">
+    <value>الآلات</value>
+  </data>
+  <data name="orders" xml:space="preserve">
+    <value>طلبات التصوير</value>
+  </data>
+  <data name="patients" xml:space="preserve">
+    <value>المرضى</value>
+  </data>
+  <data name="perms" xml:space="preserve">
+    <value>الصلاحيات</value>
+  </data>
+  <data name="users" xml:space="preserve">
+    <value>المستخدمون</value>
+  </data>
+  <data name="departments" xml:space="preserve">
+    <value>الأقسام</value>
+  </data>
+  <data name="procedures" xml:space="preserve">
+    <value>وضعيات التصوير</value>
+  </data>
+  <data name="requireduserDept" xml:space="preserve">
+    <value>يجب اختيار قسم</value>
+  </data>
+  <data name="BarCodePrint" xml:space="preserve">
+    <value>طباعة الباركود</value>
+  </data>
+  <data name="CantDeletePatient" xml:space="preserve">
+    <value>لا يمكنك حذف بيانات هذا المريض</value>
+  </data>
+  <data name="CantDeleteModality" xml:space="preserve">
+    <value>لا يمكنك حذف هذه الآلة</value>
+  </data>
+  <data name="CantDeleteDepartment" xml:space="preserve">
+    <value>لا يمكنك حذف هذا القسم</value>
+  </data>
+  <data name="CantDeleteModalityType" xml:space="preserve">
+    <value>لا يمكنك حذف نوع الآلة هذا</value>
+  </data>
+  <data name="CantDeleteProcedure" xml:space="preserve">
+    <value>لا يمكنك حذف وضعية التصوير هذه</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>حالة الطلب</value>
+  </data>
+  <data name="patOrders" xml:space="preserve">
+    <value>طلبات المريض</value>
+  </data>
+  <data name="RequiredValues" xml:space="preserve">
+    <value>الحقول الاجبارية</value>
+  </data>
+  <data name="alertRequired" xml:space="preserve">
+    <value>هذا الحقل يجب ألّا يكون فارغاً</value>
+  </data>
+  <data name="PatientBirthdate" xml:space="preserve">
+    <value>تاريخ الولادة</value>
+  </data>
+  <data name="PatientDocumnetId" xml:space="preserve">
+    <value>رقم الوثيقة للطلب</value>
+  </data>
+  <data name="PatientDoctor" xml:space="preserve">
+    <value>الطبيب المرسل للطلب</value>
+  </data>
+  <data name="reqField" xml:space="preserve">
+    <value>الحقل</value>
+  </data>
+  <data name="reqFieldManage" xml:space="preserve">
+    <value>إدارة إدخال الحقول الاجبارية</value>
+  </data>
+  <data name="required" xml:space="preserve">
+    <value>إجباري</value>
+  </data>
+  <data name="requiredStartDate" xml:space="preserve">
+    <value>يجب إدخال تاريخ الصورة</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="rowsPerPage" xml:space="preserve">
+    <value>عدد الأسطر في الصفحة</value>
+  </data>
+  <data name="doneSuccessfully" xml:space="preserve">
+    <value>تمت العملية بنجاح</value>
+  </data>
+  <data name="OrderEndDate" xml:space="preserve">
+    <value>تاريخ الانتهاء</value>
+  </data>
+  <data name="AccNum" xml:space="preserve">
+    <value>رقم الدخول</value>
+  </data>
+  <data name="NotEmptyAtt" xml:space="preserve">
+    <value>لا يجب أن يكون فارغاً</value>
+  </data>
+  <data name="Waiting" xml:space="preserve">
+    <value>انتظار</value>
+  </data>
+  <data name="WaitingRad" xml:space="preserve">
+    <value>سجل طلبات الانتظار</value>
+  </data>
+  <data name="InsertDateParameter" xml:space="preserve">
+    <value>تاريخ الإدخال</value>
+  </data>
+  <data name="InsertUser" xml:space="preserve">
+    <value>منفّذ العملية</value>
+  </data>
+  <data name="OrderRegStatus" xml:space="preserve">
+    <value>حالة التسجيل</value>
+  </data>
+  <data name="UpdateDeleteReason" xml:space="preserve">
+    <value>سبب العملية</value>
+  </data>
+  <data name="UpdateDate" xml:space="preserve">
+    <value>تاريخ التعديل</value>
+  </data>
+  <data name="UpdateUser" xml:space="preserve">
+    <value>المستخدم المعدل</value>
+  </data>
+  <data name="audit" xml:space="preserve">
+    <value>مراقبة</value>
+  </data>
+  <data name="ordersAudit" xml:space="preserve">
+    <value>مراقبة تسجيل طلبات التصوير</value>
+  </data>
+  <data name="patAudit" xml:space="preserve">
+    <value>مراقبة تسجيل المرضى</value>
+  </data>
+  <data name="mnmAlert" xml:space="preserve">
+    <value>يجب عليك تحديد كل من تاريخ بداية ونهاية البحث</value>
+  </data>
+  <data name="mnmChoMod" xml:space="preserve">
+    <value>اختر جهاز التصوير</value>
+  </data>
+  <data name="mnmCurrentDate" xml:space="preserve">
+    <value>الموعد المحدد</value>
+  </data>
+  <data name="mnmFr" xml:space="preserve">
+    <value>الجمعة</value>
+  </data>
+  <data name="mnmMin" xml:space="preserve">
+    <value>دقيقة</value>
+  </data>
+  <data name="mnmMon" xml:space="preserve">
+    <value>الأثنين</value>
+  </data>
+  <data name="mnmNextDate" xml:space="preserve">
+    <value>الموعد الجديد</value>
+  </data>
+  <data name="mnmOrderInfo" xml:space="preserve">
+    <value>معلومات طلب التصوير</value>
+  </data>
+  <data name="mnmRadiologyCalendar" xml:space="preserve">
+    <value>مفكرة طلبات التصوير</value>
+  </data>
+  <data name="mnmRetrieve" xml:space="preserve">
+    <value>يتم الآن جلب المعطيات</value>
+  </data>
+  <data name="mnmSat" xml:space="preserve">
+    <value>السبت</value>
+  </data>
+  <data name="mnmSince" xml:space="preserve">
+    <value>منذ</value>
+  </data>
+  <data name="mnmSun" xml:space="preserve">
+    <value>الأحد</value>
+  </data>
+  <data name="mnmTh" xml:space="preserve">
+    <value>الخميس</value>
+  </data>
+  <data name="mnmTo" xml:space="preserve">
+    <value>حتى</value>
+  </data>
+  <data name="mnmTues" xml:space="preserve">
+    <value>الثلاثاء</value>
+  </data>
+  <data name="mnmWed" xml:space="preserve">
+    <value>الأربعاء</value>
+  </data>
+  <data name="NewInfo" xml:space="preserve">
+    <value>البيانات الجديدة</value>
+  </data>
+  <data name="mnmRegStatus" xml:space="preserve">
+    <value>العملية</value>
+  </data>
+  <data name="mnmIndexAudit" xml:space="preserve">
+    <value>سجل طلبات التصوير المعدلة</value>
+  </data>
+  <data name="DoctorName" xml:space="preserve">
+    <value>اسم الطبيب</value>
+  </data>
+  <data name="addDoctor" xml:space="preserve">
+    <value>إضافة طبيب</value>
+  </data>
+  <data name="navDoctors" xml:space="preserve">
+    <value>قائمة الأطباء</value>
+  </data>
+  <data name="mnmAlert1" xml:space="preserve">
+    <value>تأكد من أن تاريخ بداية البحث أصغر من تاريخ نهاية البحث</value>
+  </data>
+  <data name="BackToDoctorsList" xml:space="preserve">
+    <value>عودة إلى قائمة الأطباء</value>
+  </data>
+  <data name="DoctorDescription" xml:space="preserve">
+    <value>التوصيف الوظيفي للطبيب</value>
+  </data>
+  <data name="DoctorNameError" xml:space="preserve">
+    <value>يجب إدخال اسم الطبيب</value>
+  </data>
+  <data name="deleteDoctor" xml:space="preserve">
+    <value>حذف طبيب</value>
+  </data>
+  <data name="surDelDoctor" xml:space="preserve">
+    <value>هل تريد حذف هذا الطبيب؟</value>
+  </data>
+  <data name="editDoctor" xml:space="preserve">
+    <value>تعديل بيانات طبيب</value>
+  </data>
+  <data name="mangLabel" xml:space="preserve">
+    <value>إدارة</value>
+  </data>
+  <data name="newPatDetails" xml:space="preserve">
+    <value>المعلومات الحالية للمريض</value>
+  </data>
+  <data name="newRadDetails" xml:space="preserve">
+    <value>المعلومات الحالية لطلب التصوير</value>
+  </data>
+  <data name="oldPatDetails" xml:space="preserve">
+    <value>المعلومات القديمة للمريض</value>
+  </data>
+  <data name="oldRadDetails" xml:space="preserve">
+    <value>المعلومات القديمة لطلب التصوير</value>
+  </data>
+  <data name="repeatPass" xml:space="preserve">
+    <value>تأكيد كلمة المرور</value>
+  </data>
+  <data name="checkRepPass" xml:space="preserve">
+    <value>يجب ان تكون كلمة المرور متطابقة مع التأكيد</value>
+  </data>
+  <data name="editMyuser" xml:space="preserve">
+    <value>تعديل بيانات حسابي</value>
+  </data>
+  <data name="EmptyProcedueError" xml:space="preserve">
+    <value>يجب إدخال اسم وضعية التصوير</value>
+  </data>
+  <data name="DBStatus" xml:space="preserve">
+    <value>حالة قاعدة المعطيات</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>تفاصيل</value>
+  </data>
+  <data name="NoNetworkOnPacs" xml:space="preserve">
+    <value>تأكد من الاتصال بالمخدم</value>
+  </data>
+  <data name="PacsServiceOff" xml:space="preserve">
+    <value>الخدمة لا تعمل</value>
+  </data>
+  <data name="PacsServiceOn" xml:space="preserve">
+    <value>الخدمة تعمل بشكل جيد</value>
+  </data>
+  <data name="PacsStatus" xml:space="preserve">
+    <value>حالة الباكس</value>
+  </data>
+  <data name="RISStatus" xml:space="preserve">
+    <value>حالة الريس</value>
+  </data>
+  <data name="server" xml:space="preserve">
+    <value>المخدم</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="systemStat" xml:space="preserve">
+    <value>حالة النظام</value>
+  </data>
+  <data name="patFree" xml:space="preserve">
+    <value>مجاني</value>
+  </data>
+  <data name="patPayed" xml:space="preserve">
+    <value>مأجور</value>
+  </data>
+  <data name="patTypeError" xml:space="preserve">
+    <value>يجب اختيار نوع القبول</value>
+  </data>
+  <data name="radPayReason" xml:space="preserve">
+    <value>السبب</value>
+  </data>
+  <data name="radPayType" xml:space="preserve">
+    <value>نوع القبول</value>
+  </data>
+  <data name="tshCantDeleteRecord" xml:space="preserve">
+    <value>لا يمكن حذف السجل لأنه مرتبط بجداول أخرى</value>
+  </data>
+  <data name="tshIndexName" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="tshIndexNameReq" xml:space="preserve">
+    <value>الاسم إجباري</value>
+  </data>
+  <data name="tshNavHealthCardType" xml:space="preserve">
+    <value>أنواع البطاقات الصحية</value>
+  </data>
+  <data name="tshNavMilDegree" xml:space="preserve">
+    <value>الرتب العسكرية</value>
+  </data>
+  <data name="tshNavMilMainUnit" xml:space="preserve">
+    <value>الوحدات العسكرية</value>
+  </data>
+  <data name="tshNavMilServiceType" xml:space="preserve">
+    <value>نوع الخدمة العسكرية</value>
+  </data>
+  <data name="tshNavRecoveryType" xml:space="preserve">
+    <value>أنواع الاستشفاء</value>
+  </data>
+  <data name="tshAcceptanceType" xml:space="preserve">
+    <value>نوع القبول</value>
+  </data>
+  <data name="tshaddHealthCardType" xml:space="preserve">
+    <value>إضافة نوع البطاقة الصحية</value>
+  </data>
+  <data name="tshaddMilDegree" xml:space="preserve">
+    <value>إضافة رتبة عسكرية</value>
+  </data>
+  <data name="tshaddMilMainUnit" xml:space="preserve">
+    <value>إضافة الوحدات الرئيسية</value>
+  </data>
+  <data name="tshaddMilServiceType" xml:space="preserve">
+    <value>إضافة نوع الخدمة</value>
+  </data>
+  <data name="tshaddRecoveryType" xml:space="preserve">
+    <value>إضافة نوع استشفاء</value>
+  </data>
+  <data name="tshbackToList" xml:space="preserve">
+    <value>العودة للقائمة</value>
+  </data>
+  <data name="tshdeleteHealthCardType" xml:space="preserve">
+    <value>حذف نوع البطاقة الصحية</value>
+  </data>
+  <data name="tshdeleteMilDegree" xml:space="preserve">
+    <value>حذف رتبة عسكرية</value>
+  </data>
+  <data name="tshdeleteMilMainUnit" xml:space="preserve">
+    <value>حذف الوحدات الرئيسية</value>
+  </data>
+  <data name="tshdeleteMilServiceType" xml:space="preserve">
+    <value>حذف نوع الخدمة</value>
+  </data>
+  <data name="tshdeleteRecoveryType" xml:space="preserve">
+    <value>حذف نوع استشفاء</value>
+  </data>
+  <data name="tshEditHealthCardType" xml:space="preserve">
+    <value>تعديل نوع البطاقة الصحية</value>
+  </data>
+  <data name="tshEditMilDegree" xml:space="preserve">
+    <value>تعديل رتبة عسكرية</value>
+  </data>
+  <data name="tshEditMilMainUnit" xml:space="preserve">
+    <value>تعديل الوحدات الرئيسية</value>
+  </data>
+  <data name="tshEditMilServiceType" xml:space="preserve">
+    <value>تعديل نوع الخدمة</value>
+  </data>
+  <data name="tshEditRecoveryType" xml:space="preserve">
+    <value>تعديل نوع استشفاء</value>
+  </data>
+  <data name="tshHealthCard" xml:space="preserve">
+    <value>بطاقة صحية</value>
+  </data>
+  <data name="tshhealthCardType" xml:space="preserve">
+    <value>البطاقة الصحية</value>
+  </data>
+  <data name="tshMil" xml:space="preserve">
+    <value>عسكري</value>
+  </data>
+  <data name="tshMilDegree" xml:space="preserve">
+    <value>الرتبة</value>
+  </data>
+  <data name="tshmilMainUnit" xml:space="preserve">
+    <value>الوحدة الرئيسية</value>
+  </data>
+  <data name="tshmilNum" xml:space="preserve">
+    <value>الرقم العسكري</value>
+  </data>
+  <data name="tshmilServiceType" xml:space="preserve">
+    <value>نوع الخدمة</value>
+  </data>
+  <data name="tshmilUnit" xml:space="preserve">
+    <value>الوحدة</value>
+  </data>
+  <data name="tshRecovery" xml:space="preserve">
+    <value>استشفاء</value>
+  </data>
+  <data name="tshRecoveryType" xml:space="preserve">
+    <value>رقم الاستشفاء</value>
+  </data>
+  <data name="tshSurDelGeniricIndex" xml:space="preserve">
+    <value>هل أنت متأكد، تريد حذف هذا السجل؟</value>
+  </data>
+  <data name="tshaddClinic" xml:space="preserve">
+    <value>إضافة عيادة/شعبة</value>
+  </data>
+  <data name="tshClinicSec" xml:space="preserve">
+    <value>العــــيادة/الشـــعبة</value>
+  </data>
+  <data name="tshdeleteClinic" xml:space="preserve">
+    <value>حذف عيادة/شعبة</value>
+  </data>
+  <data name="tshDoctor" xml:space="preserve">
+    <value>طبيب</value>
+  </data>
+  <data name="tshEditClinic" xml:space="preserve">
+    <value>تعديل عيادة/شعبة</value>
+  </data>
+  <data name="tshEmp" xml:space="preserve">
+    <value>موظف</value>
+  </data>
+  <data name="tshIsDoctor" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="tshNavClinic" xml:space="preserve">
+    <value>العيادات والشعب</value>
+  </data>
+  <data name="tshModType" xml:space="preserve">
+    <value>نوع الآلة</value>
+  </data>
+  <data name="tshSend" xml:space="preserve">
+    <value>إرسال</value>
+  </data>
+  <data name="tshSendOrder" xml:space="preserve">
+    <value>إرسال الطلب</value>
+  </data>
+  <data name="tshOrderStatu" xml:space="preserve">
+    <value>متابعة طلبات التصوير</value>
+  </data>
+  <data name="tshREPORTED" xml:space="preserve">
+    <value>كتب التقرير</value>
+  </data>
+  <data name="tshVIEWED" xml:space="preserve">
+    <value>تم الاستعراض</value>
+  </data>
+  <data name="mnm_addRep" xml:space="preserve">
+    <value>إضافة تقرير</value>
+  </data>
+  <data name="mnm_aud" xml:space="preserve">
+    <value>الملف الصوتي</value>
+  </data>
+  <data name="mnm_birthdate" xml:space="preserve">
+    <value>تاريخ الولادة</value>
+  </data>
+  <data name="mnm_create" xml:space="preserve">
+    <value>إضافة تقرير</value>
+  </data>
+  <data name="mnm_dele" xml:space="preserve">
+    <value>حذف التسجيل</value>
+  </data>
+  <data name="mnm_edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="mnm_editedRep" xml:space="preserve">
+    <value>نسخة معدل من التقرير رقم:</value>
+  </data>
+  <data name="mnm_imageDate" xml:space="preserve">
+    <value>تاريخ الصورة</value>
+  </data>
+  <data name="mnm_imageType" xml:space="preserve">
+    <value>نوع الصورة</value>
+  </data>
+  <data name="mnm_next" xml:space="preserve">
+    <value>التالي</value>
+  </data>
+  <data name="mnm_noResults" xml:space="preserve">
+    <value>لايوجد نتائج</value>
+  </data>
+  <data name="mnm_not" xml:space="preserve">
+    <value>الملخص</value>
+  </data>
+  <data name="mnm_of" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="mnm_orderStatus" xml:space="preserve">
+    <value>حالة الطلب</value>
+  </data>
+  <data name="mnm_patname" xml:space="preserve">
+    <value>اسم المريض</value>
+  </data>
+  <data name="mnm_patStudies" xml:space="preserve">
+    <value>دراسات المريض</value>
+  </data>
+  <data name="mnm_pos" xml:space="preserve">
+    <value>وضعية الصورة</value>
+  </data>
+  <data name="mnm_prev" xml:space="preserve">
+    <value>السابق</value>
+  </data>
+  <data name="mnm_prin" xml:space="preserve">
+    <value>معيانة وطباعة</value>
+  </data>
+  <data name="mnm_rec" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="mnm_refph" xml:space="preserve">
+    <value>فني الأشعة</value>
+  </data>
+  <data name="mnm_rep" xml:space="preserve">
+    <value>التقرير</value>
+  </data>
+  <data name="mnm_repDate" xml:space="preserve">
+    <value>تاريخ التقرير</value>
+  </data>
+  <data name="mnm_repDoc" xml:space="preserve">
+    <value>اسم الطبيب</value>
+  </data>
+  <data name="mnm_results" xml:space="preserve">
+    <value>نتائج</value>
+  </data>
+  <data name="mnm_savaPrint" xml:space="preserve">
+    <value>حفظ وطباعة</value>
+  </data>
+  <data name="mnm_search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="mnm_sendingDoctor" xml:space="preserve">
+    <value>الطبيب المرسل</value>
+  </data>
+  <data name="mnm_show" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="mnm_showRep" xml:space="preserve">
+    <value>عرض التقارير</value>
+  </data>
+  <data name="mnm_stop" xml:space="preserve">
+    <value>إيقاف التسجيل</value>
+  </data>
+  <data name="mnm_tit" xml:space="preserve">
+    <value>عنوان الدراسة المرضية</value>
+  </data>
+  <data name="mnm_AddProcedureTypes" xml:space="preserve">
+    <value>إضافة الوضعيات الفرعية</value>
+  </data>
+  <data name="mnm_procedureCode" xml:space="preserve">
+    <value>رمز الوضعية الفرعية</value>
+  </data>
+  <data name="mnm_procedureName" xml:space="preserve">
+    <value>اسم الوضعية الفرعية</value>
+  </data>
+  <data name="mnm_procEnName" xml:space="preserve">
+    <value>الاسم باللغة االانكليزية</value>
+  </data>
+  <data name="mnm_subProcedures" xml:space="preserve">
+    <value>قائمة الوضعيات الفرعية</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>الكل</value>
+  </data>
+  <data name="mnm_dir0" xml:space="preserve">
+    <value>rtl</value>
+  </data>
+  <data name="mnm_downloadStudies" xml:space="preserve">
+    <value>عرض دراسات المريض</value>
+  </data>
+  <data name="mnm_showImage" xml:space="preserve">
+    <value>عرض الصورة</value>
+  </data>
+  <data name="mnm_viewStudies" xml:space="preserve">
+    <value>عرض دراسات المريض</value>
+  </data>
+  <data name="mnm_floatDirection" xml:space="preserve">
+    <value>right</value>
+  </data>
+  <data name="mnm_themeDir" xml:space="preserve">
+    <value>rtl</value>
+  </data>
+  <data name="mnm_userDir" xml:space="preserve">
+    <value>left</value>
+  </data>
+  <data name="mnm_usrCHANGEPASSWORD" xml:space="preserve">
+    <value>حسابي</value>
+  </data>
+  <data name="mnm_usrLOGOUT" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="tshImageType" xml:space="preserve">
+    <value>نوع الصورة</value>
+  </data>
+  <data name="Auditting" xml:space="preserve">
+    <value>المراقبة</value>
+  </data>
+  <data name="ClinicPerms" xml:space="preserve">
+    <value>إدارة العيادات والشعب</value>
+  </data>
+  <data name="DetailsWithReportsPerms" xml:space="preserve">
+    <value>عرض معلومات المريض مع التقرير</value>
+  </data>
+  <data name="HealthCardTypePerms" xml:space="preserve">
+    <value>إدارة أنواع البطاقات الصحية</value>
+  </data>
+  <data name="MilDegreePerms" xml:space="preserve">
+    <value>إدارة الرتب العسكرية</value>
+  </data>
+  <data name="MilServiceTypePerms" xml:space="preserve">
+    <value>إدارة الخدمة العسكرية</value>
+  </data>
+  <data name="MilUnitsPerms" xml:space="preserve">
+    <value>إدارة الوحدات العسكرية</value>
+  </data>
+  <data name="RadiologyCalender" xml:space="preserve">
+    <value>مفكرة طلبات التصوير</value>
+  </data>
+  <data name="RadiologyOrdersStatusProcc" xml:space="preserve">
+    <value>متابعة حالة طلبات التصوير</value>
+  </data>
+  <data name="RadiologyWaiting" xml:space="preserve">
+    <value>سجل طلبات الانتظار</value>
+  </data>
+  <data name="RecoveryTypePerms" xml:space="preserve">
+    <value>إدارة أنواع الاستشفاء</value>
+  </data>
+  <data name="ReportCreatePerms" xml:space="preserve">
+    <value>إنشاء تقرير</value>
+  </data>
+  <data name="ReportEditPerms" xml:space="preserve">
+    <value>تعديل تقرير</value>
+  </data>
+  <data name="mnm_refresh" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="tshOrderRecommendations" xml:space="preserve">
+    <value>توصيات</value>
+  </data>
+  <data name="tshOrderSummary" xml:space="preserve">
+    <value>لمحة سريرية</value>
+  </data>
+  <data name="ColorNmrlgy" xml:space="preserve">
+    <value>الدلالات اللونية</value>
+  </data>
+  <data name="ColorRaddone" xml:space="preserve">
+    <value>تم التصوير</value>
+  </data>
+  <data name="ColorRadReviewed" xml:space="preserve">
+    <value>تم استعراض الصور</value>
+  </data>
+  <data name="ColorRadUnderway" xml:space="preserve">
+    <value>يتم التصوير الآن</value>
+  </data>
+  <data name="ColorRepWritten" xml:space="preserve">
+    <value>تم كتابة التقرير</value>
+  </data>
+  <data name="ColorRequestSent" xml:space="preserve">
+    <value>تم إرسال الطلب ولم يتم التصوير</value>
+  </data>
+  <data name="ColorAmbulance" xml:space="preserve">
+    <value>طلب إسعافي</value>
+  </data>
+  <data name="CreateApp" xml:space="preserve">
+    <value>إضافة حجز عيادة</value>
+  </data>
+  <data name="ChooseClinic" xml:space="preserve">
+    <value>اختر العيادة</value>
+  </data>
+  <data name="Appoinments" xml:space="preserve">
+    <value>مواعيد العيادات</value>
+  </data>
+  <data name="ClinicName" xml:space="preserve">
+    <value>اسم العيادة</value>
+  </data>
+  <data name="editApp" xml:space="preserve">
+    <value>تعديل الموعد</value>
+  </data>
+  <data name="AppDate" xml:space="preserve">
+    <value>تاريخ الموعد</value>
+  </data>
+  <data name="AddApp" xml:space="preserve">
+    <value>إضافة موعد جديد</value>
+  </data>
+  <data name="appDetails" xml:space="preserve">
+    <value>تفاصيل الموعد</value>
+  </data>
+  <data name="sureDeleteApp" xml:space="preserve">
+    <value>هل أنت متأكد من حذف هذا الموعد؟</value>
+  </data>
+  <data name="AppCalenderView" xml:space="preserve">
+    <value>عرض مفكرة المواعيد</value>
+  </data>
+  <data name="AppAudit" xml:space="preserve">
+    <value>مراقبة تسجيل المواعيد</value>
+  </data>
+  <data name="appSearch" xml:space="preserve">
+    <value>البحث في المواعيد</value>
+  </data>
+  <data name="DelSearchParam" xml:space="preserve">
+    <value>حذف معاملات البحث</value>
+  </data>
+  <data name="Milliliters" xml:space="preserve">
+    <value>مل</value>
+  </data>
+  <data name="WithInjuction" xml:space="preserve">
+    <value>مع حقن</value>
+  </data>
+  <data name="injectionVal" xml:space="preserve">
+    <value>كمية الحقن</value>
+  </data>
+  <data name="filtered" xml:space="preserve">
+    <value>تم الفلترة</value>
+  </data>
+  <data name="totalRecords" xml:space="preserve">
+    <value>دراسات إجمالية</value>
+  </data>
+  <data name="choose" xml:space="preserve">
+    <value>اختر</value>
+  </data>
+  <data name="ClinicRequired" xml:space="preserve">
+    <value>يجب تحديد اسم الشعبة/ العيادة</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="subRadProce" xml:space="preserve">
+    <value>وضعية التصوير الفرعية</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="deleted" xml:space="preserve">
+    <value>محذوف</value>
+  </data>
+  <data name="procedurePrice" xml:space="preserve">
+    <value>سعر الصورة بهذه الوضعية</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>الأخبار</value>
+  </data>
+  <data name="ArabicLang" xml:space="preserve">
+    <value>اللغة العربية</value>
+  </data>
+  <data name="EnglishLang" xml:space="preserve">
+    <value>اللغة الانكليزية</value>
+  </data>
+  <data name="AddNewNews" xml:space="preserve">
+    <value>إضافة خبر جديد</value>
+  </data>
+  <data name="BreakingNewsList" xml:space="preserve">
+    <value>قائمة الأخبار العاجلة</value>
+  </data>
+  <data name="NewDetails" xml:space="preserve">
+    <value>تفاصيل الخبر</value>
+  </data>
+  <data name="NewsLink" xml:space="preserve">
+    <value>رابط الخبر</value>
+  </data>
+  <data name="NewsText" xml:space="preserve">
+    <value>نص الخبر</value>
+  </data>
+  <data name="NewsTitle" xml:space="preserve">
+    <value>عنوان الخبر</value>
+  </data>
+  <data name="BillsIndex" xml:space="preserve">
+    <value>عرض فواتير المريض</value>
+  </data>
+  <data name="BillsEdit" xml:space="preserve">
+    <value>تعديل الفاتورة</value>
+  </data>
+  <data name="BillsDelete" xml:space="preserve">
+    <value>حذف الفاتورة</value>
+  </data>
+  <data name="BillsDetails" xml:space="preserve">
+    <value>عرض تفاصيل الفاتورة</value>
+  </data>
+  <data name="ClinicAppoinmentIndex" xml:space="preserve">
+    <value>عرض قائمة المواعيد</value>
+  </data>
+  <data name="ClinicAppoinmentEdit" xml:space="preserve">
+    <value>تعديل المواعيد</value>
+  </data>
+  <data name="ClinicAppoinmentDelete" xml:space="preserve">
+    <value>حذف المواعيد</value>
+  </data>
+  <data name="ClinicAppoinmentDetails" xml:space="preserve">
+    <value>عرض تفاصيل المواعيد</value>
+  </data>
+  <data name="addOrg" xml:space="preserve">
+    <value>إضافة هيئة جديدة</value>
+  </data>
+  <data name="orgDiscount" xml:space="preserve">
+    <value>نسبة الحسم على الفواتير</value>
+  </data>
+  <data name="OrgIndex" xml:space="preserve">
+    <value>الهيئات والحسم الخاص بها</value>
+  </data>
+  <data name="OrgName" xml:space="preserve">
+    <value>اسم الهيئة</value>
+  </data>
+  <data name="OrgNameError" xml:space="preserve">
+    <value>اسم الهيئة الذي أدخلته غير مناسب</value>
+  </data>
+  <data name="orgType" xml:space="preserve">
+    <value>نوع الهيئة</value>
+  </data>
+  <data name="orgTypeError" xml:space="preserve">
+    <value>خطأ في إدخال نوع الهيئة</value>
+  </data>
+  <data name="ReturnTo" xml:space="preserve">
+    <value>العودة إلى </value>
+  </data>
+  <data name="appPayReason" xml:space="preserve">
+    <value>سبب المعاينة المجانية</value>
+  </data>
+  <data name="appPayType" xml:space="preserve">
+    <value>طريقة الدفع</value>
+  </data>
+  <data name="AppCost" xml:space="preserve">
+    <value>كلفة المعاينة</value>
+  </data>
+  <data name="RadCost" xml:space="preserve">
+    <value>تكلفة الصورة الشعاعية</value>
+  </data>
+  <data name="AdditionalCosts" xml:space="preserve">
+    <value>نفقات إضافية</value>
+  </data>
+  <data name="BillDate" xml:space="preserve">
+    <value>تاريخ الإصدار</value>
+  </data>
+  <data name="billValue" xml:space="preserve">
+    <value>قيمة الفاتورة</value>
+  </data>
+  <data name="totBillValue" xml:space="preserve">
+    <value>قيمة الفاتورة الإجمالية</value>
+  </data>
+  <data name="BillDetails" xml:space="preserve">
+    <value>تفاصيل الفاتورة</value>
+  </data>
+  <data name="BillCreate" xml:space="preserve">
+    <value>إنشاء فاتورة للمريض</value>
+  </data>
+  <data name="DiscountValue" xml:space="preserve">
+    <value>قيمة الحسم</value>
+  </data>
+  <data name="appsSt" xml:space="preserve">
+    <value>إحصائيات العيادات</value>
+  </data>
+  <data name="CLINICParameter" xml:space="preserve">
+    <value>العيادة</value>
+  </data>
+  <data name="AppsNumber" xml:space="preserve">
+    <value>عدد الفحوصات</value>
+  </data>
+  <data name="Diagnosis" xml:space="preserve">
+    <value>تشخيص الطبيب</value>
+  </data>
+  <data name="AppStatsIndex" xml:space="preserve">
+    <value>عرض إحصائيات فحوصات العيادات</value>
+  </data>
+  <data name="AppStatsPatient" xml:space="preserve">
+    <value>عرض إحصائيات المرضى في العيادات</value>
+  </data>
+  <data name="BillsCreate" xml:space="preserve">
+    <value>إنشاء فاتورة</value>
+  </data>
+  <data name="ClinicAppoinmentCreate" xml:space="preserve">
+    <value>إنشاء موعد فحص في العيادة</value>
+  </data>
+  <data name="NewsIndex" xml:space="preserve">
+    <value>عرض قائمة الأخبار</value>
+  </data>
+  <data name="StatsApps" xml:space="preserve">
+    <value>عرض صفحة إحصائيات فحوصات العيادات</value>
+  </data>
+  <data name="AppCalender" xml:space="preserve">
+    <value>مفكرة مواعيد العيادات</value>
+  </data>
+  <data name="ClinicAppoinmentAudit" xml:space="preserve">
+    <value>احصائيات مواعيد العيادات</value>
+  </data>
+  <data name="ModalityQcode" xml:space="preserve">
+    <value>رمز العيادة في نظام الدور</value>
+  </data>
+  <data name="ModalityQcodeError" xml:space="preserve">
+    <value>أدخل رمز الدور بشكل صحيح</value>
+  </data>
+  <data name="NoDataMsg" xml:space="preserve">
+    <value>لا يوجد بيانات لعرضها</value>
+  </data>
+</root>

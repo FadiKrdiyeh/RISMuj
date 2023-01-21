@@ -1,0 +1,317 @@
+﻿@model IEnumerable<RIS.Models.Radiology>
+@using RIS.Resources
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.mnmIndexAudit</title>
+
+<link href="~/assets/css/style.css" rel="stylesheet" />
+<script src="~/Scripts/flatpickr.min.js"></script>
+<link href="~/Content/flatpickr.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+@{
+    Dictionary<string, string> stat =
+            new Dictionary<string, string>();
+    stat.Add(ConnectionConfigs.SCHEDUALED, Res.SCHEDUALED);
+    stat.Add(ConnectionConfigs.STARTED, Res.STARTED);
+    stat.Add(ConnectionConfigs.COMPLETED, Res.COMPLETED);
+    stat.Add(ConnectionConfigs.Waiting, Res.Waiting);
+}
+
+<div class="back">
+    @using (Html.BeginForm())
+    {
+        @Html.Hidden("PageCnt", ViewData["PageCnt"])
+        @Html.Hidden("pageNBr", ViewData["pageNBr"])
+        @Html.Hidden("count", ViewData["count"])
+        @Html.Hidden("page", ViewData["page"])
+        @*<input name="oldOrderStatus" value=""/>*@
+        <fieldset style="margin-top:3px;">
+
+            <a id="otherInfo" href="#" title="@RIS.Resources.Res.patSearch.ToString()" class="btn btn-info btn-l">
+                <span class="fa fa-search"></span>
+            </a>
+
+
+
+
+            <div id="infoToShow">
+                <center>
+                    <div style="font-size:x-large; color:black;font-weight:400">
+                        @RIS.Resources.Res.searchParas
+                    </div>
+                </center>
+                <center>
+                    <div class="search-form">
+                        <table>
+                            <tr>
+                                <td>@Html.DisplayNameFor(model => model.DocumnetId) @Html.TextBox("docId")  </td>
+                                <td>@RIS.Resources.Res.PatientFirstname.ToString() @Html.TextBox("firstname")  </td>
+                                <td>@RIS.Resources.Res.PatientLastname.ToString() @Html.TextBox("lastname")  </td>
+                                <td>@Html.DisplayNameFor(model => model.DepartementName) @Html.DropDownList("departments")</td>
+                                <td>@Html.DisplayNameFor(model => model.ModalityID) @Html.DropDownList("modalities")</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>
+                                    <select id="oldOrderStatus" name="oldOrderStatus">
+                                        @{
+                                            <option value="">@RIS.Resources.Res.mnmRegStatus</option>
+
+                                            if (ViewBag.oldOrderStatus == "1")
+                                            {
+                                                <option selected value="1">@RIS.Resources.Res.edit</option>
+                                                <option value="2">@RIS.Resources.Res.Delete</option>
+
+                                            }
+                                            else
+                                            {
+                                                if (ViewBag.oldOrderStatus == "2")
+                                                {
+                                                    <option  value="1">@RIS.Resources.Res.edit</option>
+                                                    <option selected value="2">@RIS.Resources.Res.Delete</option>
+
+                                                }
+                                                else
+                                                {
+                                                    <option value="1">@RIS.Resources.Res.edit</option>
+                                                    <option  value="2">@RIS.Resources.Res.Delete</option>
+
+                                                }
+                                            }
+                                        }
+                                    </select>
+                                </td>
+                                <td>
+                                    <input value="@ViewBag.mnmfrom" type="text" id="mnmfrom" class="form-control flatpickr" name="mnmfrom" placeholder="@RIS.Resources.Res.mnmSince" />
+                                </td>
+                                <td>
+                                    <input value="@ViewBag.mnmto" type="text" id="mnmto" class="form-control flatpickr" name="mnmto" placeholder="@RIS.Resources.Res.mnmTo" />
+                                </td>
+                            </tr>
+                            <tr style="align-content:center;">
+                                <td colspan="6">
+                                    <input type="submit" value="@RIS.Resources.Res.radSearch" class="btn btn-primary btn-xs" onclick="resetPageNum()" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </center>
+
+
+</div>
+
+        </fieldset>
+
+        <hr />
+        @*<h2>
+            @Html.ActionLink(RIS.Resources.Res.mnmIndexAudit.ToString(), "Index")
+        </h2>*@
+
+        <center>
+            <ul class="pagination" style="display: -webkit-box;padding-bottom: 3px;padding-top: 5px;">
+                @{
+
+
+
+                    <li style="font-weight: bold;color: black;margin: 2px;">
+                        @RIS.Resources.Res.page.ToString()  @Html.Encode(ViewData["pageNBr"])  /  @Html.Encode(ViewData["PageCnt"])
+                    </li>
+                    <li>
+                        &nbsp;
+                    </li>
+                    if (!ViewData["pageNBr"].ToString().Equals(ViewData["PageCnt"].ToString()) && !ViewData["count"].ToString().Equals("0"))
+                    {
+
+                        <li>
+                            @Html.ActionLink("<<", "IndexAudit", new { page = ViewData["count"], count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities"), oldOrderStatus = Html.Value("oldOrderStatus"), mnmfrom = Html.Value("mnmfrom"), mnmto = Html.Value("mnmto") }, new { title = RIS.Resources.Res.lastPage.ToString() })
+                        </li>
+                        <li>
+                            @Html.ActionLink("<", "IndexAudit", new { page = (double.Parse((ViewData["page"]).ToString()) + 1).ToString(), count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities"), oldOrderStatus = Html.Value("oldOrderStatus"), mnmfrom = Html.Value("mnmfrom"), mnmto = Html.Value("mnmto") }, new { title = RIS.Resources.Res.nextPage.ToString() })
+                        </li>
+                    }
+                    <li>
+                        &nbsp;
+                    </li>
+                    if (!ViewData["pageNBr"].ToString().Equals("1") && !ViewData["count"].ToString().Equals("0"))
+                    {
+
+                        <li>
+                            @Html.ActionLink(">", "IndexAudit", new { page = (double.Parse((ViewData["page"]).ToString()) - 1).ToString(), count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities"), oldOrderStatus = Html.Value("oldOrderStatus"), mnmfrom = Html.Value("mnmfrom"), mnmto = Html.Value("mnmto") }, new { title = RIS.Resources.Res.previousPage.ToString() })
+                        </li>
+                        <li>
+                            @Html.ActionLink(">>", "IndexAudit", new { page = 1, count = ViewData["count"], docId = Html.Value("docId"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), departments = Html.Value("departments"), modalities = Html.Value("modalities"), oldOrderStatus = Html.Value("oldOrderStatus"), mnmfrom = Html.Value("mnmfrom"), mnmto = Html.Value("mnmto") }, new { title = RIS.Resources.Res.firstPage.ToString() })
+                        </li>
+                    }
+
+
+                }
+            </ul>
+        </center>
+
+
+
+                    }
+    <table style="width:100%; text-align:center; align-items:center; " align="center">
+        <tr style="background-color:cadetblue">
+
+            @*<th id="th1">
+                @Html.DisplayNameFor(model => model.DocumnetId)
+            </th>*@
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.parentR.firstname)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.DepartementName)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.ModalityID)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.ProcedureID)
+            </th>
+            @*<th id="th1">
+                @Html.DisplayNameFor(model => model.Status)
+            </th>*@
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.InsertUser)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.regStatus)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.updateDate)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.UpdatetUser)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.UpdateDeleteReason)
+            </th>
+            <th id="th1" colspan="4">
+                @RIS.Resources.Res.controlKey
+            </th>
+
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr style="border:solid">
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.DocumnetId)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.parentR.firstname) @Html.DisplayFor(modelItem => item.parentR.lastname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.parentDep.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.parentMod.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.parentProc.name)
+                </td>
+                @*<td>
+                    @{
+                        String st = "";
+                        stat.TryGetValue(Html.ValueFor(modelItem => item.Status).ToString(), out st);
+
+                    }
+                    <p>@st</p>
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.insUser.firstName)
+                </td>
+                <td>
+                    @{
+                        var ss = int.Parse(Html.ValueFor(modelItem => item.regStatus).ToString());
+                        if (ss == (int)RegStatus.delete)
+                        {
+                            <strong style="color:red;">@RIS.Resources.Res.Delete</strong>
+                        }
+                        else
+                        {
+                            @RIS.Resources.Res.edit
+                        }
+
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.updateDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.updUser.firstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdateDeleteReason)
+                </td>
+                @{
+                    var ptRStat = @Html.DisplayFor(modelItem => item.regStatus).ToString();
+                }
+                @if (int.Parse(ptRStat) != (int)RegStatus.delete)
+                {
+                    <td style="width:1%;">
+                        <a href="@Url.Action( "Details","Radiology", new { id = item.NewID })" title="@RIS.Resources.Res.newRadDetails" class="btn btn-info btn-l">
+                            <span class="fa fa-info"></span>
+
+                        </a>
+                    </td>
+                }
+                else
+                {
+                    <td style="width:1%;"></td>
+
+                }
+
+                <td style="width:1%;">
+                    <a style="background-color:red;background-color: red;" href="@Url.Action( "DetailsAudit","Radiology", new { id = item.ID })" title="@RIS.Resources.Res.oldRadDetails" class="btn btn-info btn-l">
+                        <span class="fa fa-info"></span>
+
+                    </a>
+                </td>
+
+            </tr>
+                    }
+
+    </table>
+</div>
+<br /><br />
+<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+<script>
+    flatpickr('.flatpickr', { dateFormat: 'Y-m-d' });
+
+    $(document).ready(function (){
+        if (@ViewData["stayInSeach"].ToString()=="0")
+            $('#infoToShow').toggle();
+
+      $('#otherInfo').click(function(){
+          $('#infoToShow').toggle();
+
+      });
+      //$("#patLink").on("click", function (event) {
+      //    alert("oh nana");
+
+      //});
+      $("#patLink").innerhtml = ("class", "active");
+    })
+
+    function resetPageNum()
+    {
+        document.getElementById('page').value = 1;
+      //  alert(document.getElementById('page').value);
+        document.getElementById('pageNBr').value = 1;
+        //pageNBr = 1;
+    }
+</script>
+

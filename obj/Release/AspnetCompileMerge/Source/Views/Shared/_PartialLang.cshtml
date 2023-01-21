@@ -1,0 +1,83 @@
+﻿@*@Html.ActionLink("English", "Change", "Lang", new { lang = "en" }, null) &nbsp; | &nbsp;
+@Html.ActionLink("Arabic", "Change", "Lang", new { lang = "ar" }, null) &nbsp; | &nbsp;*@
+
+<table align="center" style="    margin-top: -3%;">
+    <tr>
+        <td style="border-top: 0px;"><a href="javascript:change2Ar();" class="td-img">
+
+    @*<span class="en-flag-icon">Arabic</span>*@
+
+    <img src=" ~/images/Flag-Ar.png" width="26px" height="26px" title="عربي"  />عربي
+</a></td>
+       
+           <td style="border-top: 0px;">
+               <a href="javascript:change2Eng();" class="td-img">
+
+                   @*<span class="en-flag-icon">English</span>*@
+     <img src="~/images/Flag-En.png" width="24px" height="24px" title="Engish" />
+                   English </a>
+           </td>
+    </tr>
+</table>
+
+
+
+
+
+<script>
+    function change2Ar()
+    {
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/Lang/Change',
+
+            data: '{ "lang" : "ar" }',
+
+            contentType: 'application/json; charset=utf-8',
+
+            dataType: 'json',
+            
+
+            success: function () {
+                //alert("fofo");
+
+                location.reload(); // reloading Parent page
+            },
+            error: function () {
+                location.reload(); // reloading Parent page
+
+            }
+
+        });
+    }
+
+    function change2Eng() {
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/Lang/Change',
+
+            data: '{ "lang" : "en" }',
+
+            contentType: 'application/json; charset=utf-8',
+
+            dataType: 'json',
+            
+            success: function () {
+                //alert("fofo");
+                location.reload(); // reloading Parent page
+            },
+            error: function ()
+            {
+
+                location.reload(); // reloading Parent page
+
+        }
+
+        });
+    }
+
+</script>

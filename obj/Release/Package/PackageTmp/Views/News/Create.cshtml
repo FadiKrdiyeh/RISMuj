@@ -1,0 +1,66 @@
+﻿@model RIS.Models.NewsElement
+
+@{
+    ViewBag.Title = "إضافة خبر";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.add @RIS.Resources.Res.NewInfo</title>
+<div style="margin:1%;">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <center>
+            <div class="form-horizontal" style="padding:10px;background-color:white;width:800px; height:auto;border-radius:4px;">
+                <h2>تفاصيل الخبر</h2>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Text, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.URL, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.URL, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.URL, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DepartementName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+@Html.DropDownList("DepartementName", null, new
+{
+    @style = "width:100%",
+    @Required = "Required",
+    oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+    oninput = "setCustomValidity('')"
+})
+                        @Html.ValidationMessageFor(model => model.DepartementName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="إضافة" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        </center>
+    }
+</div>
+<div>
+    @Html.ActionLink("عودة إلى قائمة الأخبار", "Index")
+</div>

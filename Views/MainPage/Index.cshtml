@@ -1,0 +1,122 @@
+﻿@model RIS.Models.SendHL7ViewModel
+@using HL7_TCP.Web;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    let activeLink = document.querySelector(".navbar ul.navbar-nav li.nav-item a.nav-link#homeLink");
+    activeLink.classList.add("active");
+</script>
+
+<title>@RIS.Resources.Res.mainPage.ToString()</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+<link href="~/Content/HL7Send.css" rel="stylesheet" />
+
+<div class="container" style="margin-top: 110px;">
+    <div class="row mt-5 d-flex justify-content-center align-items-center" dir="@RIS.Resources.Res.mnm_dir0">
+        @if (HttpContext.Current.Session["PatientPerm"].ToString() == "1")
+        {
+            <div class="col-sm-4">
+                <a href="@Url.Action("Index", "Patient")" title="@RIS.Resources.Res.navPat">
+                    <div class="person">
+                        <img src="~/assets/img/patient.png" alt="@RIS.Resources.Res.navPat" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.navPat</div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @if (HttpContext.Current.Session["StatsPerm"].ToString() == "1")
+        {
+            <div class="col-sm-4">
+                <a href="@Url.Action("Index", "Statistics")" title="@RIS.Resources.Res.ordersSt">
+                    <div class="person">
+                        <img src="~/assets/img/statisticsNav.png" alt="@RIS.Resources.Res.ordersSt" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.ordersSt</div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @if (HttpContext.Current.Session["AppStatsPerm"].ToString() == "1")
+        {
+            <div class="col-sm-4">
+                <a href="@Url.Action("Index", "AppStatistics")" title="@RIS.Resources.Res.appsSt">
+                    <div class="person">
+                        <img src="~/assets/img/AppStatisticsNav.png" alt="@RIS.Resources.Res.appsSt" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.appsSt</div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @if (HttpContext.Current.Session["PermsPerm"].ToString() == "1")
+        {
+            <div class="col-sm-4">
+                <a href="@Url.Action("Index", "Audit")" title="@RIS.Resources.Res.audit">
+                    <div class="person">
+                        <img src="~/assets/img/auditingNav.svg" alt="@RIS.Resources.Res.audit" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.audit</div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @if (HttpContext.Current.Session["RadiologyPerm"].ToString() == "1")
+        {
+            <div class="col-sm-4">
+                <a href="@Url.Action("Waiting", "Radiology")" title="@RIS.Resources.Res.WaitingRad">
+                    <div class="person">
+                        <img src="~/assets/img/waitingScheduledNav.png" alt="@RIS.Resources.Res.WaitingRad" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.WaitingRad</div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @if (HttpContext.Current.Session["RadiologyPerm"].ToString() == "1")
+        {
+            <div class="col-sm-4">
+                <a href="@Url.Action("Index", "Schedule")" title="@RIS.Resources.Res.mnmRadiologyCalendar">
+                    <div class="person">
+                        <img src="~/assets/img/CalenderNav.png" alt="@RIS.Resources.Res.mnmRadiologyCalendar" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.mnmRadiologyCalendar</div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @if (HttpContext.Current.Session["AppsPerm"].ToString() == "1")
+        {
+            <div class="col-sm-4">
+                <a href="@Url.Action("Schedule", "Appoinments")" title="@RIS.Resources.Res.AppCalender">
+                    <div class="person">
+                        <img src="~/assets/img/AppCalenderNav.png" alt="@RIS.Resources.Res.AppCalender" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.AppCalender</div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @if (HttpContext.Current.Session["RadiologyPerm"].ToString() == "1")
+        {
+            <div class="col-sm-4">
+                <a href="@Url.Action("Index", "Radiology")" title="@RIS.Resources.Res.navRad">
+                    <div class="person">
+                        <img src="~/assets/img/radiologyNav.png" alt="@RIS.Resources.Res.navRad" style="width:170px;height:170px;" />
+                        <div class="main-page-titles">@RIS.Resources.Res.navRad</div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<script type="text/javascript" src="~/Scripts/HL7Send.js"></script>

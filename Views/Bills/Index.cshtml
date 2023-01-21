@@ -1,0 +1,283 @@
+﻿@model IEnumerable<RIS.Models.Bills>
+@using RIS.Resources
+
+@{
+    ViewBag.Title = Res.BillsIndex;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<title>@Res.Appoinments</title>
+
+<link href="~/assets/css/style.css" rel="stylesheet" />
+
+<div class="back">
+
+
+    @using (Html.BeginForm())
+    {
+        <td colspan="4">
+            @Html.ActionLink(RIS.Resources.Res.DelSearchParam, "View", new { }, new { title = @RIS.Resources.Res.AppCalenderView })
+            <span class="fa fa-calendar"></span>
+        </td>
+        @Html.Hidden("PageCnt", ViewData["PageCnt"])
+        @Html.Hidden("pageNBr", ViewData["pageNBr"])
+        @Html.Hidden("count", ViewData["count"])
+        @Html.Hidden("page", ViewData["page"])
+        <fieldset style="margin-top:3px;">
+
+            <a id="otherInfo" href="#" title="@RIS.Resources.Res.patSearch.ToString()" class="btn btn-info btn-l">
+                <span class="fa fa-search"></span>
+            </a>
+
+            <div id="infoToShow">
+                <center>
+                    <div style="font-size:x-large; color:black;font-weight:400">
+                        @RIS.Resources.Res.searchParas
+                    </div>
+                </center>
+
+                <table class="table table-bordred table-striped">
+
+                    <tr>
+                        <td>@RIS.Resources.Res.status.ToString() @Html.TextBox("billStatus", null, new { @class = "form-control" })  </td>
+                        <td>@RIS.Resources.Res.AppDate @Html.TextBox("billDate", null, new { @class = "flatpickr form-control", placeholder = @RIS.Resources.Res.From })  </td>
+
+
+                    </tr>
+                    <tr style="align-content:center;">
+                        <td colspan="4">
+                            <input type="submit" value="@RIS.Resources.Res.appSearch" class="btn btn-primary btn-xs" onclick="resetPageNum()" />
+                        </td>
+                        <td colspan="4">
+                            @Html.ActionLink(RIS.Resources.Res.DelSearchParam, "Index", new { page = '1', count = ViewData["count"] }, new { title = RIS.Resources.Res.DelSearchParam.ToString() })
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </fieldset>
+
+        <hr />
+        <h2>
+            @Html.ActionLink(RIS.Resources.Res.Appoinments, "Index")
+        </h2>
+
+        <center>
+            <ul class="pagination" style="display: -webkit-box;padding-bottom: 3px;padding-top: 5px;">
+                @{
+
+
+
+                    <li style="font-weight: bold;color: black;margin: 2px;">
+                        @RIS.Resources.Res.page.ToString()  @Html.Encode(ViewData["pageNBr"])  /  @Html.Encode(ViewData["PageCnt"])
+                    </li>
+                    <li>
+                        &nbsp;
+                    </li>
+
+
+                    if (!ViewData["pageNBr"].ToString().Equals("1") && !ViewData["count"].ToString().Equals("0"))
+                    {
+
+                        <li>
+                            @Html.ActionLink(">", "Index", new { page = (double.Parse((ViewData["page"]).ToString()) - 1).ToString(), count = ViewData["count"], appStatus = Html.Value("appStatus"), firstname = Html.Value("firstname"), pagging = 1, lastname = Html.Value("lastname"), clinic = Html.Value("clinic") }, new { title = RIS.Resources.Res.previousPage.ToString() })
+                        </li>
+                        <li>
+                            @Html.ActionLink(">>", "Index", new { page = 1, count = ViewData["count"], pagging = 1, firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), appStatus = Html.Value("appStatus"), clinic = Html.Value("clinic"), appDate = Html.Value("appDate") }, new { title = RIS.Resources.Res.firstPage.ToString() })
+                        </li>
+                    }
+
+                    <li>
+                        &nbsp;
+                    </li>
+
+                    if (!ViewData["pageNBr"].ToString().Equals(ViewData["PageCnt"].ToString()) && !ViewData["count"].ToString().Equals("0"))
+                    {
+
+                        <li>
+                            @Html.ActionLink("<<", "Index", new { page = ViewData["count"], count = ViewData["count"], appStatus = Html.Value("appStatus"), firstname = Html.Value("firstname"), pagging = 1, lastname = Html.Value("lastname"), clinic = Html.Value("clinic") }, new { title = RIS.Resources.Res.lastPage.ToString() })
+                        </li>
+                        <li>
+                            @Html.ActionLink("<", "Index", new { page = (double.Parse((ViewData["page"]).ToString()) + 1).ToString(), count = ViewData["count"], appStatus = Html.Value("appStatus"), firstname = Html.Value("firstname"), lastname = Html.Value("lastname"), clinic = Html.Value("clinic"), appDate = Html.Value("appDate") }, new { title = RIS.Resources.Res.nextPage.ToString() })
+                        </li>
+                    }
+
+
+                }
+            </ul>
+        </center>
+
+    }
+    <table style="width:100%; text-align:center; align-items:center; " align="center">
+        <tr style="background-color:cadetblue">
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.patientID)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.parentR.firstname)
+            </th>
+
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.billValue)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.billInsertDate)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.billDate)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.billStatus)
+            </th>
+
+            <th id="th1" colspan="6">
+                @RIS.Resources.Res.controlKey
+            </th>
+
+        </tr>
+        @if (Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr style="border:solid">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.patientID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.parentR.firstname) @Html.DisplayFor(modelItem => item.parentR.lastname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.billValue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.billInsertDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.billDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.billStatus)
+                    </td>
+                    <td style="width:1%;">
+                        <a href="@Url.Action("Edit", "Appoinments", new { id = item.billId }) " title="@Res.edit" class="btn btn-default">
+                            <em class="fa fa-pencil">
+                            </em>
+                        </a>
+                    </td>
+                    <td style="width:1%;">
+                        <a href="@Url.Action("Details", "Appoinments", new { id = item.billId })" title="@Res.details" class="btn btn-info btn-l">
+                            <span class="fa fa-info"></span>
+
+                        </a>
+                    </td>
+
+                    <td style="width:1%;">
+                        <a href="@Url.Action("Delete", "Appoinments", new { id = item.billId })" title="@Res.Delete" class="btn btn-danger">
+                            <em class="fa fa-trash">
+                            </em>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="7" class="text-center" style="font-size: 26px;">@Res.NoDataMsg!</td>
+            </tr>
+        }
+
+    </table>
+</div>
+<br />
+<br />
+<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+<script type="text/javascript">
+
+    flatpickr('.flatpickr', { dateFormat: 'Ymd', enableTime: false, altInput: true });
+</script>
+<script>
+
+    $(document).ready(function (){
+        if (@ViewData["stayInSeach"].ToString()=="0")
+            $('#infoToShow').toggle();
+
+      $('#otherInfo').click(function(){
+          $('#infoToShow').toggle();
+
+      });
+      //$("#patLink").on("click", function (event) {
+      //    alert("oh nana");
+
+      //});
+      $("#patLink").innerhtml = ("class", "active");
+    })
+
+    function resetPageNum()
+    {
+        document.getElementById('page').value = 1;
+      //  alert(document.getElementById('page').value);
+        document.getElementById('pageNBr').value = 1;
+        //pageNBr = 1;
+    }
+</script>
+
+
+
+<script>
+    $("#departments").change(function () {
+        var selectedText = $(this).find("option:selected").text();
+        var selectedValue = $(this).val();
+        //  alert("Selected Text: " + selectedText + " Value: " + selectedValue);
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/Radiology/getDeptModalities',
+
+            data: '{ "dept" : "' + selectedValue + '" }',
+
+            contentType: 'application/json; charset=utf-8',
+
+            dataType: 'json',
+
+
+            success: function (data) {
+                var ddlMod = document.getElementById("modalities");
+                ddlMod.innerHTML = "";
+
+
+                var option = document.createElement("OPTION");
+
+                //Set Customer Name in Text part.
+                option.innerHTML = "";
+
+                //Set CustomerId in Value part.
+
+                //Add the Option element to DropDownList.
+                ddlMod.options.add(option);
+
+
+                for (var i = 0; i < data.length; i++) {
+                    var option = document.createElement("OPTION");
+
+                    //Set Customer Name in Text part.
+                    option.innerHTML = data[i].name;
+
+                    //Set CustomerId in Value part.
+                    option.value = data[i].num;
+
+                    //Add the Option element to DropDownList.
+                    ddlMod.options.add(option);
+                }
+
+            },
+            error: function () {
+
+            }
+
+        });
+    });
+</script>

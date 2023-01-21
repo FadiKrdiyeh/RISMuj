@@ -1,0 +1,1430 @@
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\RIS.Resources.Res.resources
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\RdlCompile.cache
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\RdlCompile.compiled
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\csc.exe
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\System.Collections.Immutable.dll
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\System.Reflection.Metadata.dll
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\vbc.exe
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\VBCSCompiler.exe
+D:\RIS\fromSVN\Project2\RIS\bin\roslyn\VBCSCompiler.exe.config
+D:\RIS\fromSVN\Project2\RIS\bin\RIS.dll.config
+D:\RIS\fromSVN\Project2\RIS\bin\RIS.dll
+D:\RIS\fromSVN\Project2\RIS\bin\RIS.pdb
+D:\RIS\fromSVN\Project2\RIS\bin\Ar\RIS.resources.dll
+D:\RIS\fromSVN\Project2\RIS\bin\Antlr3.Runtime.dll
+D:\RIS\fromSVN\Project2\RIS\bin\BarcodeLib.dll
+D:\RIS\fromSVN\Project2\RIS\bin\EntityFramework.dll
+D:\RIS\fromSVN\Project2\RIS\bin\EntityFramework.SqlServer.dll
+D:\RIS\fromSVN\Project2\RIS\bin\GridMvc.dll
+D:\RIS\fromSVN\Project2\RIS\bin\HL7-TCP.dll
+D:\RIS\fromSVN\Project2\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\RIS\fromSVN\Project2\RIS\bin\Microsoft.ReportViewer.Common.dll
+D:\RIS\fromSVN\Project2\RIS\bin\Microsoft.ReportViewer.DataVisualization.DLL
+D:\RIS\fromSVN\Project2\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\RIS\fromSVN\Project2\RIS\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\RIS\fromSVN\Project2\RIS\bin\Microsoft.Web.Infrastructure.dll
+D:\RIS\fromSVN\Project2\RIS\bin\Newtonsoft.Json.dll
+D:\RIS\fromSVN\Project2\RIS\bin\Oracle.DataAccess.dll
+D:\RIS\fromSVN\Project2\RIS\bin\ReportViewerForMvc.dll
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Helpers.dll
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Mvc.dll
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Optimization.dll
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Razor.dll
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Webpages.Deployment.dll
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Webpages.dll
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Webpages.Razor.dll
+D:\RIS\fromSVN\Project2\RIS\bin\WebGrease.dll
+D:\RIS\fromSVN\Project2\RIS\bin\HL7-TCP.pdb
+D:\RIS\fromSVN\Project2\RIS\bin\Antlr3.Runtime.pdb
+D:\RIS\fromSVN\Project2\RIS\bin\EntityFramework.xml
+D:\RIS\fromSVN\Project2\RIS\bin\EntityFramework.SqlServer.xml
+D:\RIS\fromSVN\Project2\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\RIS\fromSVN\Project2\RIS\bin\Newtonsoft.Json.xml
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Optimization.xml
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Razor.xml
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Webpages.xml
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Webpages.Deployment.xml
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Webpages.Razor.xml
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Helpers.xml
+D:\RIS\fromSVN\Project2\RIS\bin\System.Web.Mvc.xml
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\Ar\RIS.resources.dll
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\RIS.dll
+D:\RIS\fromSVN\Project2\RIS\obj\Debug\RIS.pdb
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\csc.exe
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\System.Collections.Immutable.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\System.Reflection.Metadata.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\vbc.exe
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe.config
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\RIS.dll.config
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\RIS.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\RIS.pdb
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Ar\RIS.resources.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Antlr3.Runtime.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\EntityFramework.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\EntityFramework.SqlServer.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\GridMvc.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\HL7-TCP.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Common.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Microsoft.ReportViewer.DataVisualization.DLL
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Microsoft.Web.Infrastructure.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Newtonsoft.Json.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Oracle.DataAccess.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\ReportViewerForMvc.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Helpers.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Mvc.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Optimization.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Razor.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Webpages.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\WebGrease.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\HL7-TCP.pdb
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Antlr3.Runtime.pdb
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\EntityFramework.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\EntityFramework.SqlServer.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\Newtonsoft.Json.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Optimization.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Razor.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Webpages.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Helpers.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\bin\System.Web.Mvc.xml
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.resources
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\RdlCompile.cache
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\RdlCompile.compiled
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\Ar\RIS.resources.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\RIS.dll
+D:\RIS\fromSVN\Project2MUJ\RIS\obj\Debug\RIS.pdb
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\csc.exe
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\vbc.exe
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\RIS.dll.config
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\RIS.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\RIS.pdb
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Ar\RIS.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Antlr3.Runtime.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\EntityFramework.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\EntityFramework.SqlServer.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\GridMvc.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\HL7-TCP.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.SqlServer.Types.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Newtonsoft.Json.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Oracle.DataAccess.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Helpers.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Mvc.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Optimization.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Razor.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Webpages.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\WebGrease.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\EnvDTE.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\stdole.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\EnvDTE80.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.Build.Tasks.Core.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\VSLangProj.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\VSLangProj80.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.MSXML.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.Build.Utilities.Core.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.Build.Framework.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\VSLangProj2.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Collections.Immutable.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\HL7-TCP.pdb
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Antlr3.Runtime.pdb
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\EntityFramework.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\EntityFramework.SqlServer.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Newtonsoft.Json.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Optimization.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Razor.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Webpages.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Helpers.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\System.Web.Mvc.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\EnvDTE.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\EnvDTE80.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\VSLangProj.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\VSLangProj80.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\VSLangProj2.xml
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.resources
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\obj\Debug\Ar\RIS.resources.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\obj\Debug\RIS.dll
+C:\Users\invest4all\Desktop\Project2MUJ\RIS\obj\Debug\RIS.pdb
+D:\mywork\muj\Project2MUJ\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\csc.exe
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\System.Collections.Immutable.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\System.Reflection.Metadata.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\vbc.exe
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe
+D:\mywork\muj\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe.config
+D:\mywork\muj\Project2MUJ\RIS\bin\RIS.dll.config
+D:\mywork\muj\Project2MUJ\RIS\bin\RIS.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\RIS.pdb
+D:\mywork\muj\Project2MUJ\RIS\bin\Ar\RIS.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Antlr3.Runtime.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\EntityFramework.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\EntityFramework.SqlServer.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\GridMvc.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\HL7-TCP.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Common.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Design.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.SqlServer.Types.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.Web.Infrastructure.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Newtonsoft.Json.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Oracle.DataAccess.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Helpers.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Mvc.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Optimization.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Razor.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Webpages.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\WebGrease.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\EnvDTE.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\stdole.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\EnvDTE80.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.Build.Tasks.Core.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\VSLangProj.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\VSLangProj80.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.MSXML.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.Build.Utilities.Core.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.Build.Framework.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\VSLangProj2.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\HL7-TCP.pdb
+D:\mywork\muj\Project2MUJ\RIS\bin\Antlr3.Runtime.pdb
+D:\mywork\muj\Project2MUJ\RIS\bin\EntityFramework.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\EntityFramework.SqlServer.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\Newtonsoft.Json.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Optimization.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Razor.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Webpages.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Helpers.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\System.Web.Mvc.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+D:\mywork\muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+D:\mywork\muj\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.resources
+D:\mywork\muj\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+D:\mywork\muj\Project2MUJ\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+D:\mywork\muj\Project2MUJ\RIS\obj\Debug\Ar\RIS.resources.dll
+D:\mywork\muj\Project2MUJ\RIS\obj\Debug\RIS.dll
+D:\mywork\muj\Project2MUJ\RIS\obj\Debug\RIS.pdb
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\csc.exe
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\vbc.exe
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\RIS.dll.config
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\RIS.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\RIS.pdb
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Ar\RIS.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Antlr3.Runtime.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\EntityFramework.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\EntityFramework.SqlServer.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\GridMvc.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\HL7-TCP.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.SqlServer.Types.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Newtonsoft.Json.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Oracle.DataAccess.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Helpers.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Mvc.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Optimization.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Razor.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\WebGrease.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\EnvDTE.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\stdole.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\EnvDTE80.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.Build.Tasks.Core.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj80.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.MSXML.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.Build.Utilities.Core.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.Build.Framework.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj2.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\HL7-TCP.pdb
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Antlr3.Runtime.pdb
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\EntityFramework.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\EntityFramework.SqlServer.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Newtonsoft.Json.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Optimization.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Razor.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Helpers.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Mvc.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\EnvDTE.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\EnvDTE80.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj80.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj2.xml
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.resources
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\RdlCompile.cache
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\RdlCompile.compiled
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\Ar\RIS.resources.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.dll
+C:\Users\hazem\Desktop\Newfolder\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\csc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\vbc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\RIS.dll.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Antlr3.Runtime.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\EntityFramework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\GridMvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\HL7-TCP.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.SqlServer.Types.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Newtonsoft.Json.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Oracle.DataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Helpers.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Mvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Optimization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\WebGrease.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\EnvDTE.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\stdole.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\EnvDTE80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.Build.Tasks.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.MSXML.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.Build.Utilities.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.Build.Framework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj2.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\HL7-TCP.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Antlr3.Runtime.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\EntityFramework.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Newtonsoft.Json.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Optimization.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Helpers.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\System.Web.Mvc.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\EnvDTE.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\EnvDTE80.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj80.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\VSLangProj2.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\bin\Oracle.ManagedDataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\RdlCompile.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ\RIS\obj\Debug\RdlCompile.compiled
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\csc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\vbc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\RIS.dll.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Antlr3.Runtime.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\EntityFramework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\GridMvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\HL7-TCP.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.SqlServer.Types.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Newtonsoft.Json.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Oracle.DataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Oracle.ManagedDataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Helpers.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Mvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Optimization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Webpages.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\WebGrease.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\EnvDTE.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\stdole.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\EnvDTE80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.Build.Tasks.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\VSLangProj.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\VSLangProj80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.MSXML.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.Build.Utilities.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.Build.Framework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\VSLangProj2.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\HL7-TCP.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Antlr3.Runtime.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\EntityFramework.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Newtonsoft.Json.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Optimization.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Webpages.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Helpers.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\System.Web.Mvc.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\EnvDTE.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\EnvDTE80.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\VSLangProj.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\VSLangProj80.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\VSLangProj2.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\RIS.Resources.Res.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\RdlCompile.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\RdlCompile.compiled
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - news update\RIS\obj\Debug\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\csc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\vbc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\RIS.dll.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Antlr3.Runtime.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\EntityFramework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\GridMvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\HL7-TCP.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.SqlServer.Types.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Newtonsoft.Json.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Oracle.DataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Oracle.ManagedDataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Helpers.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Mvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Optimization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Webpages.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\WebGrease.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\EnvDTE.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\stdole.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\EnvDTE80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.Build.Tasks.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\VSLangProj.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\VSLangProj80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.MSXML.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.Build.Utilities.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.Build.Framework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\VSLangProj2.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\HL7-TCP.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Antlr3.Runtime.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\EntityFramework.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Newtonsoft.Json.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Optimization.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Webpages.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Helpers.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\System.Web.Mvc.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\EnvDTE.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\EnvDTE80.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\VSLangProj.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\VSLangProj80.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\VSLangProj2.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\RIS.Resources.Res.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\RdlCompile.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\RdlCompile.compiled
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode\RIS\obj\Debug\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\csc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\vbc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\RIS.dll.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Antlr3.Runtime.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\EntityFramework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\GridMvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\HL7-TCP.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.SqlServer.Types.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Newtonsoft.Json.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Oracle.DataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Oracle.ManagedDataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Helpers.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Mvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Optimization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Webpages.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\WebGrease.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\EnvDTE.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\stdole.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\EnvDTE80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.Build.Tasks.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\VSLangProj.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\VSLangProj80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.MSXML.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.Build.Utilities.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.Build.Framework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\VSLangProj2.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\HL7-TCP.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Antlr3.Runtime.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\EntityFramework.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Newtonsoft.Json.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Optimization.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Webpages.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Helpers.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\System.Web.Mvc.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\RIS.Resources.Res.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\RdlCompile.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\RdlCompile.compiled
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - Copy (2)\RIS\obj\Debug\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\csc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\vbc.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\RIS.dll.config
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\RIS.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Antlr3.Runtime.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\EntityFramework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\GridMvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\HL7-TCP.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.SqlServer.Types.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Newtonsoft.Json.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Oracle.DataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Oracle.ManagedDataAccess.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Helpers.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Mvc.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Optimization.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\WebGrease.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\EnvDTE.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\stdole.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\EnvDTE80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.Build.Tasks.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj80.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.MSXML.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.Build.Utilities.Core.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.Build.Framework.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj2.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Collections.Immutable.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\HL7-TCP.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Antlr3.Runtime.pdb
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\EntityFramework.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Newtonsoft.Json.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Optimization.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Helpers.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Mvc.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.csprojResolveAssemblyReference.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.Resources.Res.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.csproj.GenerateResource.Cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RdlCompile.cache
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RdlCompile.compiled
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\Ar\RIS.resources.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.dll
+C:\Users\hp\Desktop\Modar\Appoinments muj\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.pdb
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\SqlServerTypes\x64\msvcr120.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\SqlServerTypes\x86\msvcr120.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\csc.exe
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\vbc.exe
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\RIS.dll.config
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\RIS.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\RIS.pdb
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Ar\RIS.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Antlr3.Runtime.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\EntityFramework.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\EntityFramework.SqlServer.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\GridMvc.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\HL7-TCP.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.Design.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.WebDesign.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.SqlServer.Types.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Newtonsoft.Json.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Oracle.DataAccess.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Helpers.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Mvc.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Optimization.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Razor.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\WebGrease.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\EnvDTE.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\stdole.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\EnvDTE80.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.Build.Tasks.Core.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.Data.Services.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.Data.Core.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj80.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.ManagedInterfaces.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.MSXML.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.Build.Utilities.Core.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.Build.Framework.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj2.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\HL7-TCP.pdb
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Antlr3.Runtime.pdb
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\EntityFramework.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\EntityFramework.SqlServer.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Newtonsoft.Json.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Optimization.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Razor.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Helpers.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\System.Web.Mvc.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\EnvDTE.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\EnvDTE80.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj80.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\VSLangProj2.xml
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.csproj.AssemblyReference.cache
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.Resources.Res.resources
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.Resources.Res.Ar.resources
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.csproj.GenerateResource.cache
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.csproj.CoreCompileInputs.cache
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\Ar\RIS.resources.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.csproj.CopyComplete
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.dll
+C:\Users\oracle\Documents\Visual Studio 2022\Projects\Project2MUJ - addQcode - حالياً\Project2MUJ - addQcode - حالياً\RIS\obj\Debug\RIS.pdb

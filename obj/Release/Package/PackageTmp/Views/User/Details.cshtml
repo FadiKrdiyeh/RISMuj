@@ -1,0 +1,126 @@
+﻿@model RIS.Models.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.userDetails.ToString()</title>
+@using RIS.Models;
+
+<div style="margin-top:1%">
+    <h2>@RIS.Resources.Res.userDetails.ToString()</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.num)
+        <center>
+            <div class="form-horizontal" style="margin-top:3px;background-color:white;width:600px;border-radius:4px;">
+
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.LabelForModel(Model.username, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.pass, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.LabelForModel(Model.pass, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.pass, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.language, htmlAttributes: new { @class = "control-label col-md-4" })
+                    @if (Model.language == "ar")
+                {
+                <div class="col-md-6">
+                    <strong>
+                        العربية
+                    </strong>
+                </div>
+                }
+                else
+                {
+                <div class="col-md-6">
+                    <strong>
+                        English
+                    </strong>
+                </div>
+                }
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.firstName, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.LabelForModel(Model.firstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.firstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.lastName, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.LabelForModel(Model.lastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.departement, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+                        @Html.LabelForModel(Model.userDepartement.name)
+                        @Html.ValidationMessageFor(model => model.departement, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <table width="90%">
+                        <tr style="background-color:wheat;">
+                            <td>@RIS.Resources.Res.userGroups</td>
+                        </tr>
+                    </table>
+
+                    <div class="scroll">
+                        <table width="100%">
+                            @foreach (var item in ViewBag.uGroupPList)
+                        {
+                        <tr style="background-color: #e9e1d4;">
+                            <td>@item.name</td>
+                        </tr>
+                        }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <table align="center">
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <div class="btn btn-primary" style="width:250px;">
+                            @Html.ActionLink(RIS.Resources.Res.edit.ToString(), "Edit", new { i = Model.num })
+                        </div> |
+
+                        <div class="btn btn-primary" style="width:250px;">
+
+                            @Html.ActionLink(RIS.Resources.Res.Backtouserslist, "Index")
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    }
+</div>

@@ -1,0 +1,389 @@
+﻿@using ReportViewerForMvc;
+@model RIS.StatisticsClasses.PatientStatisticModel
+
+@{
+    //ViewBag.Title = "PatientStatics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.patStat</title>
+<div style="margin-top:1%">
+    <h2>@RIS.Resources.Res.patStat</h2>
+    <form id="f1">
+        @using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+    <center>
+        <div class="form-horizontal">
+            @*<h4>PatientStatisticModel</h4>*@
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        </div>
+
+        <table>
+            <tr>
+                <td style="text-size-adjust:150%">
+                    @RIS.Resources.Res.PatientGendre
+                </td>
+                <td style="text-size-adjust:150%">
+                    @RIS.Resources.Res.PatientAge
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @*@Html.EditorFor(model => model.sex, new { htmlAttributes = new { @class = "form-control" } })*@
+                    @if (ViewData["sex"].ToString() == "1")
+                    {
+                        <select id="sex" name="sex" class="form-control">
+                            <option value="-1"></option>
+                            <option value="1" selected="selected">@RIS.Resources.Res.male</option>
+                            <option value="0">@RIS.Resources.Res.female</option>
+                        </select>
+                    }
+                    else if (ViewData["sex"].ToString() == "0")
+                    {
+                        <select id="sex" name="sex" class="form-control">
+                            <option value="-1"></option>
+                            <option value="0" selected="selected">@RIS.Resources.Res.female</option>
+
+                            <option value="1">@RIS.Resources.Res.male</option>
+                        </select>
+                    }
+                    else
+                    {
+                        <select id="sex" name="sex" class="form-control">
+                            <option value="-1"></option>
+                            <option value="1">@RIS.Resources.Res.male</option>
+                            <option value="0">@RIS.Resources.Res.female</option>
+                        </select>
+                    }
+                </td>
+
+
+
+                <td>
+                    @Html.EditorFor(model => model.age, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>@RIS.Resources.Res.PatientBirhtDate</td>
+                <td>@RIS.Resources.Res.PatientInsertdate</td>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>@RIS.Resources.Res.sinceDate</td>
+                            <td>@Html.EditorFor(model => model.sBirthDate, new { htmlAttributes = new { @class = "dateInput form-control" } })</td>
+                            <td>@RIS.Resources.Res.toDate</td>
+                            <td>@Html.EditorFor(model => model.eBirthDate, new { htmlAttributes = new { @class = "dateInput form-control" } })</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>@RIS.Resources.Res.sinceDate</td>
+                            <td>@Html.EditorFor(model => model.sInsertDate, new { htmlAttributes = new { @class = "dateInput form-control" } })</td>
+                            <td>@RIS.Resources.Res.toDate</td>
+                            <td>@Html.EditorFor(model => model.eInsertDate, new { htmlAttributes = new { @class = "dateInput form-control" } })</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td>@RIS.Resources.Res.ChooseClinic</td>
+                <td>@RIS.Resources.Res.DoctorName</td>
+            </tr>
+
+            @* <tr><td>@Html.EditorFor(model => model.clinics, new { htmlAttributes = new { @class = "form-control" } })</td></tr>*@
+            @*<tr><td>@Html.DropDownList("departement", (MultiSelectList)ViewBag.departement, new { multiple = "multiple"})</td></tr>*@
+            <tr>
+                <td>
+                    <select id="clinics" name="clinics[]" multiple="multiple" style="width:100%" class="form-control">
+                        @foreach (var clinic in ViewBag.clinicList)
+                {
+                    bool temp = false;
+                    if (ViewBag.selectedClinicList != null)
+                    {
+                        foreach (var sd in ViewBag.selectedClinicList)
+                        {
+                            if (sd == clinic)
+                            {
+                                temp = true;
+                                break;
+                            }
+                        }
+                        if (temp)
+                        {
+                                    <option value="@clinic" selected="selected">@clinic</option>}
+                        else
+                        {
+                                    <option value="@clinic">@clinic</option>}
+                    }
+                    else
+                    {
+                                <option value="@clinic">@clinic</option>}
+                }
+                    </select>
+
+                </td>
+                @*<td>
+                    <select id="modalities" name="modalities[]" multiple="multiple" style="width:100%">
+                        @foreach (var doc in ViewBag.doctorList)
+                                    {
+                                        bool temp1 = false;
+                                        if (ViewBag.selecteddoctorList != null)
+                                        {
+                                            foreach (var sm in ViewBag.selecteddoctorList)
+                                            {
+                                                if (sm == doc)
+                                                {
+                                                    temp1 = true;
+                                                    break;
+                                                }
+                                            }
+                                            if (temp1)
+                                            {
+                                    <option value="@doc" selected="selected">@doc</option>
+
+                                            }
+                                            else
+                                            {
+                                    <option value="@doc">@doc</option>
+
+                                            }
+                                        }
+                                        else
+                                        {
+                                    <option value="@doc">@doc</option>
+
+                                        }
+
+                                    }
+
+
+                    </select>
+                </td>*@
+            </tr>
+
+            <tr>
+
+
+
+                <td>
+
+                    <a href="javascript:showGroupOptions();" class="td-img">
+                        @RIS.Resources.Res.infoChart @*@Html.RadioButtonFor(model => model.infoTable, false, new { htmlAttributes = new { @class = "form-control" } })*@
+                    </a>
+
+                </td>
+                <td>
+
+                    <a href="javascript:showAsTable();" class="btn btn-default">
+
+                        @*<span class="en-flag-icon">Arabic</span>*@
+
+                        @RIS.Resources.Res.infoTable @*@Html.RadioButtonFor(model => model.infoTable, true, new { htmlAttributes = new { @class = "form-control" } })*@
+                    </a>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div id="groupOptions" style="display:none">
+                        <table>
+                            <tr>
+                                <td>
+                                    @RIS.Resources.Res.groupByGendre
+                                </td>
+                                <td>
+                                    @Html.RadioButtonFor(model => model.GroupingItem, "Gendre", new { htmlAttributes = new { @class = "form-control" } })
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @RIS.Resources.Res.groupByAge
+                                </td>
+                                <td>
+                                    @Html.RadioButtonFor(model => model.GroupingItem, "Age", new { htmlAttributes = new { @class = "form-control" } })
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @RIS.Resources.Res.groupByDailyId
+                                </td>
+                                <td>
+                                    @Html.RadioButtonFor(model => model.GroupingItem, "DID", new { htmlAttributes = new { @class = "form-control" } })
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @RIS.Resources.Res.groupByMonthlyId
+                                </td>
+                                <td>
+                                    @Html.RadioButtonFor(model => model.GroupingItem, "MID", new { htmlAttributes = new { @class = "form-control" } })
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @RIS.Resources.Res.groupByYearlyId
+                                </td>
+                                <td>
+                                    @Html.RadioButtonFor(model => model.GroupingItem, "YID", new { htmlAttributes = new { @class = "form-control" } })
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+
+                                    <a href="javascript:showAsChart();" class="btn btn-default">
+
+                                        @*<span class="en-flag-icon">Arabic</span>*@
+
+                                        @RIS.Resources.Res.showChart @*@Html.RadioButtonFor(model => model.infoTable, true, new { htmlAttributes = new { @class = "form-control" } })*@
+                                    </a>
+
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </td>
+            </tr>
+
+
+        </table>
+
+</center>
+
+    <table align="center">
+        <tr>
+            <td width="25%"></td>
+            <td width="50%">
+                @Html.ReportViewer(ViewBag.ReportViewer as Microsoft.Reporting.WebForms.ReportViewer)
+            </td>
+            <td width="25%"></td>
+        </tr>
+    </table>
+    }
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#errorLbl").html("");
+        var options = $.extend({},                                  // empty object
+$.datepicker.regional["ar"],         // ar regional
+{ dateFormat: "mm/dd/yy" /*, ... */ } // your custom options
+);
+        $.datepicker.setDefaults(options);
+        $(".dateInput").datepicker({
+            dateFormat: "mm/dd/yy",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0"
+        });
+
+
+      });
+
+
+
+    function parseJsonDate(jsonDate) {
+
+        var fullDate = new Date(parseInt(jsonDate.substr(6)));
+        var twoDigitMonth = (fullDate.getMonth() + 1) + ""; if (twoDigitMonth.length == 1) twoDigitMonth = "0" + twoDigitMonth;
+
+        var twoDigitDate = fullDate.getDate() + ""; if (twoDigitDate.length == 1) twoDigitDate = "0" + twoDigitDate;
+        var currentDate = twoDigitDate + "/" + twoDigitMonth + "/" + fullDate.getFullYear();
+
+        return currentDate;
+    };
+
+
+
+    function showAsTable()
+    {
+        //var obj = @Html.Raw(Json.Encode(Model));
+
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/AppStatistics/AppPatientStaticsTable',
+
+            //data: '{ "lang" : "Ar" }',
+            //data: SON.stringify(model),
+            // and then change the 'data' option to:
+
+           /* data: JSON.stringify({ "ps": obj}),
+            contentType: 'application/json; charset=utf-8',
+
+            dataType: 'josn',*/
+
+            data: $("#f1").serialize(),
+            success: function (data) {
+                //alert("soso");
+                //location.reload(); // reloading Parent page
+                $("body").html(data);
+            },
+            error: function () {
+                //alert("fofo");
+                //location.reload(); // reloading Parent page
+
+            }
+
+        });
+    }
+
+
+    function showAsChart() {
+        //var obj = @Html.Raw(Json.Encode(Model));
+
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/AppStatistics/AppPatientStatics',
+
+            //data: '{ "lang" : "Ar" }',
+            //data: SON.stringify(model),
+            // and then change the 'data' option to:
+
+            /* data: JSON.stringify({ "ps": obj}),
+             contentType: 'application/json; charset=utf-8',
+ 
+             dataType: 'josn',*/
+
+            data: $("#f1").serialize(),
+            success: function (data) {
+                //alert("soso");
+                //location.reload(); // reloading Parent page
+                $("body").html(data);
+            },
+            error: function () {
+                //alert("fofo");
+                //location.reload(); // reloading Parent page
+
+            }
+
+        });
+    }
+
+    function showGroupOptions() {
+        $("#groupOptions").toggle();
+
+    }
+
+</script>

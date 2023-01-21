@@ -1,0 +1,1113 @@
+﻿@model RIS.ViewModels.PatientDetails
+@using RIS.Resources
+@using RIS.helpers;
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = @Res.patDetails.ToString();
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*using System.Net;
+
+    namespace DICOMcloud.Examples
+    {
+        class WadoUrlExample
+        {
+            public void DownloadDicom ( )
+            {
+                WebClient client = new WebClient ( ) ;
+
+                string url = "http://localhost:44301/wadouri?RequestType=wado&studyUID=1.2.392.200036.9116.2.6.1.3268.2051314020.1461904638.200374&seriesUID=1.2.392.200036.9116.2.6.1.3268.2051314020.1461904639.541937&objectUID=1.2.392.200036.9116.2.6.1.3268.2051314020.1461897481.951895&contentType=application/dicom" ;
+
+                client.Headers.Add ( "Accept", "application/dicom");
+
+                //Or you just need to specify that you accept all media types:
+                //client.Headers.Add ( "Accept", "*/*");
+
+                System.IO.Stream dicomData = client.OpenRead ( url ) ;
+            }
+        }
+    }*@
+
+
+<style type="text/css" class="init">
+    .palyButton {
+        background: url('../../Resources/play.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    td.details-control {
+        background: url('../../Resources/details_open.png') no-repeat center center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    td.date {
+        width: 20%;
+    }
+
+    tr.shown td.details-control {
+        background: url('../../Resources/details_close.png') no-repeat center center;
+    }
+
+    td.addRep-control {
+        background: url('../../Resources/add.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    td.showImage-control {
+        background: url('../../Resources/dcm.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+
+    td.showImage-control-java {
+        background: url('../../Resources/dcm1.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    td.goToPatientPage-control {
+        background: url('../../Resources/goTo.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    td.goToPatientPageEN-control {
+        background: url('../../Resources/goToEn.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    td.DownloadStudies-control {
+        background: url('../../resources/dcm.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+
+    td.ViewStudies-control {
+        background: url('../../resources/dcm.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    textarea {
+        resize: vertical;
+        pointer-events: painted;
+    }
+</style>
+
+<title>@Res.patDetails.ToString()</title>
+@{
+    var ss = "";
+    if (TempData["Message"] != null)
+    {
+        ss = TempData["Message"].ToString();
+    }
+}
+@if (ss != "")
+{
+    <div style="margin-top:1%">
+        <h2>@Res.patDetails.ToString()</h2>
+        <br /><br />
+        <center style="color:red">
+            @ss
+        </center>
+    </div>
+}
+else
+{
+    <div style="border:outset;border-radius:9px;margin-left:15px;margin-right:15px;box-shadow:4px 3px #2d97af;width:auto;background-color:#fdffff;">
+        <center>
+            <h2>@Res.patDetails.ToString()</h2>
+        </center>
+
+        <table>
+            <tr>
+                <td>
+                    <table style="margin-top:3px; border:double; background-color:white;">
+
+                        <tr style="background-color:wheat;">
+
+                            <td>@Html.LabelFor(model => model.patient.givenid, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.insertdate, htmlAttributes: new { @class = "" })</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.givenid, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.insertdate, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table style="margin-top:3px; border:double; background-color:white;">
+
+                        <tr style="background-color:wheat;">
+                            <td>@Html.LabelFor(model => model.patient.firstname, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.middlename, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.lastname, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.mothername, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.gendre, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.martialstatus, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.birthdate, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.nationalidnumber, htmlAttributes: new { })</td>
+                            <td>@Html.LabelFor(model => model.patient.age, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.nationality, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.birthplace, htmlAttributes: new { @class = "" })</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.middlename, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.lastname, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.mothername, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @{
+                                    int g = Int16.Parse(Html.ValueFor(model => model.patient.gendre).ToString());
+                                    //  string selected = "selected";
+                                    if (g == 1)
+                                    {
+                                        @Res.male
+
+                                    }
+                                    else
+                                    {
+                                        @Res.female
+                                    }
+                                }
+                                @* @Html.DisplayFor(model => model.gendre, new { htmlAttributes = new { @class = "form-control" } })*@
+                            </td>
+
+                            <td>
+                                @{
+                                    try
+                                    {
+                                        int ms = Int16.Parse(Html.ValueFor(model => model.patient.martialstatus).ToString());
+                                        //  string selected = "selected";
+                                        if (ms == 1)
+                                        {
+                                            @Res.martialMar
+                                        }
+                                        else
+                                        {
+                                            @Res.martialSing
+
+                                        }
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        string ssss = e.ToString();
+                                    }
+
+
+                                }
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.birthdate, new { htmlAttributes = new { } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.nationalidnumber, new { htmlAttributes = new { } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.age, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(model => model.patient.nationality, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(model => model.patient.birthplace, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <table style="margin-top:3px; border:double; background-color:white;">
+
+
+                        <tr style="background-color:wheat;">
+                            <td>@Html.LabelFor(model => model.patient.currentaddress, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.residentaddress, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.mobilephone, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.landphone, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.workphone, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.workaddress, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.worktype, htmlAttributes: new { @class = "" })</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.currentaddress, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.residentaddress, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.mobilephone, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(model => model.patient.landphone, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.workphone, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(model => model.patient.workaddress, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.worktype, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td>
+                    <table style="margin-top:3px; border:double; background-color:white;">
+                        <tr style="background-color:wheat;">
+                            <td>@Html.LabelFor(model => model.patient.nearestperson, htmlAttributes: new { @class = "" })</td>
+                            <td>@Html.LabelFor(model => model.patient.nearestpersonphone, htmlAttributes: new { @class = "" })</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.nearestperson, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.nearestpersonphone, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br />
+
+
+        <table>
+            <tr>
+                <td>
+                    <table style="margin-top:3px; border:double; background-color:white;">
+
+                        <tr style="background-color:wheat;">
+                            <td>@Html.LabelFor(model => model.patient.notes, htmlAttributes: new { @class = "" })</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(model => model.patient.notes, new { htmlAttributes = new { @class = "form-control" } })
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <br />
+
+    </div>
+    <br />
+    <div style="margin-top:1%">
+        <h2>@RIS.Resources.Res.Appoinments</h2>
+        <table align="center" style="margin-top:3px;">
+            <tr>
+                <td class="btn btn-primary btn-xs c">
+                    @Html.ActionLink(RIS.Resources.Res.AddApp, "Create", "Appoinments", new { pId = Model.patient.num }, null)
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <div style="padding-left: 5%;padding-right: 5%;">
+            @Html.Grid(Model.patientApps).Columns(columns =>
+       {
+           columns.Add(c => c.clinicName).Titled(Res.ClinicName).Filterable(true);
+           columns.Add(c => c.appDate).Titled(Res.AppDate).Filterable(true);
+           columns.Add(c => c.appStatus).Titled(Res.status).Filterable(true);
+           columns.Add(c => c.Doctor).Titled(Res.DoctorName).Filterable(true);
+           columns.Add().Encoded(false).Sanitized(false).SetWidth(50)
+            .RenderValueAs(c => Html.ActionLink(" ", "Edit", "Appoinments", new { id = c.appID }, new { @title = RIS.Resources.Res.edit, @class = "btn btn-default fa fa-pencil" }) + "&nbsp;&nbsp;" +
+          Html.ActionLink(" ", "Delete", "Appoinments", new { id = c.appID }, new { @title = RIS.Resources.Res.Delete, @class = "btn btn-danger fa fa-trash" }) + "&nbsp;&nbsp;"
+          ).Encoded(false).Css("flexy").Titled("");
+
+
+       }).WithPaging(5).Sortable()
+        </div>
+    </div>
+    <br />
+    <center>
+        <div style="border:outset;border-radius:9px;margin-left:15px;margin-right:15px;box-shadow:4px 3px #2d97af;width:auto;background-color:#fdffff;">
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <button class="form-control" onclick="refresh()" style="background-color:palegreen">
+                                <span class="fa fa-refresh">  @Res.mnm_refresh</span>
+                            </button>
+                        </td>
+                        <td><h2>@Res.mnm_patStudies</h2></td>
+                    </tr>
+                </table>
+                <script>
+                    function refresh()
+                    {
+                        searcher();
+                    }
+                </script>
+            </center>
+
+            <table style="display:@Html.IsVisible(new List<string> { "Patient" })">
+                @*check permission *@
+                <tr>
+                    <td colspan="2">
+                        <h2 dir="@Res.mnm_dir0"><span><a href="Javascript:openStudiesJNLP()"><img src="../../resources/dcm1.png" /></a></span>  @Res.mnm_downloadStudies </h2>
+                    </td>
+                </tr>
+            </table>
+
+            <script>
+                function myRefresh()
+                {
+                    getReportList();
+                }
+                function openStudiesJNLP() {
+                    //http://localhost:8080/weasis-pacs-connector/viewer?patientID=97026728&studyUID=1.3.6.1.4.1.5962.1.2.2.20031208063649.855XXXXXX
+                    //
+                    var url = "http://" + '@Session["pacsIP_"].ToString()' + ":" + '@Session["viewerPort"].ToString()' + "/weasis-pacs-connector/weasis?patientID=" + '@Model.patient.givenid';
+                    //var url = "/Reports/Create?pid=" + d.ID + "&pname=" + d.NAME + "&pbirthdate=" + d.BIRTHDATE + "&psex=" + d.SEX;
+                    window.open(url, '_blank');
+                }
+                function openStudiesWEB() {
+                    //http://192.168.1.245:8081/pacs-viewer/oviyam?patientID=5Yp0E
+                    var url = "http://" + '@Session["pacsIP_"].ToString()' + ":" + '@Session["viewerPort"].ToString()' + "/pacs-viewer/oviyam?patientID=" + '@Model.patient.givenid';
+                    //var url = "/Reports/Create?pid=" + d.ID + "&pname=" + d.NAME + "&pbirthdate=" + d.BIRTHDATE + "&psex=" + d.SEX;
+                    window.open(url, '_blank');
+                }
+            </script>
+
+            <br />
+
+            <table style="display: inline;font-weight:bold">
+                <tr>
+                    <td>@Res.ColorNmrlgy:</td>
+                    <td><span style="background-color:tomato">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>@Res.ColorRequestSent</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td><span style="background-color:lightgreen">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>@Res.ColorRadUnderway</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td><span style="background-color:whitesmoke">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>@Res.ColorRaddone</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td><span style="background-color:gray">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>@Res.ColorRadReviewed</td>
+                    <td>&nbsp;&nbsp;</td>
+                    <td><span style="background-color:green">&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                    <td>@Res.ColorRepWritten</td>
+                    <td>&nbsp;&nbsp;</td>
+                </tr>
+            </table>
+
+            <div class="body-content" style="width:95% !important;margin:2% !important" dir="@Res.mnm_themeDir">
+                <section>
+                    <table id="example" class="display" cellspacing="0" style="width:100%"></table>
+                </section>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        var globalRow;
+        // this function is used to excute search operatio
+        function searcher()
+        {
+            debugger;
+            //TODO Check if session null
+            $('#example').show(); // when the page is loaded the table is hidden
+            // here we fill the data table
+            // first we decorate the datatable and setup the configurations
+            var tableHeader =
+                '<thead>' +
+                '<tr>' +
+                    '<th style="width:85px">@Res.mnm_showImage</th> ' +
+                    '<th style="width:85px">@Res.mnm_showImage</th> ' +
+                    '<th style="width:85px">@Res.mnm_addRep</th> ' +
+                    '<th style="width:85px">@Res.mnm_showRep</th>' +
+                    '<th style="text-align:center">@Res.mnm_imageType</th>' +
+                    '<th style="text-align:center">@Res.mnm_pos</th>' +
+                    '<th style="text-align:center;width:170px">@Res.mnm_imageDate</th>' +
+                    '<th style="text-align:center">@Res.mnm_orderStatus</th>' +
+                    '<th style="text-align:center">@Res.mnm_sendingDoctor</th>' +
+                '</tr>' +
+                '</thead>';
+            $('#example').empty();
+            $('#example').append(tableHeader);
+            var table = $('#example').DataTable();
+            table = $('#example').DataTable({
+                destroy: true,
+                "bServerSide ": true,
+                // set the language of the datatable
+                "language": {
+                    "lengthMenu": "@Res.mnm_show  _MENU_  @Res.mnm_results",
+                    "zeroRecords": "@Res.mnm_noResults",
+                    "info": "@Res.mnm_show _PAGE_ @Res.From _PAGES_",
+                    "infoEmpty": "@Res.mnm_noResults",
+                    "infoFiltered": "(@Res.filtered @Res.From _MAX_ @Res.totalRecords)",
+                    "search": "@Res.mnm_search",
+                    "paginate":
+                        {
+                            "next": "@Res.mnm_next",
+                            "previous": "@Res.mnm_prev",
+                        }
+                },
+                // ajax call to fill the table
+                "ajax": {
+                    "url": '@Url.Content("~/Report/getPatientRadiologies")',
+                    "type": "GET",
+                    "datatype": "json",
+                    "data": { patId:@Model.patient.id },
+                },
+
+                // decorate the coloumns of the table
+                "columns": [
+                {
+                    // add report button
+                    "className": 'showImage-control-java',
+                    "orderable": false,
+                    "data": null,
+                    "defaultContent": ''
+                },
+                {
+                    // add report button
+                    "className": 'showImage-control',
+                    "orderable": false,
+                    "data": null,
+                    "defaultContent": ''
+                },
+                {
+                    // add report button
+                    "className": 'addRep-control',
+                    "orderable": false,
+                    "data": null,
+                    "defaultContent": ''
+                },
+                {
+                    // brief preview of patient's report
+                    "className": 'details-control',
+                    "orderable": false,
+                    "data": null,
+                    "defaultContent": ''
+                },
+
+                { "data": "ImageType" }, // the type of the image
+                { "data": "newProc.name" }, // name
+                { "data": "EndDate" }, // date of image
+                { "data": "statusName" }, // status of the order
+                { "data": "sendingDoctor" } // name of doctor that sends the order
+                ],
+
+                "order": [[6, 'desc']],
+
+                "createdRow": function( row, data, dataIndex){
+                    if( data.Status =="0"  ){ // scheduled
+                        $(row).css('background-color', 'tomato');
+                    }
+                    if( data.Status =="1"  ){ // started
+                        $(row).css('background-color', 'lightgreen');
+                    }
+                    if( data.Status =="2"  ){ // complete
+                        $(row).css('background-color', 'whitesmoke');
+                    }
+                    if( data.Status =="3"  ){ // viewed
+                        $(row).css('background-color', 'gray');
+                    }
+                    if( data.Status =="4"  ){ // reported
+                        $(row).css('background-color', 'green');
+                    }
+                    if( data.Status =="5"  ){ // watiting
+                        $(row).css('background-color', 'tomato');
+                    }
+
+                    $(row).find('td').eq(2).removeClass('addRep-control');
+                    $.ajax(
+                        {
+                            "url": '@Url.Content("~/Report/canAddReport")',
+                            "type": "GET",
+                            "datatype": "json",
+                            "data": { radId:data.ID},
+                            success: function(data)
+                            {
+                                if(data==0)
+                                {
+                                    $(row).find('td').eq(2).addClass('addRep-control');
+                                    return;
+                                }
+                            }
+                        });
+
+                    $(row).find('td').eq(1).removeClass('showImage-control');
+                    $(row).find('td').eq(0).removeClass('showImage-control-java');
+                    $.ajax(
+                        {
+                            "url": '@Url.Content("~/Report/canPreviewImage")',
+                            "type": "GET",
+                            "datatype": "json",
+                            "data": { radId:data.ID},
+                            success: function(data)
+                            {
+                                if(data==0)
+                                {
+                                    $(row).find('td').eq(1).addClass('showImage-control');
+                                    $(row).find('td').eq(0).addClass('showImage-control-java');
+                                    return;
+                                }
+                            }
+                        });
+
+                    $(row).find('td').eq(3).removeClass('details-control');
+                    $.ajax(
+                        {
+                            "url": '@Url.Content("~/Report/canViewReport")',
+                            "type": "GET",
+                            "datatype": "json",
+                            "data": { radId:data.ID},
+                            success: function(data)
+                            {
+                                if(data==0)
+                                {
+                                    $(row).find('td').eq(3).addClass('details-control');
+                                    return;
+                                }
+                            }
+                        });
+                }
+            });
+
+
+            // now it is the time for linking the buttons of the tables with their functions.
+            // linking is done as the following: each coloumn of the datatable is of a specific css class
+
+            // here the code for previewing the reports of the patient
+            $('#example tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr'); // get the row
+                var row = table.row(tr); // get the content of the row
+                globalRow=row;
+                // toggle the child row: if the row is shown hide it, else show the child row.
+                if (row.child.isShown()) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    // Open this row
+                    format(row); // here we excute "format" function which calls the controller and and get the data and draw the child table
+                    tr.addClass('shown'); // show the child the table
+                }
+            });
+
+            // add report button
+            $('#example tbody').on('click', 'td.addRep-control', function () {
+                debugger;
+                // the next 3 lines is to get the content of the row
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+                var d = row.data();
+                // check if can add report
+                $.ajax(
+                    {
+                        "url": '@Url.Content("~/Report/canAddReport")',
+                        "type": "GET",
+                        "datatype": "json",
+                        "data": { radId:d.ID},
+                        success: function(data)
+                        {
+                            //if(data==0)
+                            if(1>0)
+                            {
+                                // go to create report page.
+                                var url = "/Report/Create?radId="+d.ID;
+                                window.open(url, '_blank');
+                                return;
+                            }
+                            else
+                            {
+                                if(data==1)
+                                {
+                                    alert("يجب استغراض الصورة أولا")
+                                    return;
+                                }
+                                if(data==2)
+                                {
+                                    alert("لاتملك الصلاحية الكافية لإتمام هذا الإجراء")
+
+                                    return;
+                                }
+
+                            }
+                        }
+                    });
+
+
+                return false;
+            });
+
+
+            // add report button
+            $('#example tbody').on('click', 'td.showImage-control', function () {
+                debugger;
+                // the next 3 lines is to get the content of the row
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+                var d = row.data();
+
+                var url = "http://" + '@Session["pacsIP_"].ToString()' + ":" + '@Session["viewerPort"].ToString()' + "/pacs-viewer/oviyam?patientID=" + '@Model.patient.givenid'+"&studyUID=" + d.StudyID;
+
+
+                // this ajax call is used to route the id of the patient to controller
+                // check if order is not shown
+                //   alert(d.Status);
+                if(d.Status<'@RIS.ConnectionConfigs.VIEWED')
+                {
+                    $.ajax({
+                        url: '/Radiology/ChangeStatus1/',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: { orderId: d.ID ,orderStatus:'@RIS.ConnectionConfigs.VIEWED'},
+                        success: function (data2) {
+                            searcher();
+                        },
+                        error: function (err) {
+                            searcher();
+
+                        }
+                    });
+                }
+                window.open(url, '_blank');
+
+
+
+
+
+
+                return false;
+            });
+
+
+            //add java viewer
+            $('#example tbody').on('click', 'td.showImage-control-java', function () {
+                debugger;
+                // the next 3 lines is to get the content of the row
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+                var d = row.data();
+                // 127.0.0.1:8081/wado?requestType=WADO&studyUID=1.2.4.0.13.1.4.2252867.60715&seriesUID=1.2.826.0.1.3680043.2.1545.1.2.1.7.20191221.154034.848.26&objectUID=1.2.826.0.1.3680043.2.1545.687.13&contentType=application%2Fdicom
+                var url = "http://" + '@Session["pacsIP_"].ToString()' + ":" + '@Session["viewerPort"].ToString()' + "/weasis-pacs-connector/weasis?patientID=" + '@Model.patient.givenid' + "&studyUID="+d.StudyID;
+
+
+                // this ajax call is used to route the id of the patient to controller
+                $.ajax({
+                    url: '/Radiology/ChangeStatus1/',
+                    type: 'GET',
+                    dataType: 'json',
+                    data: { orderId: d.ID ,orderStatus:'@RIS.ConnectionConfigs.VIEWED'},
+                    success: function (data2) {
+                        searcher();
+                    },
+                    error: function (err) {
+                        searcher();
+
+                    }
+                });
+
+                window.open(url, '_blank');
+
+
+
+
+
+
+                return false;
+            });
+
+
+            $('#example tbody').on('click', 'td.DownloadStudies-control', function () {
+
+
+                return false;
+            });
+
+            $('#example tbody').on('click', 'td.ViewStudies-control', function () {
+
+
+                return false;
+            });
+
+
+        }
+
+
+
+
+
+        /* Formatting function for row details - modify as you need */
+        /*
+         this is the function that used to draw the child table of the row in order to preview patient's reprts.
+        */
+        function format(ro) {
+
+            d = ro.data(); // get the content data of the row.
+
+            // this ajax call is used to route the id of the patient to controller
+            $.ajax({
+                url: '/Report/GetReportByStudyID/',
+                type: 'GET',
+                dataType: 'json',
+                data: { radId: d.ID },
+                success: function (data2) {
+                    if (data2.length > 0) // if there are reports.
+                    {
+                        debugger;
+                        // now we draw the child table.
+                        var rows = '';
+                        var rrrrrr ='';
+                        for (p in data2) {
+                            rows = '';
+                            rows += "<tr id='newRow" + data2[p].NUM + "'>";
+                            rows += '<td class="date">' +data2[p].REPORTDATESTRING+ '</td>';
+                            try
+                            {
+                                rows += '<td>' + data2[p].DOCTOR.name+ '</td>';
+                            }
+                            catch(excpeption )
+                            {
+                                rows += '<td> </td>';
+
+                            }
+                            rows += '<td><textarea readonly style="width:100%" resize="none">' + data2[p].TITLE + '</textarea></td>';
+                            if (data2[p].AUDIOPATH != null) {
+                                rows += "<td><img id='btnPaly" + data2[p].NUM + "' src='../../resources/play.png' style='background-repeat:no-repeat;cursor:pointer;width:40px;height:40px' onclick='playAudioReportById(" + data2[p].NUM + ")'/><img id='btnStop" + data2[p].NUM + "' src='../../resources/stop.png' style='display:none;background-repeat:no-repeat;cursor:pointer;width:40px;height:40px' onclick='stopAudioReportById(" + data2[p].NUM + ")'/><audio  id='audPaly" + data2[p].NUM + "'></audio><img id='btnDownload' src='../../resources/download.png' style='background-repeat:no-repeat;cursor:pointer;width:40px;height:40px' onclick='downloadAudioReportById(" + data2[p].NUM + ")'/><td><button type='button' id='btnView' class='btn btn-info' onclick='viewReportById(" + data2[p].NUM + ")'>عرض</button> <button type='button' id='btnEdit' class='btn btn-edit' onclick='editReportById(" + data2[p].NUM + ")'>تعديل</button> <button type='button' id='btnPrint' class='btn btn-default' onclick='printReportById(" + data2[p].NUM + ")'>معاينة وطباعة</button>  <button type='button' id='btnDelete' class='btn btn-danger' onclick='DeleteReportById(" + data2[p].NUM + ")'>@Res.Delete</button></td>"
+
+                            }
+                            else {
+                                rows += "<td>@Res.mnm_noResults<td><button type='button' id='btnView' class='btn btn-info' onclick='viewReportById(" + data2[p].NUM + ")'>@Res.mnm_show</button> <button type='button' id='btnEdit' class='btn btn-edit' onclick='editReportById(" + data2[p].NUM + ")'>@Res.mnm_edit</button> <button type='button' id='btnPrint' class='btn btn-default' onclick='printReportById(" + data2[p].NUM + ")'>@Res.mnm_prin</button>  <button type='button' id='btnDelete' class='btn btn-danger' onclick='DeleteReportById(" + data2[p].NUM + ")'>@Res.Delete</button></td>"
+                            }
+                            rows += '</tr>';
+                            rows += '<tr style="display:none;width:100%" class="body'+data2[p].NUM+'">';
+                            rows += '<td>';
+                            rows += '@Res.mnm_rep:';
+                            rows += '</td>';
+                            rows += '<td colspan="4">';
+                            rows += '<textarea readonly style="width:100%" resize="none">';
+                            rows+=data2[p].REPORTBODY;
+                            rows += '</textarea>';
+
+                            rows += '</td>';
+
+                            rows += '</tr>';
+
+
+                            rows += '</tr>';
+                            rows += '<tr style="display:none;width:100%" class="body'+data2[p].NUM+'">';
+                            rows += '<td>';
+                            rows += '@Res.mnm_not:';
+                            rows += '</td>';
+                            rows += '<td colspan="4">';
+                            rows += '<textarea readonly style="width:100%">';
+                            rows+=data2[p].NOTES;
+                            rows += '</textarea>';
+
+                            rows += '</td>';
+
+                            rows += '</tr>';
+
+
+                            rrrrrr += '<table style="width:100%"><thead><th style="text-align:center">@Res.mnm_repDate</th><th style="text-align:center">@Res.mnm_repDoc</th><th style="text-align:center">@Res.mnm_tit</th><th style="text-align:center">@Res.mnm_aud</th></tr></thead>' + rows + '</table>';
+                        }
+
+                        //var rrrrrr = '<table style="width:100%"><thead><th style="text-align:center">تاريخ التقرير</th><th style="text-align:center">اسم الطبيب</th><th style="text-align:center">عنوان التقرير</th><th style="text-align:center">الملف الصوتي</th></tr></thead>' + rows + '</table>';
+
+                        ro.child(rrrrrr).show();
+
+
+                    }
+                    else {
+                        var rrrrrr = '<table ><tr><td>لا يوجد تقارير</td></tr></table>';
+                        ro.child(rrrrrr).show();
+                    }
+                },
+                error: function (err) {
+                    alert("Error: " + err.responseText);
+                }
+            });
+
+        }
+
+        // when the page is loaded hide the datatable.
+        $(document).ready(function () {
+            $('#example').hide();
+            searcher();
+
+        });
+
+
+
+        function playAudioReportById(repId) {
+            // draw the player
+            $('#btnPaly' + repId).attr('style', 'style = background-repeat:no-repeat;cursor:pointer;width:40px;height:40px;display:none');
+            $('#btnStop' + repId).attr('style', 'style = background-repeat:no-repeat;cursor:pointer;width:40px;height:40px;display:');
+            $('#audPaly' + repId).attr('style', 'display:');
+            $('#newRow' + repId).attr('class', 'soundBite');
+            $('#audPaly' + repId).attr('controls', '');
+            // get the file.
+            $.ajax(
+          {
+              type: 'Get',
+              datatype: 'json',
+              url: '/Report/getFileToPlay/',
+              data: { repId: repId },
+              success: function (d) {
+                  $('#audPaly' + repId).attr('src', d);
+              }
+          }
+       );
+
+        }
+        // stop playing.
+        function stopAudioReportById(repId) {
+            $('#btnStop' + repId).attr('style', 'style = background-repeat:no-repeat;cursor:pointer;width:40px;height:40px;display:none');
+            $('#btnPaly' + repId).attr('style', 'style = background-repeat:no-repeat;cursor:pointer;width:40px;height:40px;display:');
+            $('#audPaly' + repId).attr('style', 'style = display:none');
+            $('#audPaly' + repId).attr('src', '');
+            $('#audPaly' + repId).removeAttr('controls');
+
+        }
+
+        // download the audio file.
+        function downloadAudioReportById(repId) {
+            debugger;
+            var url = "/Report/downloadFile?repId=" + repId;;
+            window.open(url);
+        }
+
+        function viewReportById(r)
+        {
+            debugger;
+            $(".body"+r).toggle();
+        }
+
+        function editReportById(repId) {
+            var url = "/Report/Edit?repId=" + repId;
+            window.open(url, '_blank');
+        }
+
+        function printReportById(repId) {
+            var url = "/Report/Details?repId=" + repId;
+            window.open(url, '_blank');
+        }
+
+
+
+        function DeleteReportById(repId) {
+            var r = confirm("هل تريد حذف هذ التقرير");
+            if (r == true) {
+
+                $.ajax(
+  {
+      type: 'get',
+      datatype: 'json',
+      url: '/Report/DeleteReportByID/',
+      data: { _repid: repId },
+      success: function (deeee) {
+          //var tr = $('#example').closest('tr');
+          //var row = table.row(tr);
+          format(globalRow);
+
+
+
+      }
+  }
+);
+
+
+            }
+        }
+
+    </script>
+
+
+
+    <br />
+    <div>
+    <table align="center">
+        <tr>
+            <td>
+                @Html.ActionLink(Res.edit.ToString(), "Edit", new { id = Model.patient.num }, new
+           {
+               @class = "btn btn-primary",
+               @style = "width:250px"
+           })
+            </td>
+
+            <td>
+                @Html.ActionLink(Res.AddRad.ToString(), "Create", "Radiology", new { pId = Model.patient.num }, new
+           {
+               @class = "btn btn-primary",
+               @style = "width:250px"
+           })
+            </td>
+            <td>
+                @Html.ActionLink(Res.patList.ToString(), "Index", "Patient", new { pId = Model.patient.num }, new
+           {
+               @class = "btn btn-primary",
+               @style = "width:250px"
+           })
+            </td>
+            <td>
+                @*@Html.ActionLink(Res.BillsIndex.ToString(), "Create", "Bills", new { patientId = Model.patient.num, ViewBag.date }, new*@
+                @Html.ActionLink(Res.BillCreate, "Create", "Bills", new { patientId = Model.patient.num }, new
+                   {
+                       @class = "btn btn-primary",
+                       @style = "width:250px"
+                   })
+            </td>
+        </tr>
+    </table>
+    @if (Model.patient.barCode != null)
+    {
+
+        <div class="btn btn-primary" style="width:250px; background-color:#3fbbc0;">
+            <a href="#" onclick="ClientSidePrint('pp');">
+                @RIS.Resources.Res.BarCodePrint.ToString()
+            </a>
+        </div>
+    }
+    </div>
+
+
+
+
+            <p>
+
+
+
+            </p>
+
+            <br /><br />
+            <script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+            <script type="text/javascript">
+                flatpickr('.flatpickr', { dateFormat: 'YmdH:i:ss', altInput: true});
+            </script>
+            <script>
+
+
+
+                $(document).ready(function () {
+                    $('#infoToShow').toggle();
+                    $('#otherInfo').click(function () {
+                        $('#infoToShow').toggle();
+                    });
+                })
+            </script>
+
+
+                                    if (Model.patient.barCode != null)
+                                    {
+                                        var base64 = Convert.ToBase64String(Model.patient.barCode);
+                                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
+
+                                        <div id="pp" style="display:none;">
+                                            <center>
+                                                <img src="@imgSrc" />
+                                            </center>
+                                        </div>
+                                    }
+                                    <script type="text/javascript">
+
+                                        function ClientSidePrint(idDiv) {
+                                            var w = 700;
+                                            var h = 360;
+                                            var l = (window.screen.availWidth - w) / 2;
+                                            var t = (window.screen.availHeight - h) / 2;
+
+                                            var sOption = "toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,width=" + w + ",height=" + h + ",left=" + l + ",top=" + t;
+                                            // Get the HTML content of the div
+                                            var sDivText = window.document.getElementById(idDiv).innerHTML;
+                                            // Open a new window
+                                            var objWindow = window.open("", "Print", sOption);
+                                            // Write the div element to the window
+                                            objWindow.document.write(sDivText);
+                                            objWindow.document.close();
+                                            // Print the window
+                                            objWindow.print();
+                                            // Close the window
+                                            objWindow.close();
+                                        }
+                                    </script>
+
+                                    @helper RadStatus(string i)
+                                    {
+Dictionary<string, string> stat =
+        new Dictionary<string, string>();
+stat.Add(ConnectionConfigs.SCHEDUALED, Res.SCHEDUALED);
+stat.Add(ConnectionConfigs.STARTED, Res.STARTED);
+stat.Add(ConnectionConfigs.COMPLETED, Res.COMPLETED);
+stat.Add(ConnectionConfigs.Waiting, Res.Waiting);
+String st = "";
+
+
+try
+{
+    stat.TryGetValue(i.ToString(), out st);
+
+}
+catch (Exception ee)
+{
+    string xx = ee.ToString();
+    st = "";
+}
+
+
+    @st;
+}
+
+                                    }
+
+@helper RadType(int i)
+{
+Dictionary<int, string> stat =
+        new Dictionary<int, string>();
+stat.Add(0, "");
+stat.Add(1, Res.patFree);
+stat.Add(2, Res.patPayed);
+
+String st = "";
+
+
+try
+{
+    stat.TryGetValue(i, out st);
+
+}
+catch (Exception ee)
+{
+    string xx = ee.ToString();
+    st = "";
+}
+
+
+    @st;
+}
+    }

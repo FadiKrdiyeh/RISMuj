@@ -1,0 +1,79 @@
+﻿@model RIS.Models.User
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.deleteuser.ToString()</title>
+<div style="margin-top:1%">
+<h2>@RIS.Resources.Res.deleteuser.ToString()</h2>
+
+<center>
+    <h3>@RIS.Resources.Res.suredeleteuser.ToString()</h3>
+
+    <div style="margin-top:3px;background-color:white;width:600px; height:300px;border-radius:4px;">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(model => model.num)
+
+        <center>
+            <table width="100%">
+                <tr style="background-color:wheat;">
+                    <td style="font-size:larger;">@Html.DisplayNameFor(model => model.firstName)</td>
+                    <td style="font-size:larger;">@Html.DisplayNameFor(model => model.lastName)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.firstName)</td>
+                    <td>@Html.DisplayFor(model => model.lastName)</td>
+
+                </tr>
+                <tr><td></td><td></td></tr>
+                <tr style="background-color:wheat;">
+                    <td style="font-size:larger;">@Html.DisplayNameFor(model => model.username)</td>
+                    <td style="font-size:larger;">@Html.DisplayNameFor(model => model.pass)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayFor(model => model.username)</td>
+                    <td>@Html.DisplayFor(model => model.pass)</td>
+
+
+                </tr>
+                <tr><td></td><td></td></tr>
+                <tr style="background-color:wheat;">
+                    <td style="font-size:larger;">@Html.DisplayNameFor(model => model.language)</td>
+                    <td style="font-size:larger;">@Html.DisplayNameFor(model => model.departement)</td>
+                </tr>
+                <tr>
+                    @if (Model.language == "ar")
+                    {
+                        <td>العربية</td>
+                    }
+                    else
+                    {
+                        <td>English</td>
+                    }
+                    <td>@Html.DisplayFor(model => model.userDepartement.name)</td>
+                </tr>
+
+
+            </table>
+        </center>
+
+
+    </div>
+
+</center>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <table align="center">
+        <tr>
+            <td><input type="submit" value=@RIS.Resources.Res.Delete class="btn btn-default" /></td>
+            <td>@Html.ActionLink(RIS.Resources.Res.Backtouserslist, "Index")</td>
+        </tr>
+    </table>
+}
+</div>

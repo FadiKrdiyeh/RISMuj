@@ -1,0 +1,145 @@
+﻿@model List<RIS.Models.RequiredValues>
+
+@{
+    ViewBag.Title = @ViewData["PageName"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@ViewData["PageName"]</title>
+<br/>
+<h2>@ViewData["PageName"]</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+   
+<center>
+    
+    <div style="margin-top:3px;background-color:white;width:600px;border-radius:4px; padding: 1%;">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+
+           
+
+            <div class="form-group">
+                <h4 style="color:red;">
+                @TempData["message"]
+            </h4>
+
+                <table width="90%">
+                    <tr style="background-color:wheat;">
+                        @*<td style="width:92%;">@RIS.Resources.Res.groupPerms</td>*@
+                        <td style="width:92%;">@RIS.Resources.Res.reqField</td>
+                        <td style="width:8%;display:table-cell">
+                            @RIS.Resources.Res.required
+                            &nbsp;     &nbsp;    <input  id="chkAll" style="float:inline-start;" type="checkbox" />
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="scroll">
+                    <table>
+                        @{var tmpP = "";
+                            var gId = 0;
+                        }
+
+                        @for (int i = 0; i < Model.Count; i++)
+
+                        {
+
+                            <tr>
+                                <td> @Html.HiddenFor(model => model[i].num)</td>
+                                <td>@Html.HiddenFor(model => model[i].value)</td>
+                                @*<td>@Html.EditorFor(model => model[i].requiredVal)</td>*@
+                            </tr>
+
+
+                            gId = int.Parse(Html.ValueFor(model => model[i].num).ToString());
+                            var bgcolor = "#e9e1d4";
+                            if (Html.ValueFor(model => model[i].requiredVal).ToString().Equals("True"))
+                            {
+                                bgcolor = "coral";
+                            }
+
+                            string ss = Html.ValueFor(model => model[i].value).ToString();
+                            global::System.Resources.ResourceManager tempRes = new global::System.Resources.ResourceManager("RIS.Resources.Res", typeof(RIS.Resources.Res).Assembly);
+                            <tr style="background-color: @bgcolor">
+                                <td style="width: 100%;">@tempRes.GetString("Patient"+ConnectionConfigs.FirstCharToUpper(ss)) @Html.HiddenFor(model => model[i].value) </td>
+                                <td>
+                                    @*<input style="float:inline-start;" id="requiredVal"  type="checkbox" @tmpP name="gPerms" value="@gId">*@
+                                    @Html.CheckBoxFor(model => model[i].requiredVal, new { @style= "float:inline-start;" })
+                                </td>
+
+                            </tr>
+                        }
+
+
+                    </table>
+                    
+                </div>
+                <br />
+                <table align="center">
+                    <tr style="background-color:wheat;">
+                        <td>@RIS.Resources.Res.rowsPerPage</td>
+                        <td>@Html.TextBox("rpp", @ViewData["rppCount"], new {
+                           type = "number",
+                           @Required ="required",
+                           oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                           oninput = "setCustomValidity('')"
+                       })
+
+                    </tr>
+                </table>
+
+                <table align="center">
+                    <tr>
+                        <td><input type="submit" value=@RIS.Resources.Res.Save class="btn btn-default" /></td>
+                        <td>
+                            &nbsp;
+                            &nbsp;
+                        </td>
+<td>
+                        <a href="@Url.Action("Manage")" class="btn btn-danger" >@RIS.Resources.Res.Cancel</a>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+  
+
+</center>
+}
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $("[id*=chkAll]").click(function () {
+            debugger;
+            //  alert("checked" + $(this).is(":checked"));
+            if ($(this).is(":checked")) {
+                $("[type='checkbox'][name$=requiredVal] ").attr("checked", "checked");
+            } else {
+                $("[type='checkbox'][name$=requiredVal] ").removeAttr("checked");
+            }
+        });
+        $("[type='checkbox'][name$=requiredVal]").click(function () {
+            if ($("[type='checkbox'][name$=requiredVal]").length == $("[type='checkbox'][name$=requiredVal]:checked").length) {
+                $("[id*=chkAll]").attr("checked", "checked");
+            } else {
+                $("[id*=chkAll]").removeAttr("checked");
+            }
+        });
+    });
+</script>
+<style>
+
+    .scroll {
+    max-height:350px !important;
+    }
+</style>

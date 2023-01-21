@@ -1,0 +1,73 @@
+﻿/*.fixed
+{
+  background :#e3c8c8;
+  width :200px;
+  position :absolute;
+  left :0;
+  float:right;
+  top :auto;
+  white-space: normal;
+  height: 90px;
+  margin-left: 0px;
+  box-shadow: 2px 0 3px rgba(0,0,0,.25);
+    padding :1em;
+  white-space: nowrap;
+  margin :0;
+  vertical-align: top;
+  }*/
+
+/*table {
+  position: relative;
+  width: 700px;
+  background-color: #aaa;
+  overflow: hidden;
+  border-collapse: collapse;
+}*/
+
+
+/*thead*/
+/*seperates the header from the body allowing it to be positioned*/
+/*thead {
+  position: relative;
+  display: block; 
+  width: 700px;
+  overflow: visible;
+}*/
+
+/*thead th {
+  background-color: #99a;
+  min-width: 120px;
+  height: 32px;
+  border: 1px solid #222;
+}*/
+/*seperates the first cell in the header from the header*/
+/*thead th:nth-child(1) {
+  position: relative;
+  display: block; 
+  background-color: #88b;
+}*/
+
+
+/*tbody*/
+/*seperates the tbody from the header*/
+/*tbody {
+  position: relative;
+  display: block; 
+  width: 700px;
+  height: 239px;
+  overflow: scroll;
+}
+
+tbody td {
+  background-color: #bbc;
+  min-width: 120px;
+  border: 1px solid #222;
+}*/
+/*the first cell in each tr*/
+/*seperates the first column from the tbody*/
+/*tbody tr td:nth-child(1) {  
+  position: relative;
+  display: block; 
+  height: 40px;
+  background-color: #99a;
+}*/

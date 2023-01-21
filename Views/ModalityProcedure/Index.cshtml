@@ -1,0 +1,79 @@
+﻿@model IEnumerable<RIS.Models.ModalityProcedure>
+
+@{
+    ViewBag.Title = ViewData["ModalityName"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+
+
+<table align="center" style="margin-top:3px;">
+    <tr>
+        <td class="btn btn-primary btn-xs c">
+            @Html.ActionLink(RIS.Resources.Res.addProc, "Create", new { mid = Int32.Parse(ViewData["ModalityID_"].ToString()) })
+        </td>
+    </tr>
+</table>
+
+<center>
+    <table class="table table-bordred table-striped" style="margin-top:30px; width:50%">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.parentMP.name)</td>
+            <td>@Html.DisplayNameFor(model => model.parentMP.code)</td>
+            <td>@RIS.Resources.Res.Delete</td>
+        </tr>
+        @if (Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.num)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.parentMP.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.parentMP.code)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink(RIS.Resources.Res.edit, "Edit", new { id=item.num }) |*@
+                        @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                        @*@Html.ActionLink(RIS.Resources.Res.Delete, "Delete", new { id = item.num, mid = item.ModalityId })*@
+                        <a href="@Url.Action("Delete", "ModalityProcedure", new { id = item.num, mid = item.ModalityId })" title="@RIS.Resources.Res.Delete" class="btn btn-danger">
+                            <em class="fa fa-trash">
+                            </em>
+                        </a>
+
+
+                    </td>
+
+
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3" class="text-center" style="font-size: 26px;">@Res.NoDataMsg!</td>
+            </tr>
+        }
+
+
+
+    </table>
+
+    <table align="center">
+        <tr>
+
+            <td>@Html.ActionLink(RIS.Resources.Res.BackToModalityList.ToString(), "Index", "Modality")</td>
+
+        </tr>
+
+    </table>
+
+</center>
+
+

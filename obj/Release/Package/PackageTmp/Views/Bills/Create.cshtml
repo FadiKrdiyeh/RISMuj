@@ -1,0 +1,481 @@
+﻿<!-- Create a Bill of the patient -->
+@model RIS.Models.Bills
+@using RIS.Resources
+@using GridMvc.Html
+@{
+    ViewBag.Title = Res.mnm_create;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    table.center, caption{
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+    }
+
+        table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+        input[type=submit] {
+            width: 10%;
+            border: 2px solid #808080;
+            border-radius: 12px;
+        }
+
+        input[type=button] {
+            width: 10%;
+            border: 2px solid #808080;
+            border-radius: 12px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+</style>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <center>        
+        <div id="dvContainer">
+            <div style="display: table none; width:100%; margin:auto;  padding:initial;">
+                <div dir="rtl" style="text-align:right; display: table-cell; float:right; width:33%; overflow: auto;">
+                    @*<p>الجمهورية العربية السورية</p>
+                    <p>الهيئة العامة لمستشفى دمشق</p>
+                    <p>هاتف 011/3228917| موبايل 0993518098</p>*@
+                </div>
+                <div style="display: table-cell; text-align: center; width:33%; margin:0;  padding:0;">
+                    <img src="~/images/logo.png style="width:150px;height:150px;">
+                </div>
+                <div style="text-align:left; display:table-cell; float:left; width:33%; overflow: auto; margin:0;  padding: 0;">
+                    <div dir="ltr">
+                        @*<p>Syrian Arab Republic</p>
+                        <p>Damascus Hospital General Authority</p>
+                        <p>Phone 011/3228917 | Mobile 0993518098</p>*@
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal" style="display:none;">
+                <h4>Report</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.billId)
+                @Html.HiddenFor(model => model.ptDetails)
+                @Html.HiddenFor(model => model.patientID)
+
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.billDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.billDate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.billDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div style="margin-top:3%;background:white;">
+                <!-- #region Report Header -->
+                <table style="width:100%;background:white;font-weight:bold">
+                    <tr>
+                        <td>
+                            <table style="background:white;">
+                                <tr class="no-boeder">
+                                    <td style="background:white;color:black">@Res.mnm_patname:</td>
+                                    <td style="background:white;color:black">@Model.ptDetails.patient.firstname &nbsp;@Model.ptDetails.patient.middlename &nbsp;@Model.ptDetails.patient.lastname </td>
+                                    <td style="background:white;color:black">@Res.mnm_birthdate:</td>
+                                    <td style="background:white;color:black">
+                                        @{
+                                            try
+                                            {
+                                                if (Model.ptDetails.patient.birthdate != null)
+                                                {
+                                                    <div>@Model.ptDetails.patient.birthdate.Value.ToShortDateString()</div>
+                                                }
+                                            }
+                                            catch
+                                            {
+                                                <div></div>
+                                            }
+                                        }
+                                    </td>
+                                    <td style="background:white;color:black">@Res.tshAcceptanceType:</td>
+                                    <td style="background:white;color:black">@Model.accTypeName </td>
+
+                                    
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <hr />
+                <!-- #endregion -->
+                <!-- #region Report Body Text Areas -->
+                @if (Model.ptDetails.patientApps.Count != 0)
+                {
+                    <table style="width:100%; text-align:center; align-items:center;" border="1" align="center">
+                        <caption style="text-align:center">@Res.Appoinments</caption>
+                        <tr style="background-color:cadetblue;  border:1px solid black;">
+                            <th id="th1">
+                                @Res.ClinicName
+                            </th>
+                            <th id="th1">
+                                @Res.AppDate
+                            </th>
+                            <th id="th1">
+                                @Res.DoctorName
+                            </th>
+                            <th id="th1">
+                                @Res.appPayType
+                            </th>
+                            <th id="th1">
+                                @Res.AppCost
+                            </th>
+
+
+                        </tr>
+
+                        @foreach (var item in Model.ptDetails.patientApps)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.clinicName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.appDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Doctor)
+                                </td>
+                                <td>
+                                    @{
+                                        string appPayType = "";
+                                        if (item.appPayType == 0)
+                                        {
+                                            appPayType = Res.patPayed.ToString();
+                                        }
+                                        else
+                                        {
+                                            appPayType = Res.patFree.ToString();
+                                        }
+                                        <div>@appPayType</div>
+                                    }
+                                  
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.appCost)
+                                </td>
+
+                            </tr>
+                        }
+
+                    </table>
+
+
+
+                    @*<div style="padding-left: 5%;padding-right: 5%;">
+                             @Html.Grid(Model.ptDetails.patientApps).Columns(columns =>
+                        {
+                            columns.Add(c => c.clinicName).Titled(Res.ClinicName).Filterable(false);
+                            columns.Add(c => c.appDate).Titled(Res.AppDate).Filterable(false);
+                            columns.Add(c => c.Doctor).Titled(Res.DoctorName).Filterable(false);
+                            columns.Add(c => c.appCost).Titled(Res.AppCost).Filterable(false);
+                        }).Sortable().
+                         </div>*@
+                }
+                else
+                {
+                    <h1>@Res.mnm_noResults</h1>
+                }
+
+                @if (Model.ptDetails.patientOrders.Count != 0)
+                {
+                    <table style="width:100%; text-align:center; align-items:center;" border="1" align="center">
+                        <caption style="text-align:center">@Res.RadiologyIndex</caption>
+                        <tr style="background-color:cadetblue">
+                            <th id="th1">
+                                @Res.mnm_imageType
+                            </th>
+                            <th id="th1">
+                                @Res.Departement
+                            </th>
+                            <th id="th1">
+                                @Res.Modalityname
+                            </th>
+                            <th id="th1">
+                                @Res.mnm_imageDate
+                            </th>
+                            <th id="th1">
+                                @Res.DoctorName
+                            </th>
+                            <th id="th1">
+                                @Res.RadCost
+                            </th>
+
+
+                        </tr>
+
+                        @foreach (var item in Model.ptDetails.patientOrders)
+                    {
+                            <tr style="border:solid">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProcedureType)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DepartementName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.radModType.name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.EndDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Doctor)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.radCost)
+                                </td>
+
+                            </tr>
+                        }
+
+                    </table>
+
+                }
+                else
+                {
+                    <h1>@Res.mnm_noResults</h1>
+                }
+
+
+            </div>
+        </div>
+
+
+
+        <fieldset style="margin-top:3px;">
+            <div>
+                <table align="center">
+                    <tr>
+                        <td>
+                            @*<input value="@ViewBag.mnmfrom" type="text" id="fromDate" class="form-control flatpickr" name="mnmfrom" placeholder="@RIS.Resources.Res.mnmSince" />*@
+
+
+                        </td>
+                        <th id="th1">@Res.sinceDate</th>
+                        <td> @Html.TextBox("fromDate", "", htmlAttributes: new { @class = "form-control  flatpickr", @placeholder = Res.mnmSince })  </td>
+                        <th id="th1">@Res.toDate</th>
+                        <td> @Html.TextBox("toDate", "", htmlAttributes: new { @class = "form-control  flatpickr", @placeholder = Res.mnmTo })  </td>
+                        <td>@Html.Hidden("i", 0, null)</td>
+                        <th id="th1">@Res.AdditionalCosts</th>
+                        <td>
+                            @Html.TextBox("billAddCosts", "0", htmlAttributes: new
+                       {
+                           @id = "billAddCosts",
+                           @type = "number",
+                           @step = "100",
+                           @min = "0",
+                           @onchange = "addToTotal();",
+                           @class = "form-control"
+                       })
+                    </td>
+
+                </tr>
+            </table>
+            <input id="saveButtonShow" type="submit" value="@Res.mnm_search" class="btn btn-primary btn-xs" title="@Res.mnm_search" style="display:none" />
+
+        </div>
+            <div id="BillFooter">
+                <table style="width:100%; text-align:center; align-items:center;" align="center">
+                    <caption style="text-align:center">@Res.BillDetails</caption>
+                    <thead>
+                        <tr>
+                            <th id="th1">@Res.BillDate</th>
+                            @*<th id="th1">@Res.AdditionalCosts</th>*@
+                            <th id="th1">@Res.DiscountValue</th>
+                            <th id="th1">@Res.totBillValue</th>
+                        </tr>
+
+                    </thead>
+                    <tr>
+                        <td>@Model.billInsertDate</td>
+                        @*<td><input type="number" id="billAddCosts" min="0" step="100" onchange="addToTotal()" class = "form-control" /></td>*@
+                        <td id="taxValue">@Model.taxValue</td>
+                        <td id="totalValue">@Model.billTotValue</td>
+
+                    </tr>
+                </table>
+            </div>
+        </fieldset>
+
+        <div id="AddCostsDiv">
+            <span class="fa fa-plus-circle" id="AddInput" onclick="AddNewTextInput()"></span>
+            <div><input type="text"> <input type="number" min="0" step="100" onchange="addToTotal1(this.value);"></div>
+            <script>
+                function AddNewTextInput() {
+                    let string_of_html = '<div><input type="text"> <input type="number" min="0" step="100" onchange="addToTotal()"></div>';
+                    var AdditionalCostsDiv = document.getElementById("AddCostsDiv");
+                    AdditionalCostsDiv.innerHTML += string_of_html;
+                }
+            </script>
+        </div>
+        <div>
+            
+
+
+            @*<center>
+                    <table style="width:100%;background:white;"></table>
+                </center>
+                <center>
+                    <table style="width:100%;background:white;"></table>
+                </center>
+                <!-- #endregion -->
+                <textarea id="target" rows="4" cols="50" style="display:none"></textarea>
+                <!-- #region buttons for recording, save, print -->*@
+            <br />
+            <br />
+            <div></div>
+            <center>
+                <table style="width:100%;background:white;">
+                    @*<tr class="no-boeder">
+                            <td style="background:white;color:black">
+                                <p>
+                                    <button class="btn btn-primary" type="button" id="tR" onclick="startRecording(this);">@Res.mnm_rec</button>
+                                    <button class="btn btn-warning" type="button" id="pR" onclick="stopRecording(this);" disabled>@Res.mnm_stop</button>
+                                    <button class="btn btn-danger" type="button" onclick="deleteRecord()">@Res.mnm_dele</button>
+                                    <center>
+                                        <table id="recordingslist"></table>
+                                    </center>
+                                    <input type="text" class="form-control" name="AUDIOPATH" id="AUDIOPATH" style="display:none;" value="-1" />
+                                </p>
+                                <script src="~/recorderLibs/js/recordLive.js"></script>
+                                <script src="~/recorderLibs/js/lib/recorder.js"></script>
+                                <script src="~/recorderLibs/js/lib/recorderWorker.js"></script>
+                            </td>
+
+                        </tr>*@
+                    <tr class="no-boeder" id="SavingButtons" >
+                        <td style="background:white;color:black">
+                                <input type="button" value="@Res.Save" onclick="SaveWithoutPrint()" class="btn btn-default" />
+
+                                <input type="button" value="@Res.mnm_savaPrint" onclick="PrintElem()" class="btn btn-default" />
+                        </td>
+                    </tr>
+                </table>
+            </center>
+            <!-- #endregion -->
+        </div>
+    </center>
+
+
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+                                    <script src="~/Scripts/jquery.validate.min.js"></script>
+                                    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+                                    <script>
+                                        function SaveWithoutPrint() {
+                                            var i = document.getElementById("i");
+                                            i.value = 1;
+                                            var x = document.getElementsByTagName("form");
+                                            x[0].submit();
+                                            return true;
+                                        }
+                                        function PrintElem() {
+                                            var divContents = $("#dvContainer").html();
+                                            var printWindow = window.open('', '', 'height=400,width=800');
+                                            printWindow.document.write('<html><head><title></title>');
+                                            var styles = '<style type="text/css" media="print">@@page { size: auto;   /* auto is the initial value */ margin: 0;  /* this affects the margin in the printer settings */  } </style>';
+
+                                            printWindow.document.write(styles);
+                                            printWindow.document.write('</head><body>');
+                                            printWindow.document.write('<page size="A4" dir="rtl">');
+
+                                            // Report Header
+                                            printWindow.document.write('<center>');
+                                            printWindow.document.write('<img src="/images/pic01.jpg" style="width:21cm;height:2.5cm"/>');
+
+                                            printWindow.document.write(divContents);
+                                            printWindow.document.write('</center>');
+
+                                            printWindow.document.write('</body>');
+                                            //printWindow.document.write('<center>');
+                                            //var divFooContents = $("#BillFooter").html();
+                                            //printWindow.document.write(divFooContents);
+                                            //printWindow.document.write('</center>');
+                                            //////////////////////////////////
+                                            printWindow.document.write('<center>');
+                                            printWindow.document.write('<table style="width:100%; text-align:center; align-items:center;" align="center" ><caption style="text-align:center">@Res.BillDetails</caption><thead><tr><th id="th1">@Res.BillDate</th><th id="th1">&nbsp&nbsp </th><th id="th1">@Res.DiscountValue</th><th id="th1">@Res.AdditionalCosts</th><th id="th1"> </th><th id="th1">@Res.totBillValue</th></tr></thead><tr><td style="text-align:center">@Model.billInsertDate</td><td> &nbsp &nbsp</td><td id="taxValue" style="text-align:center">@Model.taxValue</td><td style="text-align:center">');
+                                            var billAddCosts = document.getElementById('billAddCosts').value;
+                                            printWindow.document.write(billAddCosts);
+                                            printWindow.document.write('</td><td style="text-align:center"> </td><td style="text-align:center">');
+                                            var billTotal = +document.getElementById('billAddCosts').value+ +@Model.billTotValue;
+                                            printWindow.document.write(billTotal);
+                                            printWindow.document.write('&nbsp ل.س</td></tr></table>');
+                                            printWindow.document.write('</center>');
+                                            ////////////////////////////////////
+
+                                            printWindow.document.write('</html>');
+                                            printWindow.document.close();
+                                            printWindow.focus(); // necessary for IE >= 10*/
+                                            var i = document.getElementById("i");
+                                            i.value = 1;
+                                            var is_chrome = function () { return Boolean(window.chrome); }
+                                            if (is_chrome) {
+                                                printWindow.onload = function () {
+                                                    setTimeout(function () { // wait until all resources loaded
+                                                        printWindow.print();  // change window to winPrint
+                                                        printWindow.close();// change window to winPrint
+                                                        debugger;
+                                                        var x = document.getElementsByTagName("form");
+                                                        x[0].submit();// Form submission
+                                                    }, 200);
+                                                };
+                                            }
+                                            else {
+                                                //debugger;
+                                                printWindow.print();
+                                                printWindow.close();
+                                                var x = document.getElementsByTagName("form");
+                                                x[0].submit();// Form submission
+                                            }
+
+                                            return true;
+                                        }
+                                    </script>
+                                    <script type="text/javascript">
+                                        flatpickr('.flatpickr', { dateFormat: 'YmdH:i:ss', altInput: true});
+                                        function addToTotal(){
+                                            var x=document.getElementById("totalValue").innerText;
+                                            x = +document.getElementById('billAddCosts').value+ +@Model.billTotValue;
+                                            $('#totalValue').html(x);
+                                            //debugger;
+                                            //alert(x);
+                                        }
+                                        function addToTotal1(value){
+                                            var x=document.getElementById("totalValue").innerText;
+                                            x = +value+ +x;
+                                            $('#totalValue').html(x);
+                                        }
+                                        $('#saveButtonShow').click(function () {
+                                            $('#SavingButtons').show();
+                                        });
+                                        $('#fromDate').change(function () {
+                                            $('#saveButtonShow').show();
+                                        });
+                                        $('#toDate').change(function () {
+                                            $('#saveButtonShow').show();
+                                        });
+
+                                    </script>
+
+                                            }

@@ -1,0 +1,293 @@
+﻿@model IEnumerable<RIS.Models.Patient>
+@using RIS.Resources
+@{
+    ViewBag.Title = Res.patList;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    let activeLink = document.querySelector(".navbar ul.navbar-nav li.nav-item a.nav-link#patientLink");
+    activeLink.classList.add("active");
+</script>
+
+<title>@Res.indexPat</title>
+<link href="~/assets/css/style.css" rel="stylesheet" />
+
+@Html.Hidden("PageCnt", ViewData["PageCnt"])
+@Html.Hidden("pageNBr", ViewData["pageNBr"])
+@Html.Hidden("count", ViewData["count"])
+@Html.Hidden("page", ViewData["page"])
+
+<div class="back">
+    <h2 class="main-title">
+        @Html.ActionLink(Res.indexPat.ToString(), "Index")
+    </h2>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        <fieldset style="margin-top:3px;">
+            <button type="button" id="otherInfo" title="@Res.patSearch.ToString()" class="btn search-o-btn icon-btn">
+                <span class="fa fa-search"></span>
+            </button>
+
+            <div id="infoToShow" class="justify-content-center align-items-center flex-column">
+                <div style="font-size: 26px; color:black; font-weight:400;" class="mb-3">
+                    @Res.searchParas
+                </div>
+                <div class="row">
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="givenid" class="col-4 form-label text-nowrap text-dark">
+                                @Res.PatientGivenId
+                            </label>
+                            @Html.TextBox("givenid", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="firstname" class="col-4 form-label text-nowrap text-dark">
+                                @Res.PatientFirstname
+                            </label>
+                            @Html.TextBox("firstname", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="middlename" class="col-4 form-label text-nowrap text-dark">
+                                @Res.PatientMiddlename
+                            </label>
+                            @Html.TextBox("middlename", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="lastname" class="col-4 form-label text-nowrap text-dark">
+                                @Res.PatientLastname
+                            </label>
+                            @Html.TextBox("lastname", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="gender" class="col-4 form-label text-nowrap text-dark">
+                                @Res.PatientGendre
+                            </label>
+                            @Html.DropDownList("gender", null, new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-5 mb-4">
+                        <div class="form-group row">
+                            <label for="mothername" class="col-4 form-label text-nowrap text-dark">
+                                @Res.PatientMothername
+                            </label>
+                            @Html.TextBox("mothername", "", new { @class = "form-control col-8" })
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" value="@Res.patSearch" class="btn search-btn mb-2 mt-2">@Res.patSearch <i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <hr class="w-100" />
+            </div>
+        </fieldset>
+
+        <div class="btn create-btn">@Html.ActionLink(Res.AddPatient.ToString(), "Create") <i class="fa fa-plus"></i></div>
+
+        <div class="pagination-container">
+            <div class="controls">
+                @{
+                    if (!ViewData["pageNBr"].ToString().Equals(ViewData["PageCnt"].ToString()) && !ViewData["count"].ToString().Equals("0"))
+                    {
+                        <div class="left double-left">
+                            @*<a href="#" class="prev"><i class="fa fa-angle-double-left"></i></a>*@
+                            <a class="prev" href="@Url.Action("Index", "Patient", new { page = ViewData["count"], count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid") })" title="@Res.lastPage.ToString()"><i class="fa fa-angle-double-left"></i></a>
+                        </div>
+                        <div class="left">
+                            @*<a href="#" class="prev"><i class="fa fa-angle-left"></i></a>*@
+                            <a class="prev" href="@Url.Action("Index", "Patient", new { page = (double.Parse((ViewData["page"]).ToString()) + 1).ToString(), count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid") })" title="@Res.nextPage.ToString()"><i class='fa fa-angle-left'></i></a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="left double-left noPrev">
+                            @*<a href="#" class="prev"><i class="fa fa-angle-double-left"></i></a>*@
+                            <a class="prev" href="@Url.Action("Index", "Patient", new { page = ViewData["count"], count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid") })" title="@Res.lastPage.ToString()"><i class="fa fa-angle-double-left"></i></a>
+                        </div>
+                        <div class="left noPrev">
+                            @*<a href="#" class="prev"><i class="fa fa-angle-left"></i></a>*@
+                            <a class="prev" href="@Url.Action("Index", "Patient", new { page = (double.Parse((ViewData["page"]).ToString()) + 1).ToString(), count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid") })" title="@Res.nextPage.ToString()"><i class='fa fa-angle-left'></i></a>
+                        </div>
+                    }
+                    <div>
+                        <div class="page">
+                            @Res.page.ToString()  @Html.Encode(ViewData["pageNBr"])  /  @Html.Encode(ViewData["PageCnt"])
+                        </div>
+                    </div>
+                    if (!ViewData["pageNBr"].ToString().Equals("1") && !ViewData["count"].ToString().Equals("0"))
+                    {
+                        <div class="right">
+                            @*<a href="#" class="next"><i class="fa fa-angle-right"></i></a>*@
+                            <a class="next" href="@Url.Action("Index", "Patient", new { page = (double.Parse((ViewData["page"]).ToString()) - 1).ToString(), count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid") })" title="@Res.previousPage.ToString()"><i class='fa fa-angle-right'></i></a>
+                        </div>
+                        <div class="right double-right">
+                            @*<a href="#" class="next"><i class="fa fa-angle-double-right"></i></a>*@
+                            <a class="next" href="@Url.Action("Index", "Patient", new { page = 1, count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid") })" title="@Res.firstPage.ToString()"><i class='fa fa-angle-double-right'></i></a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="right noNext">
+                            @*<a href="#" class="next"><i class="fa fa-angle-right"></i></a>*@
+                            <a class="next" href="@Url.Action("Index", "Patient", new { page = (double.Parse((ViewData["page"]).ToString()) - 1).ToString(), count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid") })" title="@Res.previousPage.ToString()"><i class='fa fa-angle-right'></i></a>
+                        </div>
+                        <div class="right double-right noNext">
+                            @*<a href="#" class="next"><i class="fa fa-angle-double-right"></i></a>*@
+                            <a class="next" href="@Url.Action("Index", "Patient", new { page = 1, count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid") })" title="@Res.firstPage.ToString()"><i class='fa fa-angle-double-right'></i></a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    }
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.givenid)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.firstname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.middlename)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.lastname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.gendre)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.mothername)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.birthdate)
+                    </th>
+                    <th>
+                        @Res.controlKey
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr class="show-buttons">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.givenid)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.firstname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.middlename)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.lastname)
+                            </td>
+                            <td>
+                                @{
+                                    if (item.gendre == 0)
+                                    {
+                                        @Res.female
+                                    }
+                                    else
+                                    {
+                                        @Res.male
+                                    }
+
+                                }
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.mothername)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.birthdate)
+                            </td>
+                            <td class="position-relative overflow-hidden">
+                                <div class="table-buttons">
+                                    <a href="@Url.Action("Edit", "Patient", new { id = item.num }) " title="@Res.edit" class="btn edit-o-btn rounded-circle"><i class="fa fa-pencil"></i></a>
+                                    <a href="@Url.Action("Details", "Patient", new { id = item.num })" title="@Res.patDetails" class="btn details-o-btn rounded-circle"><i class="fa fa-info"></i></a>
+                                    @if (HttpContext.Current.Session["PatientDelPerm"].ToString() == "1")
+                                    {
+                                        <a href="@Url.Action("Delete", "Patient", new { id = item.num })" title="@Res.Delete" class="btn delete-o-btn rounded-circle"><i class="fa fa-trash"></i></a>
+                                    }
+                                    @if (HttpContext.Current.Session["RadiologyCreate"].ToString() == "1")
+                                    {
+                                        <a href="@Url.Action("Create", "Radiology", new { pId = item.num })" title="@Res.CreateRad" class="btn other-o-btn rounded-circle" style="--other-color: #0068c7;"><i class="fa fa-plus"></i></a>
+                                    }
+                                    @if (HttpContext.Current.Session["RadiologyCreateSchedualed"].ToString() == "1")
+                                    {
+                                        <a href="@Url.Action("CreateSchedualed", "Radiology", new { pId = item.num })" title="@Res.CreateSchRad" class="btn other-o-btn rounded-circle" style="--other-color: #1800b2"><i class="fa fa-calendar"></i></a>
+                                    }
+                                    @*@if (HttpContext.Current.Session["ClinicAppoinmentCreate"].ToString() == "1")*@
+                                    @if (true)
+                                    {
+                                        <a href="@Url.Action("Create", "Appoinments", new { pId = item.num })" title="@Res.CreateApp" class="btn other-o-btn rounded-circle" style="--other-color: #ce4500"><i class="fa fa-clock-o"></i></a>
+                                    }
+                                    @if (HttpContext.Current.Session["BillsCreate"].ToString() == "1")
+                                    {
+                                        <a href="@Url.Action("Create", "Bills", new { patientId = item.num, i = 0 }) " title="@Res.BillCreate" class="btn other-o-btn icon-btn" style="--other-color: #b6ff00"><i class="fa fa-credit-card"></i></a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="8" class="text-center" style="font-size: 26px;">@Res.NoDataMsg!</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#infoToShow').toggle();
+
+        $('#otherInfo').click(function () {
+            $('#infoToShow').toggleClass('d-flex');
+
+        });
+        //$("#patLink").on("click", function (event) {
+        //    alert("oh nana");
+
+        //});
+        $("#patLink").innerhtml = ("class", "active");
+    });
+</script>
+
+<script src="~/assets/js/jquery.scannerdetection.js"></script>
+
+<script type="text/javascript">
+    $(document).scannerDetection({
+        timeBeforeScanTest: 200, // wait for the next character for upto 200ms
+        //startChar: [120], // Prefix character for the cabled scanner (OPL6845R)
+        endChar: [13], // be sure the scan is complete if key 13 (enter) is detected
+        avgTimeByChar: 30, // it's not a barcode if a character takes longer than 40ms ujjjjnnn
+        onComplete: function (barcode, qty) {
+            var url = "/Patient/PatientByBarcode?givenid=" + parseFloat(barcode);
+            window.open(url);
+        } // main callback function
+    });
+</script>

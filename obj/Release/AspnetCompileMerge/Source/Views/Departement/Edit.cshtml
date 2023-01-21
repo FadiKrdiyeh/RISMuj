@@ -1,0 +1,51 @@
+﻿@model RIS.Models.Departement
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.DepartmentEdit</title>
+
+<div style="margin-top:1%">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <center>
+
+            @Html.HiddenFor(model => model.num)
+            <h2>@RIS.Resources.Res.DepartmentEdit</h2>
+
+
+            <div style="margin-top:3px;background-color:white;width:300px;border-radius:4px;">
+
+                <div class="form-group">
+
+                    <div>
+                        <table style="width:100%">
+                            <tr>
+
+                                <td width="100px">@Html.LabelFor(model => model.name, htmlAttributes: new { })</td>
+                                <td>@Html.EditorFor(model => model.name, new { htmlAttributes = new { } })    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <table align="center">
+                <tr>
+                    <td><input type="submit" value=@RIS.Resources.Res.edit class="btn btn-default" /></td>
+                    <td>@Html.ActionLink(RIS.Resources.Res.backToDepList, "Index")</td>
+
+                </tr>
+
+            </table>
+
+        </center>
+
+    }
+</div>
+

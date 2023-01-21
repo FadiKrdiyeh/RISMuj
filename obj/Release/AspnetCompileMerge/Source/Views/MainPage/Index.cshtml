@@ -1,0 +1,125 @@
+﻿@model RIS.Models.SendHL7ViewModel
+@using HL7_TCP.Web;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<title>@RIS.Resources.Res.mainPage.ToString()</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+<link href="~/Content/HL7Send.css" rel="stylesheet" />
+
+
+<section class="our_team"  >
+    <center>
+        <div class="team"  style="margin-top: -205px;" >
+
+            <br/>
+            <div class="container">
+                <div class="row" >
+                    <br/>
+@if (HttpContext.Current.Session["UserPerm"].ToString() == "1")
+{
+                    <div class="col-lg-3">
+
+
+
+                        <div class="person">
+                            <a href="@Url.Action("Index", "User")" title="@RIS.Resources.Res.navUse">
+                                
+                                <img src="~/assets/img/user.png" alt="@RIS.Resources.Res.navUse" style="width:150px;height:150px;">
+                                <br />
+                                <center>  <strong style="font-size:larger; color:black;">     @RIS.Resources.Res.navUse</strong></center>
+</a>
+                        </div>
+
+                    </div>
+
+}
+
+@if (HttpContext.Current.Session["ModalityPerm"].ToString() == "1")
+{
+                    <div class="col-lg-3">
+
+
+
+                        <div class="person">
+                            <a href="@Url.Action("Index", "Modality")" title="@RIS.Resources.Res.navMod">
+                               
+                                <img src="~/assets/img/modality.png" alt="@RIS.Resources.Res.navMod" style="width:150px;height:150px;">
+                                <br />
+                                <center>
+                                    <strong style="font-size:larger; color:black;">
+                                        @RIS.Resources.Res.navMod
+                                    </strong>
+                                </center>    
+</a>
+                    </div>
+
+                </div>
+}
+
+@if (HttpContext.Current.Session["PatientPerm"].ToString() == "1")
+{
+
+                <div class="col-lg-3">
+
+
+
+                    <div class="person">
+                        <a href="@Url.Action("Index", "Patient")" title="@RIS.Resources.Res.navPat">
+                           
+                                <img src="~/assets/img/patient.png" alt="@RIS.Resources.Res.navPat" style="width:150px;height:150px;">
+                            <br />
+                            <center>
+                                <strong style="font-size:larger; color:black;">
+                                    @RIS.Resources.Res.navPat
+                                </strong>
+                            </center>
+</a>
+                </div>
+
+            </div>
+}
+
+@if (HttpContext.Current.Session["ProcedurePerm"].ToString() == "1")
+{
+            <div class="col-lg-3">
+
+
+
+                <div class="person">
+                    <a href="@Url.Action("Index", "Procedure")" title="@RIS.Resources.Res.navProc">
+                        
+                            <img src="~/assets/img/procedure.png" alt="@RIS.Resources.Res.navProc" style="width:150px;height:150px;">
+                        <br />
+                        <center>
+                            <strong style="font-size:larger; color:black;">
+                                @RIS.Resources.Res.navProc
+                            </strong>
+                        </center>
+</a>
+            </div>
+
+        </div>
+}
+
+
+
+    </div>
+</div>
+</div>
+</center>
+</section>
+
+
+
+
+
+<script type="text/javascript" src="~/Scripts/HL7Send.js"></script>
+
+

@@ -1,0 +1,903 @@
+﻿@model RIS.Models.Patient
+
+@{
+    ViewBag.Title = @RIS.Resources.Res.editPat.ToString();
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.editPat.ToString()</title>
+<div style="margin-top:1%">
+
+    <h2>@RIS.Resources.Res.editPat.ToString()</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(model => model.num)
+
+        @Html.HiddenFor(model => model.id)
+        @Html.HiddenFor(model => model.givenid)
+
+       
+        <center>
+            <label name="errorLbl" id="errorLbl" style="color: red; background-color: yellow;"></label>
+            <label name="simLbl" id="simLbl" style="color: red; background-color: yellow;"></label>
+            <div id="similarTable" class="handle" name="similarTable"></div>
+
+            <table>
+                <tr>
+                    <td>
+
+                        <table style="margin-top:3px">
+                            <tr>
+                                <td>
+                                    <table style="margin-left: 60px;">
+                                        <tr>
+                                            <td>@Html.LabelFor(model => model.firstname, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @Html.EditorFor(model => model.firstname, new
+                                           {
+                                               htmlAttributes = new
+                                               {
+                                                   @class = "form-control",
+                                                   @Required = "Required",
+                                                   oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                   oninput = "setCustomValidity('')"
+                                               }
+                                           })
+                                                <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                @Html.ValidationMessageFor(model => model.firstname, "", new { @class = "text-danger" })
+                                            </td>
+                                            <td>@Html.LabelFor(model => model.middlename, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.middlename).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.middlename, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.middlename, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.middlename, "", new { @class = "text-danger" })
+                                            </td>
+                                            <td>@Html.LabelFor(model => model.lastname, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @Html.EditorFor(model => model.lastname, new
+                                           {
+                                               htmlAttributes = new
+                                               {
+                                                   @class = "form-control",
+                                                   @Required = "Required",
+                                                   oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                   oninput = "setCustomValidity('')"
+                                               }
+                                           })
+                                                <span style="padding-top: 4%;color:red">&nbsp;*</span>
+
+                                                @Html.ValidationMessageFor(model => model.lastname, "", new { @class = "text-danger" })
+                                            </td>
+                                            <td>@Html.LabelFor(model => model.mothername, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.mothername).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.mothername, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.mothername, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+
+                                                @Html.ValidationMessageFor(model => model.mothername, "", new { @class = "text-danger" })
+                                            </td>
+
+                                        </tr>
+                                        <tr> <td>&nbsp;</td></tr>
+
+
+                                        <tr>
+                                            <td>@Html.LabelFor(model => model.gendre, htmlAttributes: new { @class = "" })</td>
+                                            <td style="margin-left: 0px;" class="requiredTd">
+                                                @{
+                                                    int g = Int16.Parse(Html.ValueFor(model => model.gendre).ToString());
+                                                    if (g == 1)
+                                                    {
+                                                            <select id="gendre" name="gendre" style="width:100%" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')">
+                                                                <option></option>
+                                                                <option value="1" selected="selected">@RIS.Resources.Res.male</option>
+                                                                <option value="0">@RIS.Resources.Res.female</option>
+                                                            </select>
+                                                    }
+                                                    else
+                                                    {
+                                                        <select id="gendre" name="gendre" style="width:100%" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')">
+                                                            <option></option>
+                                                            <option value="1">@RIS.Resources.Res.male</option>
+                                                            <option value="0" selected="selected">@RIS.Resources.Res.female</option>
+                                                        </select>
+                                                    }
+                                                }
+                                                <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                @Html.ValidationMessageFor(model => model.gendre, "", new { @class = "text-danger" })
+                                            </td>
+
+                                            <td>@Html.LabelFor(model => model.birthdate, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.birthdate).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.birthdate, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "dateInput",
+                                                       @Style = "width: 100%;",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.birthdate, new { htmlAttributes = new { @class = "dateInput", @Style = "width: 100%;" } })
+
+                                                }
+
+                                                @Html.ValidationMessageFor(model => model.birthdate, "", new { @class = "text-danger" })
+                                            </td>
+                                            <td>@Html.LabelFor(model => model.age, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.age).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.age, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.age, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.age, "", new
+                                           {
+                                               @class = "text-danger"
+                                           })
+                                            </td>
+
+
+                                            <td>@Html.LabelFor(model => model.nationalidnumber, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.nationalidnumber).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.nationalidnumber, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.nationalidnumber, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.nationalidnumber, "", new { @class = "text-danger" })
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <br />
+                        <fieldset>
+                            <center>
+                                <legend id="otherInfo" class="btn btn-danger" style="width:250px !important; background:#3fbbc0;border: 0;"><strong> @RIS.Resources.Res.PatientOtherInfo</strong></legend>
+
+                            </center>
+                            <center>
+                                <div id="infoToShow">
+                                    <table>
+                                        <tr>
+
+
+                                            <td>@Html.LabelFor(model => model.nationality, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.nationality).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.nationality, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.nationality, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.nationality, "", new { @class = "text-danger" })
+                                            </td>
+
+                                            <td>@Html.LabelFor(model => model.martialstatus, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.martialstatus).requiredVal)
+                                                {
+                                                    try
+                                                    {
+                                                        int ms = Int16.Parse(Html.ValueFor(model => model.martialstatus).ToString());
+                                                        if (ms == 1)
+                                                        {
+                                                            <select id="martialstatus" name="martialstatus" style="width:100%" required oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')" oninput="setCustomValidity('')">
+                                                                <option></option>
+                                                                <option value="1" selected="selected">@RIS.Resources.Res.martialMar</option>
+                                                                <option value="0">@RIS.Resources.Res.martialSing</option>
+                                                            </select>
+                                                        }
+                                                        else
+                                                        {
+                                                            <select id="martialstatus" name="martialstatus" style="width:100%" required oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')" oninput="setCustomValidity('')">
+                                                                <option></option>
+                                                                <option value="1">@RIS.Resources.Res.martialMar</option>
+                                                                <option value="0" selected="selected">@RIS.Resources.Res.martialSing</option>
+                                                            </select>
+                                                        }
+                                                        <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                    }
+                                                    catch
+                                                    {
+                                                        <select id="martialstatus" name="martialstatus" style="width:100%" required oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')" oninput="setCustomValidity('')">
+                                                            <option></option>
+                                                            <option value="1">@RIS.Resources.Res.martialMar</option>
+                                                            <option value="0">@RIS.Resources.Res.martialSing</option>
+                                                        </select>
+                                                        <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    try
+                                                    {
+                                                        int ms = Int16.Parse(Html.ValueFor(model => model.martialstatus).ToString());
+                                                        if (ms == 1)
+                                                        {
+                                                            <select id="martialstatus" name="martialstatus" style="width:100%">
+                                                                <option></option>
+                                                                <option value="1" selected="selected">@RIS.Resources.Res.martialMar</option>
+                                                                <option value="0">@RIS.Resources.Res.martialSing</option>
+                                                            </select>
+                                                        }
+                                                        else
+                                                        {
+                                                            <select id="martialstatus" name="martialstatus" style="width:100%">
+                                                                <option></option>
+                                                                <option value="1">@RIS.Resources.Res.martialMar</option>
+                                                                <option value="0" selected="selected">@RIS.Resources.Res.martialSing</option>
+                                                            </select>
+                                                        }
+                                                    }
+                                                    catch
+                                                    {
+                                                        <select id="martialstatus" name="martialstatus" style="width:100%">
+                                                            <option></option>
+                                                            <option value="1">@RIS.Resources.Res.martialMar</option>
+                                                            <option value="0">@RIS.Resources.Res.martialSing</option>
+                                                        </select>
+                                                    }
+                                                }
+                                                @Html.ValidationMessageFor(model => model.martialstatus, "", new { @class = "text-danger" })
+                                            </td>
+
+                                            <td>@Html.LabelFor(model => model.birthplace, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.birthplace).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.birthplace, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.birthplace, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.birthplace, "", new { @class = "text-danger" })
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>@Html.LabelFor(model => model.currentaddress, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.currentaddress).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.currentaddress, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.currentaddress, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.currentaddress, "", new { @class = "text-danger" })
+                                            </td>
+
+                                            <td>@Html.LabelFor(model => model.residentaddress, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.residentaddress).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.residentaddress, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.residentaddress, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.residentaddress, "", new { @class = "text-danger" })
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>@Html.LabelFor(model => model.mobilephone, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.mobilephone).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.mobilephone, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.mobilephone, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.mobilephone, "", new { @class = "text-danger" })
+                                            </td>
+
+                                            <td>@Html.LabelFor(model => model.landphone, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.landphone).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.landphone, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.landphone, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.landphone, "", new { @class = "text-danger" })
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>@Html.LabelFor(model => model.workphone, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.workphone).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.workphone, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.workphone, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.workphone, "", new { @class = "text-danger" })
+                                            </td>
+
+                                            <td>@Html.LabelFor(model => model.workaddress, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.workaddress).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.workaddress, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.workaddress, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.workaddress, "", new { @class = "text-danger" })
+                                            </td>
+
+                                            <td>@Html.LabelFor(model => model.worktype, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.worktype).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.worktype, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.worktype, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.worktype, "", new { @class = "text-danger" })
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>@Html.LabelFor(model => model.nearestperson, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.nearestperson).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.nearestperson, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.nearestperson, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.nearestperson, "", new { @class = "text-danger" })
+                                            </td>
+                                            <td>@Html.LabelFor(model => model.nearestpersonphone, htmlAttributes: new { @class = "" })</td>
+                                            <td class="requiredTd">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.nearestpersonphone).requiredVal)
+                                                {
+                                                    @Html.EditorFor(model => model.nearestpersonphone, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "form-control",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.nearestpersonphone, new { htmlAttributes = new { @class = "form-control" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.nearestpersonphone, "", new { @class = "text-danger" })
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td colspan="1">@Html.LabelFor(model => model.notes, htmlAttributes: new { @class = "" })</td>
+                                            <td colspan="5">
+                                                @if (((List<RIS.Models.RequiredValues>)ViewData["rvl"]).Find(tt => tt.num == (int)ReqPatientVals.notes).requiredVal)
+                                                {
+                                                    @Html.TextAreaFor(model => model.notes, new
+                                               {
+                                                   htmlAttributes = new
+                                                   {
+                                                       @class = "textariacontrol",
+                                                       @Required = "Required",
+                                                       oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                                       oninput = "setCustomValidity('')"
+                                                   }
+                                               })
+                                                    <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                                }
+                                                else
+                                                {
+                                                    @Html.TextAreaFor(model => model.notes, new { htmlAttributes = new { @class = "textariacontrol" } })
+                                                }
+                                                @Html.ValidationMessageFor(model => model.notes, "", new { @class = "text-danger" })
+                                            </td>
+                                            @*<td colspan="5">
+                                                    @Html.TextAreaFor(model => model.notes, new { htmlAttributes = new { @class = "textariacontrol" } })
+                                                    @Html.ValidationMessageFor(model => model.notes, "", new { @class = "text-danger" })
+                                                </td>*@
+
+
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </center>
+                        </fieldset>
+
+
+                        <br />
+
+                    </td>
+                </tr>
+            </table>
+
+
+            <br />
+            <table align="center">
+                <tr>
+                    <td><input name="subButton" id="subButton" type="submit" value=@RIS.Resources.Res.edit.ToString() class="btn btn-default" onClick="return CheckNationNumExists();" /></td>
+                    <td>@Html.ActionLink(RIS.Resources.Res.patList.ToString(), "Index")</td>
+                </tr>
+            </table>
+
+        </center>
+                                                    }
+
+    <br /><br /><br />
+</div>
+@*<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>*@
+<script>
+
+    $(document).ready(function () {
+        var ccc = '@ViewBag.arvl'
+        if (ccc == '0')
+        {
+            $('#infoToShow').toggle();
+            $('#otherInfo').click(function () {
+                $('#infoToShow').toggle();
+            });
+        }
+
+    })
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#errorLbl").html("");
+        var options = $.extend({},                                  // empty object
+$.datepicker.regional["ar"],         // ar regional
+{ dateFormat: "mm/dd/yy" /*, ... */ } // your custom options
+);
+        $.datepicker.setDefaults(options);
+        $(".dateInput").datepicker({
+            dateFormat: "mm/dd/yy",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0"
+        });
+
+        $('#nationalidnumber').on('keyup change', function () {
+            $("#errorLbl").html("");
+
+            CheckNationNumExists();
+        });
+
+
+
+        $('#mothername, #firstname, #lastname, #middlename').on('keyup change', function () {
+
+            if ($("#firstname").val() != "" && $("#lastname").val() != "" && $("#middlename").val() != "" && $("#mothername").val() != "") {
+                //  alert($("#middlename").val());
+                CheckSimilarPatiens();
+            }
+
+        });
+
+    });
+    //set age if birthdate entered
+    $("#birthdate").change(function () {
+
+        var birthDate = $(this).val().split('/');
+        var birthDay = birthDate[1];
+        var birthMonth = birthDate[0];
+        var birthYear = birthDate[2];
+
+        var today_date = new Date();
+        var today_year = today_date.getFullYear();
+        var today_month = today_date.getMonth();
+        var today_day = today_date.getDate();
+        age = today_year - birthYear;
+
+        if (today_month < (birthMonth - 1)) {
+            age--;
+        }
+        if (((birthMonth - 1) == today_month) && (today_day < birthDay)) {
+            age--;
+        }
+        if (age == 0) {
+            age = 1;
+        }
+
+        $("#age").val(age.toString());
+        //alert(age);
+    });
+
+    //$("#patLink").on("click", function(event){
+    //    alert("oh nana");
+    //    $("#patLink").innerhtml= ("class","active");
+    //});
+    function CheckNationNumExists() {
+        debugger;
+        //    alert("start checking...");
+        document.getElementById("subButton").disabled = true;
+        //  $("#subButton").disable(false);
+        $("#errorLbl").html("");
+        value = $("#nationalidnumber").val();
+        currentPat = $("#num").val();
+        if (value != "") {
+            if (! /^[0-9]{11}$/.test(value)) {
+                $("#errorLbl").html("الرقم الوطني يجب أن يكون 11 خانة فقط"); //**//RIS.Resources.Res
+                $("#nationalidnumber").css("color", "red");
+                document.getElementById("subButton").disabled = true;
+                return false;
+            }
+
+            $.ajax({
+
+                type: 'POST',
+
+                url: '/Patient/CheckNationNumExistsEdit',
+
+                data: '{ "nNum" : "' + value + '", "CurrentPat" : "' + currentPat + '" }',
+
+                contentType: 'application/json; charset=utf-8',
+
+                dataType: 'text',
+
+
+                success: function (data) {
+                    //  alert("dd "+data);
+                    if (data != "false") {
+                        $("#nationalidnumber").css("color", "red");
+                        // alert("already exists " + data);
+                        var ptData = data.split('-.-');
+                        var link = '@Url.Action("Details", "Patient", new { id = "-1" })';
+                        link = link.replace("-1", ptData[0]);
+                        $("#errorLbl").html("موجود مسبقا " + " <a href=" + link + " title=@RIS.Resources.Res.patDetails >" + ptData[1] + " " + ptData[2] + "</a>"); //**//RIS.Resources.Res
+
+                        return false;
+
+                    } else {
+                        $("#nationalidnumber").css("color", "green");
+                        // $("#subButton").disable(true);
+                        document.getElementById("subButton").disabled = false;
+                        return true;
+                    }
+
+                    //  location.reload(); // reloading Parent page
+                },
+                error: function (error) {
+                       //  alert(error);
+                    return false;
+                    //  location.reload(); // reloading Parent page
+
+                }
+
+            });
+        }
+        else {
+            document.getElementById("subButton").disabled = false;
+        }
+    }
+    //check similar patient
+    function CheckSimilarPatiens() {
+        document.getElementById("similarTable").innerHTML = "";
+        $(".handle").css({ 'width': '', 'height': '', 'overflow-y': '' });
+        $("#simLbl").html("");
+        var firstname = "";
+        var lastname = "";
+        var middlename = "";
+        var mothername = "";
+
+        firstname = $("#firstname").val();
+        lastname = $("#lastname").val();
+        middlename = $("#middlename").val();
+        mothername = $("#mothername").val();
+
+        //    alert("start checking...");
+        //   document.getElementById("subButton").disabled = true;
+        //  $("#subButton").disable(false);
+        //  $("#errorLbl").html("");
+        //  value = $("#nationalidnumber").val();
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/Patient/CheckSimilarPatiens',
+
+            //  data: '{ "nNum" : "' + value + '" }',
+            data: "{'firstname': '" + firstname + "','lastname': '" + lastname + "','middlename': '" + middlename + "','mothername': '" + mothername + "'}",
+            contentType: 'application/json; charset=utf-8',
+
+            dataType: 'json',
+
+
+            success: function (data) {
+                //  alert("dd "+data);
+                if (data.length > 0) {
+                    var simTbl = document.getElementById("similarTable");
+                    //      simTbl.innerHTML = "<table><tr><td>22</td></tr><tr><td>33</td></tr></table>";
+                    //  simTbl.innerHTML = 'sssssssss';
+                    //   $("#nationalidnumber").css("color", "red");
+                    $("#simLbl").html("مرضى مشابهين");//**//RIS.Resources.Res
+                    var simString = "";
+
+                    var sex = "أنثى"; //**//RIS.Resources.Res
+                    var birthDt = "";
+                    var link = "";
+                    simString += "<table>";
+
+                    simString += "<tr style='background-color: #3fbbc0;'><td style='font-weight:bold;color: white;'>المريض</td><td style='font-weight:bold;color: white;'>الجنس</td><td style='font-weight:bold;color: white;'>تاريخ الولادة</td><tr>"; //**//RIS.Resources.Res
+                    for (var i = 0; i < data.length; i++) {
+                        simString += "<tr>";
+                        simString += "<td>";
+                        //  simString += data[i].firstname;
+                        link = '@Url.Action("Details", "Patient", new { id = "-1" })';
+                        link = link.replace("-1", data[i].id);
+                        simString += "<a href=" + link + " title=@RIS.Resources.Res.patDetails >" + data[i].firstname + " " + data[i].middlename + " " + data[i].lastname + "</a>";
+                        simString += "</td>";
+                        simString += "<td>";
+                        if (data[i].gendre == 1)
+                            sex = "ذكر";//**//RIS.Resources.Res
+                        simString += sex;
+                        simString += "</td>";
+                        simString += "<td>";
+                        if (data[i].birthdate != null)
+                            birthDt = "" + parseJsonDate(data[i].birthdate.toString());
+                        simString += birthDt;
+                        simString += "</td>";
+                        simString += "</tr>";
+                    }
+                    simString += "</table>";
+                    simTbl.innerHTML = simString;
+                    $(".handle").css({ 'width': '90%', 'max-height': '170px', 'overflow-y': 'scroll' });
+                    //    alert("already exists " + data);
+                    //        var ptData = data.split('-.-');
+                    //     var link = '@Url.Action("Details", "Patient", new { id = "-1" })';
+                    //      link = link.replace("-1", ptData[0]);
+                    //      $("#errorLbl").html("already exists <a href=" + link + " title=@RIS.Resources.Res.patDetails >" + ptData[1] + " " + ptData[2] + "</a>");
+
+                    //    return false;
+
+                } else {
+                    //    $("#nationalidnumber").css("color", "green");
+                    // $("#subButton").disable(true);
+                    //    document.getElementById("subButton").disabled = false;
+                    //    return true;
+                }
+
+                //  location.reload(); // reloading Parent page
+            },
+            error: function (error) {
+                //     alert(error);
+                //   return false;
+                //  location.reload(); // reloading Parent page
+
+                //  location.reload(); // reloading Parent page
+
+
+            }
+
+        });
+
+
+    }
+
+    function parseJsonDate(jsonDate) {
+
+        var fullDate = new Date(parseInt(jsonDate.substr(6)));
+        var twoDigitMonth = (fullDate.getMonth() + 1) + ""; if (twoDigitMonth.length == 1) twoDigitMonth = "0" + twoDigitMonth;
+
+        var twoDigitDate = fullDate.getDate() + ""; if (twoDigitDate.length == 1) twoDigitDate = "0" + twoDigitDate;
+        var currentDate = twoDigitDate + "/" + twoDigitMonth + "/" + fullDate.getFullYear();
+
+        return currentDate;
+    };
+
+
+</script>
+<style>
+    #notes {
+        width: 100% !important;
+    }
+</style>

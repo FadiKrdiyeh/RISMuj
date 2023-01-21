@@ -1,0 +1,82 @@
+﻿@*@Html.ActionLink("English", "Change", "Lang", new { lang = "en" }, null) &nbsp; | &nbsp;
+@Html.ActionLink("Arabic", "Change", "Lang", new { lang = "ar" }, null) &nbsp; | &nbsp;*@
+
+<table class="footer-table" align="center">
+    <tr>
+        <td style="border-top: 0px;">
+            <a href="javascript:change2Ar();" class="td-img">
+                <img src="~/images/Flag-Ar.png" width="40" height="40" title="عربي" />
+                <span class="footer-lang text-light">عربي</span>
+            </a>
+        </td>
+        <td style="border-top: 0px;">
+            <a href="javascript:change2Eng();" class="td-img">
+                <img src="~/images/Flag-En.png" width="35" height="35" title="Engish" />
+                <span class="footer-lang text-light">English</span>
+            </a>
+        </td>
+        <td style="border-top: 0px;">
+            <a href="javascript:change2Eng();" class="td-img">
+                <img src="~/images/Flag-Fr.png" width="35" height="35" title="Français" />
+                <span class="footer-lang text-light">Français</span>
+            </a>
+        </td>
+        <td style="border-top: 0px;">
+            <a href="javascript:change2Eng();" class="td-img">
+                <img src="~/images/Flag-Es.png" width="40" height="40" title="Español" />
+                <span class="footer-lang text-light">Español</span>
+            </a>
+        </td>
+        <td style="border-top: 0px;">
+            <a href="javascript:change2Eng();" class="td-img">
+                <img src="~/images/Flag-Gr.png" width="40" height="40" title="Deutsch" />
+                <span class="footer-lang text-light">Deutsch</span>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5"><span class="lead text-light">Copyright &copy; By Invest4All - 2017</span></td>
+    </tr>
+</table>
+
+
+<script>
+    function change2Ar()
+    {
+        $.ajax({
+            type: 'POST',
+            url: '/Lang/Change',
+            data: '{ "lang" : "ar" }',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+
+            success: function () {
+                //alert("fofo");
+
+                location.reload(); // reloading Parent page
+            },
+            error: function () {
+                location.reload(); // reloading Parent page
+            }
+        });
+    }
+
+    function change2Eng() {
+        $.ajax({
+            type: 'POST',
+            url: '/Lang/Change',
+            data: '{ "lang" : "en" }',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            
+            success: function () {
+                //alert("fofo");
+                location.reload(); // reloading Parent page
+            },
+            error: function ()
+            {
+                location.reload(); // reloading Parent page
+            }
+        });
+    }
+</script>

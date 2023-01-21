@@ -1,0 +1,460 @@
+﻿<!-- Create a report of the patient's radiograph -->
+@model RIS.Models.Report
+@using RIS.Resources
+@{
+    ViewBag.Title = Res.mnm_create;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    td {
+        border: none;
+    }
+
+    button {
+        width: 10%;
+        border: 2px solid #808080;
+        border-radius: 12px;
+    }
+
+    input[type=submit] {
+        width: 10%;
+        border: 2px solid #808080;
+        border-radius: 12px;
+    }
+
+    input[type=button] {
+        width: 10%;
+        border: 2px solid #808080;
+        border-radius: 12px;
+    }
+
+    textarea {
+        resize: none;
+    }
+</style>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal" style="display:none;">
+        <h4>Report</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.NUM)
+        @Html.HiddenFor(model => model.ORDERNUM)
+        @Html.HiddenFor(model => model.PATIENTNUM)
+        @Html.HiddenFor(model => model.DOCTORID)
+        @Html.HiddenFor(model => model.REFERINGPHYSICIANID)
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.REPORTDATE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.REPORTDATE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.REPORTDATE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ALERGY, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ALERGY, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ALERGY, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PARENTREPORT, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PARENTREPORT, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PARENTREPORT, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SERIESNUMBER, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SERIESNUMBER, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SERIESNUMBER, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.APPROVED, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.APPROVED, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.APPROVED, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.APPROVEDDOCTORID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.APPROVEDDOCTORID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.APPROVEDDOCTORID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+    </div>
+
+    <div style="margin-top:3%;background:white;">
+        <!-- #region Report Header -->
+        <table style="width:100%;background:white;font-weight:bold">
+            <tr>
+                <td>
+                    <table style="background:white;">
+                        <tr class="no-boeder">
+                            <td style="background:white;color:black">@Res.mnm_patname:</td>
+                            <td style="background:white;color:black">@Model.PATIENT.firstname &nbsp;@Model.PATIENT.middlename &nbsp;@Model.PATIENT.lastname </td>
+                            <td style="background:white;color:black">@Res.mnm_birthdate:</td>
+                            <td style="background:white;color:black">
+                                @{
+                                    try
+                                    {
+                                        if (Model.PATIENT.birthdate != null)
+                                        {
+                                            <div>@Model.PATIENT.birthdate.Value.ToShortDateString()</div>
+                                        }
+                                    }
+                                    catch
+                                    {
+                                        <div></div>
+                                    }
+                                }
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="background:white;">
+                        <tr class="no-boeder">
+                            <td style="background:white;color:black">@Res.mnm_imageType:</td>
+                            <td style="background:white;color:black">
+                                @{
+                                    string radType = "";
+                                    if (Model.RADIOLOGY.ModalityID != null)
+                                    {
+                                        radType = Model.RADIOLOGY.ImageType;
+                                        
+                                    }
+
+                                    //{ radType = RIS.Models.ModalityType.Select(RIS.Models.Modality.Select(int.Parse(Model.RADIOLOGY.ModalityID)).type).name; }
+
+                                    <div>@radType</div>
+                                }
+                            </td>
+                            <td style="background:white;color:black">@Res.mnm_pos:</td>
+                            <td style="background:white;color:black">
+                                @{
+                                    string radPos = Model.RADIOLOGY.parentProc.code;
+                                    <div>@radPos</div>
+                                }
+                            </td>
+                            <td style="background:white;color:black">@Res.mnm_imageDate:</td>
+                            <td style="background:white;color:black">
+                                @{
+                                    try
+                                    {
+                                        if (Model.RADIOLOGY.StartDate != null)
+                                        {
+                                            <div>@Model.RADIOLOGY.StartDate</div>
+                                        }
+                                    }
+                                    catch
+                                    {
+                                        <div></div>
+                                    }
+                                }
+                            </td>
+
+                            <td style="background:white;color:black">@Res.mnm_sendingDoctor:</td>
+                            <td style="background:white;color:black">
+                                @{
+                                    try
+                                    {
+                                        if (!string.IsNullOrEmpty(Model.RADIOLOGY.Doctor))
+                                        {
+                                            <div>@Model.RADIOLOGY.Doctor</div>
+                                        }
+                                    }
+                                    catch
+                                    {
+                                        <div></div>
+                                    }
+                                }
+                            </td>
+                            <td style="background:white;color:black">@Res.mnm_refph:</td>
+                            <td style="background:white;color:black">
+                                @{
+                                    try
+                                    {
+                                        if (!string.IsNullOrEmpty(Model.REFERINGPHYSICIAN.name))
+                                        {
+                                            <div>@Model.REFERINGPHYSICIAN.name</div>
+                                        }
+                                        else
+                                        {
+                                            <div>غير معروف</div>
+                                        }
+                                    }
+                                    catch
+                                    {
+                                        <div>غير معروف</div>
+                                    }
+                                }
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <!-- #endregion -->
+        <!-- #region Report Body Text Areas -->
+        <center>
+            <table style="width:100%;background:white;">
+                <tr>
+                    <td style="text-align:center;background:white;color:black;width:10%;font-weight:bold">
+                        @Res.mnm_tit:
+                    </td>
+                    <td style="text-align:center;background:white;color:black">
+                        @Html.TextAreaFor(model => model.TITLE, new { @id = "reportTitle", @class = "form-control", @style = "width:100%;color: black !important;" })
+                    </td>
+                </tr>
+            </table>
+        </center>
+
+        <center>
+            <table style="width:100%;background:white;">
+                <tr>
+                    <td style="text-align:center;background:white;color:black;width:10%;font-weight:bold">
+                        @Res.mnm_rep:
+                    </td>
+                    <td style="text-align:center;background:white;color:black">
+
+                        @Html.TextAreaFor(model => model.REPORTBODY, new { @id = "reportBody", @class = "form-control", @style = "width:100%;height:40%;color: black !important;", @cols = 17, @rows = 11 })
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <center>
+            <table style="width:100%;background:white;">
+                <tr>
+                    <td style="text-align:center;background:white;color:black;width:10%;font-weight:bold">
+                        @Res.mnm_not:
+                    </td>
+                    <td style="text-align:center;background:white;color:black">
+                        @Html.TextAreaFor(model => model.NOTES, new { @class = "form-control", @id = "reportNotes", @style = "width:100%;color: black !important;" })
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <!-- #endregion -->
+        <textarea id="target" rows="4" cols="50" style="display:none"></textarea>
+        <!-- #region buttons for recording, save, print -->
+        <center>
+            <table style="width:100%;background:white;">
+                <tr class="no-boeder">
+                    <td style="background:white;color:black">
+                        <p>
+                            <button class="btn btn-primary" type="button" id="tR" onclick="startRecording(this);">@Res.mnm_rec</button>
+                            <button class="btn btn-warning" type="button" id="pR" onclick="stopRecording(this);" disabled>@Res.mnm_stop</button>
+                            <button class="btn btn-danger" type="button" onclick="deleteRecord()">@Res.mnm_dele</button>
+                            <center>
+                                <table id="recordingslist"></table>
+                            </center>
+                            <input type="text" class="form-control" name="AUDIOPATH" id="AUDIOPATH" style="display:none;" value="-1" />
+                        </p>
+                        <script src="~/recorderLibs/js/recordLive.js"></script>
+                        <script src="~/recorderLibs/js/lib/recorder.js"></script>
+                        <script src="~/recorderLibs/js/lib/recorderWorker.js"></script>
+                    </td>
+
+                </tr>
+                <tr class="no-boeder">
+                    <td style="background:white;color:black">
+                        <input type="submit" value="@Res.Save" class="btn btn-default" />
+
+                        <input type="button" value="@Res.mnm_savaPrint" onclick="PrintElem()" class="btn btn-default" />
+
+                        <input type="submit" value="@Res.Cancel" class="btn btn-default" />
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <!-- #endregion -->
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        function PrintElem() {
+            debugger;
+            var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+            // Calculate Age:
+            @{
+                string age = "";
+                if (Model.PATIENT.birthdate != null)
+                {
+                    age=(DateTime.Now.Year-Model.PATIENT.birthdate.Value.Year).ToString();
+                }
+            }
+
+            mywindow.document.write('<html ><head><title> </title><link href="~/Content/bootstrap.css" rel="stylesheet" /><link href = "~/Content/printStyles2.css" rel = "stylesheet" />');
+
+            var styles='<style type="text/css" media="print">@@page { size: auto;   /* auto is the initial value */ margin: 0;  /* this affects the margin in the printer settings */  } </style>';
+
+            mywindow.document.write(styles);
+            mywindow.document.write('</head><body>');
+            mywindow.document.write('<page size="A4" dir="rtl">');
+
+            // Report Header
+            mywindow.document.write('<center>');
+            mywindow.document.write('<img src="/images/header.png" style="width:19cm;height:2.5cm"/>');
+            mywindow.document.write('</center>');
+
+            // Report Body
+            var myPage =
+                '<table dir="rtl" style="width:96%;margin-right:5px">' +
+                '<tr style="border:groove">' +
+                            '<td style="border:groove;text-align:right">' +
+                                'اسم المريض:  ' +
+                @{
+                    string patName = "";
+                    if(Model.PATIENT.middlename !=null)
+                    {
+                        patName = Model.PATIENT.firstname + " " + Model.PATIENT.middlename + " " + Model.PATIENT.lastname;
+                    }
+                    else
+                    {
+                        patName = Model.PATIENT.firstname +  " " + Model.PATIENT.lastname;
+
+                    }
+        }
+                '@patName' +
+        '</td>' +
+        '<td style="border:groove;text-align:right">' +
+            ' العمر:  ' +
+        '@age' +
+        '</td>' +
+    '</tr>' +
+    '<tr style="border:groove">' +
+        '<td style="border:groove;text-align:right">' +
+            ' نوع الصورة:  ' +
+        '@radType' +
+        '</td>' +
+        '<td style="border:groove;text-align:right">' +
+            ' تاريخ الصورة:  ' +
+        '@Model.RADIOLOGY.StartDate' +
+        '</td>' +
+    '</tr>' +
+        '<tr style="border:groove">' +
+        '<td style="border:groove;text-align:right">' +
+            ' تاريخ التقرير:  ' +
+        '@DateTime.Now' +
+        '</td>' +
+
+        '<td style="border:groove;text-align:right">' +
+'<h3>'+
+                'اسم الطبيب: @Model.DOCTOR.name'+
+
+                '</h3>'+
+        '</td>' +
+    '</tr>' +
+'</table>' +
+
+'<br/>' +
+
+     '<br/>' +
+
+
+'<table  dir="rtl" style="border:groove;width:96%;margin-right:5px">' +
+'<tr><td><h3>' +
+'عنوان الدراسة المرضية:' +
+'</h3></td></tr>' +
+'<tr><td><div style="  width: 100%; word-break: break-all; word-wrap: break-word;">';
+        myPage +=document.getElementById('reportTitle').value.replace(/(?:\r\n|\r|\n)/g, '<br> ');
+        myPage += '</div></td></tr>' +
+
+ '</table>' +
+     '<br/>' +
+    '<br/>' +
+       '<table  dir="rtl" style="border:groove;width:96%;margin-right:5px">' +
+       '<tr><td><h3>' +
+       'التقرير الشعاعي:' +
+       '</h3></td></tr>' +
+       '<tr><td><div style=" width: 100%; word-break: break-all; word-wrap: break-word;">';
+        myPage += document.getElementById('reportBody').value.replace(/(?:\r\n|\r|\n)/g, '<br> ');
+
+
+        myPage += '</div></td></tr>' +
+        '</table>'+
+        '<br/>' +
+       '<br/>' +
+'<table  dir="rtl" style="border:groove;width:96%;margin-right:5px">' +
+'<tr><td><h3>' +
+'ملاحظات:' +
+'</h3></td></tr>' +
+'<tr><td><div style=" width: 100%; word-break: break-all; word-wrap: break-word;">';
+        myPage += document.getElementById('reportNotes').value.replace(/(?:\r\n|\r|\n)/g, '<br> ');
+            myPage += '</div></td></tr>' +
+
+     '</table>';
+
+        mywindow.document.write(myPage);
+
+        mywindow.document.write('</page>');
+        mywindow.document.write('<br/>');
+
+        // Report Footer
+        //var repFooter='<div style="margin-left:25px">'+
+        //            '<table>'+
+        //        '<tr>'+
+
+        //    '<td><h3>'+
+        //        'اسم الطبيب: د. دكتور بن دكتور'+
+
+        //        '</h3>'+
+        //            '</td>'+
+        //    '</tr>'+
+
+        //        '</table>'+
+        //    '</div>';
+        //mywindow.document.write(repFooter);
+
+        mywindow.document.write('</body></html>');
+
+        mywindow.document.close(); // necessary for IE >= 10
+        mywindow.focus(); // necessary for IE >= 10*/
+
+        var is_chrome = function () { return Boolean(window.chrome); }
+        if (is_chrome) {
+            debugger;
+            mywindow.onload = function () {
+                setTimeout(function () { // wait until all resources loaded
+                    mywindow.print();  // change window to winPrint
+                    mywindow.close();// change window to winPrint
+                    var x = document.getElementsByTagName("form");
+                    x[0].submit();// Form submission
+                }, 200);
+            };
+        }
+        else {
+            debugger;
+            mywindow.print();
+            mywindow.close();
+            var x = document.getElementsByTagName("form");
+            x[0].submit();// Form submission
+        }
+
+        return true;
+        }
+    </script>
+
+    }

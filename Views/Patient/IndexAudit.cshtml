@@ -1,0 +1,300 @@
+﻿@model IEnumerable<RIS.Models.Patient>
+
+@{
+    ViewBag.Title = RIS.Resources.Res.patList;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using RIS;
+<title>@RIS.Resources.Res.patAudit</title>
+<link href="~/assets/css/style.css" rel="stylesheet" />
+
+@Html.Hidden("PageCnt", ViewData["PageCnt"])
+@Html.Hidden("pageNBr", ViewData["pageNBr"])
+@Html.Hidden("count", ViewData["count"])
+@Html.Hidden("page", ViewData["page"])
+
+<div class="back">
+    @using (Html.BeginForm())
+    {
+
+        <fieldset style="margin-top:3px;">
+
+            <a id="otherInfo" href="#" title="@RIS.Resources.Res.patSearch.ToString()" style="background-color: #5BC0DE;" class="btn btn-inf obtn-l">
+                <span class="fa fa-search"></span>
+            </a>
+
+
+
+
+            <div id="infoToShow">
+                <center>
+                    <div style="font-size:x-large; color:black;font-weight:400">
+                        @RIS.Resources.Res.searchParas
+                    </div>
+                </center>
+
+                <table class="table table-bordred table-striped">
+
+                    <tr>
+                        <td>@RIS.Resources.Res.PatientGivenId.ToString() @Html.TextBox("givenid")  </td>
+                        <td>@RIS.Resources.Res.PatientFirstname.ToString() @Html.TextBox("firstname")  </td>
+                        <td>@RIS.Resources.Res.PatientMiddlename.ToString() @Html.TextBox("middlename")  </td>
+                        <td>@RIS.Resources.Res.PatientLastname.ToString() @Html.TextBox("lastname")  </td>
+                        <td>@RIS.Resources.Res.PatientMothername.ToString() @Html.TextBox("mothername")  </td>
+                        @*<td></td>*@
+
+
+                    </tr>
+                    @{
+                        var d = (int)RegStatus.delete;
+                        var u = (int)RegStatus.update;
+                    }
+                    <tr style="">
+
+                        <td style="padding-top: 1%;background-color: #fff; ">@RIS.Resources.Res.PatientGendre @Html.DropDownList("gender", null, new { style = "width: 50%;" })</td>
+                        <td style="padding-top: 1%;background-color: #fff; ">
+                            @RIS.Resources.Res.OrderRegStatus
+                            @Html.DropDownList("regStat", null, new { style = "width: 50%;" })
+
+                        </td>
+                        @*<td style="background-color: #fff; "></td>*@
+
+                        <td style="background-color: #f9f9f9e6; padding-top: 1%;border-radius: 0 20px 20px 0;">@RIS.Resources.Res.UpdateDate </td>
+                        <td style="background-color: #f9f9f9e6;">  @Html.TextBox("beginDate", null, new { @class = "flatpickr", @placeholder = RIS.Resources.Res.From })  </td>
+                        <td style="background-color: #f9f9f9e6;border-radius: 20px 0 0 20px;"> @Html.TextBox("endDate", null, new { @class = "flatpickr", @placeholder = RIS.Resources.Res.To })  </td>
+
+
+                    </tr>
+
+
+                    <tr style="align-content:center;">
+                        <td colspan="6">
+                            <input type="submit" value="@RIS.Resources.Res.patSearch" class="btn btn-primary btn-xs" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="@Url.Action("IndexAudit")" style="background-color:red;" class="btn btn-primary btn-xs">@RIS.Resources.Res.Cancel</a>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </fieldset>
+
+
+        <hr />
+
+
+
+
+        <center>
+            <ul class="pagination" style="display: -webkit-box;padding-bottom: 3px;padding-top: 5px;">
+                @{
+                    if (!ViewData["pageNBr"].ToString().Equals(ViewData["PageCnt"].ToString()) && !ViewData["count"].ToString().Equals("0"))
+                    {
+
+
+                        <li>
+                            @Html.ActionLink("<<", "IndexAudit", new { page = ViewData["count"], count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid"), beginDate = Html.Value("beginDate"), endDate = Html.Value("endDate"), regStat = Html.Value("regStat"), stayInSeach = ViewData["stayInSeach"] }, new { title = RIS.Resources.Res.lastPage.ToString() })
+                        </li>
+                        <li>
+                            @Html.ActionLink("<", "IndexAudit", new { page = (double.Parse((ViewData["page"]).ToString()) + 1).ToString(), count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid"), beginDate = Html.Value("beginDate"), endDate = Html.Value("endDate"), regStat = Html.Value("regStat"), stayInSeach = ViewData["stayInSeach"] }, new { title = RIS.Resources.Res.nextPage.ToString() })
+                        </li>
+                    }
+
+                    <li>
+                        &nbsp;
+                    </li>
+
+                    <li style="font-weight: bold;color: black;margin: 2px;">
+                        @RIS.Resources.Res.page.ToString()  @Html.Encode(ViewData["pageNBr"])  /  @Html.Encode(ViewData["PageCnt"])
+                    </li>
+                    <li>
+                        &nbsp;
+                    </li>
+
+                    if (!ViewData["pageNBr"].ToString().Equals("1") && !ViewData["count"].ToString().Equals("0"))
+                    {
+
+                        <li>
+                            @Html.ActionLink(">", "IndexAudit", new { page = (double.Parse((ViewData["page"]).ToString()) - 1).ToString(), count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid"), beginDate = Html.Value("beginDate"), endDate = Html.Value("endDate"), regStat = Html.Value("regStat"), stayInSeach = ViewData["stayInSeach"] }, new { title = RIS.Resources.Res.previousPage.ToString() })
+                        </li>
+                        <li>
+                            @Html.ActionLink(">>", "IndexAudit", new { page = 1, count = ViewData["count"], firstname = Html.Value("firstname"), gender = Html.Value("gender"), middlename = Html.Value("middlename"), lastname = Html.Value("lastname"), mothername = Html.Value("mothername"), givenid = Html.Value("givenid"), beginDate = Html.Value("beginDate"), endDate = Html.Value("endDate"), regStat = Html.Value("regStat"), stayInSeach = ViewData["stayInSeach"] }, new { title = RIS.Resources.Res.firstPage.ToString() })
+                        </li>
+                    }
+                }
+            </ul>
+
+        </center>
+
+
+    }
+    <table style="width:100%; text-align:center; align-items:center; " align="center">
+        <tr style="background-color:cadetblue">
+
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.givenid)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.firstname)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.insertdate)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.insertUser)
+            </th>
+            <th id="th1">
+                العملية
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.updateDate)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.updateUser)
+            </th>
+            <th id="th1">
+                @Html.DisplayNameFor(model => model.updateDeleteReason)
+            </th>
+
+            <th id="th1" colspan="5">
+                @RIS.Resources.Res.controlKey
+            </th>
+
+
+        </tr>
+        @if (Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr style="border:solid">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.givenid)
+                    </td>
+                    <td>
+
+                        @Html.DisplayFor(modelItem => item.firstname) @Html.DisplayFor(modelItem => item.middlename) @Html.DisplayFor(modelItem => item.lastname)
+                    </td>
+
+                    <td style="direction: ltr;">
+                        @Html.DisplayFor(modelItem => item.insertdate)
+                    </td>
+                    <td>
+                        <a title=" @Html.DisplayFor(modelItem => item.insUser.firstName) &nbsp; @Html.DisplayFor(modelItem => item.insUser.lastName)"><strong> @Html.DisplayFor(modelItem => item.insUser.username) </strong></a>
+                    </td>
+                    <td>
+                        @{
+                            var ss = int.Parse(Html.ValueFor(modelItem => item.regStatus).ToString());
+                            if (ss == (int)RegStatus.delete)
+                            {
+                                <strong style="color:red;">@RIS.Resources.Res.Delete</strong>
+                            }
+                            else
+                            {
+                                @RIS.Resources.Res.edit
+                            }
+
+                        }
+                    </td>
+                    <td style="direction: ltr;">
+                        @Html.DisplayFor(modelItem => item.updateDate)
+                    </td>
+                    <td>
+                        <a title=" @Html.DisplayFor(modelItem => item.updUser.firstName) &nbsp; @Html.DisplayFor(modelItem => item.updUser.lastName)"><strong> @Html.DisplayFor(modelItem => item.updUser.username) </strong></a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.updateDeleteReason)
+                    </td>
+
+
+                    <td style="width:1%;">
+                        <a style="background-color:red;background-color: red;" href="@Url.Action("DetailsAudit", "Patient", new { id = item.num })" title="@RIS.Resources.Res.oldPatDetails" class="btn btn-info btn-l">
+                            <span class="fa fa-info"></span>
+
+                        </a>
+                    </td>
+
+
+                    @{
+                        var ptRStat = @Html.DisplayFor(modelItem => item.regStatus).ToString();
+                    }
+                    @if (int.Parse(ptRStat) != (int)RegStatus.delete)
+                    {
+                        <td style="width:1%;">
+                            <a href="@Url.Action("Details", "Patient", new { id = item.id })" title="@RIS.Resources.Res.newPatDetails" class="btn btn-info btn-l">
+                                <span class="fa fa-info"></span>
+
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td style="width:1%;">
+                        </td>
+
+                    }
+
+
+
+
+
+
+
+
+
+
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="9" class="text-center" style="font-size: 26px;">@RIS.Resources.Res.NoDataMsg!</td>
+            </tr>
+        }
+
+    </table>
+</div>
+<br />
+<script type="text/javascript" src="~/assets/js/jquery1.8.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        if (@ViewData["stayInSeach"].ToString()=="0")
+        $('#infoToShow').toggle();
+
+        $('#otherInfo').click(function () {
+            $('#infoToShow').toggle();
+
+        });
+        //$("#patLink").on("click", function (event) {
+        //    alert("oh nana");
+
+        //});
+        $("#patLink").innerhtml = ("class", "active");
+    })
+
+
+</script>
+
+<script src="~/assets/js/jquery.scannerdetection.js"></script>
+<script type="text/javascript">
+
+    $(document).scannerDetection({
+
+        timeBeforeScanTest: 200, // wait for the next character for upto 200ms
+        //startChar: [120], // Prefix character for the cabled scanner (OPL6845R)
+        endChar: [13], // be sure the scan is complete if key 13 (enter) is detected
+        avgTimeByChar: 30, // it's not a barcode if a character takes longer than 40ms ujjjjnnn
+        onComplete: function (barcode, qty) {
+            var url = "/Patient/PatientByBarcode?givenid=" + parseFloat(barcode);
+            window.open(url);
+        } // main callback function
+    });
+</script>
+
+<script type="text/javascript">
+
+    flatpickr('.flatpickr', { dateFormat: 'YmdH:i:ss', enableTime: true, altInput: true });
+</script>

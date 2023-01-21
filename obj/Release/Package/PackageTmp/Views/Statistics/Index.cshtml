@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.statistics</title>
+<div style="height:100%; width:100%">
+    <section class="our_team" style="margin-top:120px;">
+        <center>
+            <div class="team" style="margin-top: -205px;">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+
+
+
+                            <div class="person">
+                                <a href="@Url.Action( "OrdersStatics","Statistics", new {})" title="@RIS.Resources.Res.ordersSt">
+
+                                    <img src="~/assets/img/os.png" alt="@RIS.Resources.Res.navUse" style="width:150px;height:150px;">
+                                    <br />
+                                    <center>  <strong style="font-size:larger; color:black;">     @RIS.Resources.Res.ordersSt</strong></center>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="col-lg-6">
+
+
+
+                            <div class="person">
+                                <a href="@Url.Action( "PatientStatics","Statistics", new {})" title="@RIS.Resources.Res.patStat">
+
+                                    <img src="~/assets/img/ps.png" alt="@RIS.Resources.Res.navMod" style="width:150px;height:150px;">
+                                    <br />
+                                    <center>
+                                        <strong style="font-size:larger; color:black;">
+                                            @RIS.Resources.Res.patStat
+                                        </strong>
+                                    </center>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </section>
+
+
+</div>
+
+

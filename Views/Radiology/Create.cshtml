@@ -1,0 +1,432 @@
+﻿@model RIS.Models.Radiology
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<title>@RIS.Resources.Res.CreateRad.ToString()</title>
+<div style="margin-top:1%">
+
+    <h2>@RIS.Resources.Res.CreateRad.ToString()</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <center>
+            <div style="margin-top:3px;background-color:white;width:700px; border-radius:4px;">
+                @Html.HiddenFor(model => model.ID)
+                @*@Html.HiddenFor(model => model.Qcode)*@
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.PatientID)
+                <input type="text" id="Qcode" hidden="hidden">
+
+                <table style="width:90%;">
+                    <tr>
+                        <td><strong> @RIS.Resources.Res.patientLable</strong></td>
+                        <td colspan="1"> @ViewData["_Patient"]  <label style="color:red">(@ViewData["_PatientNB"])</label> </td>
+                    </tr>
+                    @if (ViewData["_notes"] != null)
+                    {
+                        <tr style="background-color:red">
+                            <td><strong> @RIS.Resources.Res.PatientNotes</strong></td>
+                            <td colspan="1">@ViewData["_notes"]</td>
+                        </tr>
+                    }
+
+                    <tr>
+                        <td>@Html.LabelFor(model => model.DepartementName, htmlAttributes: new { })</td>
+                        <td class="requiredTd">
+                            @Html.DropDownList("DepartementName", null, new
+                       {
+                           @style = "width:100%",
+                           @Required = "Required",
+                           oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                           oninput = "setCustomValidity('')"
+                       })
+
+                            <span style="padding-top: 3%;color:red">&nbsp;*</span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>@Html.LabelFor(model => model.ModalityID, htmlAttributes: new { })</td>
+                        <td class="requiredTd">
+                            @Html.DropDownList("ModalityID", null, new
+                       {
+                           @style = "width:100%",
+                           @Required = "Required",
+                           oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                           oninput = "setCustomValidity('')"
+                       })
+                            <span style="padding-top: 3%;color:red">&nbsp;*</span>
+                            @Html.ValidationMessageFor(model => model.ModalityID, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>@Html.LabelFor(model => model.ProcedureID, htmlAttributes: new { })</td>
+                        <td class="requiredTd">
+                            @Html.DropDownList("ProcedureID", null, new
+                       {
+                           @style = "width:100%",
+                           @Required = "Required",
+                           oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                           oninput = "setCustomValidity('')"
+                       })
+                            <span style="padding-top: 3%;color:red">&nbsp;*</span>
+
+                        </td>
+                    </tr>
+                    @*<tr>
+                        <td>Code</td>
+                        <td style="margin-left: 0px;" class="requiredTd" required>
+                            <select id="Qcode" name="Qcode" style="width:100%" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')">
+
+                                @if (Session["userName"].ToString() == "HosAdmin" || Session["userName"].ToString() == "rauser")
+                                {
+                                    <option></option>
+                                    <option value="A05">ايكو دوبلر</option>
+                                    <option value="A07">البانوراما</option>
+                                    <option value="A08">التصوير البسيط 1</option>
+                                    <option value="A09">التصوير البسيط 2</option>
+                                    <option value="A10">التصوير الظليل</option>
+                                    <option value="A11">ايكو السطحي</option>
+                                    <option value="A12">قياس الكثافة</option>
+                                    <option value="A13">ايكو الثدي</option>
+                                    <option value="A14">المامو غراف</option>
+                                    
+                                }
+                                @if (Session["userName"].ToString() == "HosAdmin" || Session["userName"].ToString() == "cluser")
+                                {
+                                    <option value="A99">تصوير عيادات</option>
+                                }
+                                @if (Session["userName"].ToString() == "HosAdmin" || Session["userName"].ToString() == "emuser")
+                                {
+                                    <option value="A24">أشعة إسعافية</option>
+                                }
+                            </select>
+                            <span style="padding-top: 4%;color:red">&nbsp;*</span>
+
+                        </td>
+                    </tr>*@
+                    @*@if (Session["userName"].ToString() == "cluser")
+                        {
+                        <tr>
+                            <td>Code</td>
+                            <td style="margin-left: 0px;" class="requiredTd">
+                                <select id="Qcode" name="Qcode" style="width:100%" class="requiredTd" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')">
+                                    <option></option>
+                                    <option value="A99">تصوير عيادات</option>
+                                </select>
+                                <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                @Html.ValidationMessageFor(model => model.radPayType, "", new { @class = "text-danger" })
+
+                            </td>
+                        </tr>
+                        }*@
+                    @*@if (Session["userName"].ToString() == "rauser")
+                        {
+                        <tr>
+                            <td>Code</td>
+                            <td style="margin-left: 0px;" class="requiredTd">
+                                <select id="Qcode" name="Qcode" style="width:100%" class="requiredTd" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')">
+                                    <option></option>
+                                    <option value="A05">ايكو دوبلر</option>
+                                    <option value="A07">البانوراما</option>
+                                    <option value="A08">التصوير البسيط 1</option>
+                                    <option value="A09">التصوير البسيط 2</option>
+                                    <option value="A10">التصوير الظليل</option>
+                                    <option value="A11">ايكو السطحي</option>
+                                    <option value="A12">قياس الكثافة</option>
+                                    <option value="A13">ايكو الثدي</option>
+                                    <option value="A14">المامو غراف</option>
+
+                                </select>
+                                <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                @Html.ValidationMessageFor(model => model.radPayType, "", new { @class = "text-danger" })
+
+                            </td>
+                        </tr>
+                        }*@
+                    @*@if (Session["userName"].ToString() == "user")
+                        {
+                        <tr>
+                            <td>Code</td>
+                            <td style="margin-left: 0px;" class="requiredTd">
+                                <select id="Qcode" name="Qcode" style="width:100%" class="requiredTd" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')">
+                                    <option></option>
+                                    <option value="A24">أشعة إسعافية</option>
+
+                                </select>
+                                <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                                @Html.ValidationMessageFor(model => model.radPayType, "", new { @class = "text-danger" })
+
+                            </td>
+                        </tr>
+                        }*@
+                    <tr>
+                        <td>@Html.LabelFor(model => model.DocumnetId, htmlAttributes: new { })</td>
+                        <td class="requiredTd">
+
+                            @if ((Boolean)ViewData["rvlDoc"])
+                            {
+                                @Html.EditorFor(model => model.DocumnetId, new
+                           {
+                               htmlAttributes = new
+                               {
+                                   @class = "form-control",
+                                   @Required = "Required",
+                                   oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                   oninput = "setCustomValidity('')"
+                               }
+                           })
+                                <span style="padding-top: 3%;color:red">&nbsp;*</span>
+                            }
+                            else
+                            {
+                                @Html.EditorFor(model => model.DocumnetId, new { htmlAttributes = new { @class = "form-control" } })
+
+                            }
+                            @Html.ValidationMessageFor(model => model.DocumnetId, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>@Html.LabelFor(model => model.Doctor, htmlAttributes: new { })</td>
+                        <td class="requiredTd">
+                            @if ((Boolean)ViewData["rvlDoct"])
+                            {
+                                @Html.EditorFor(model => model.Doctor, new
+                           {
+                               htmlAttributes = new
+                               {
+                                   @class = "form-control",
+                                   @Required = "Required",
+                                   oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                                   oninput = "setCustomValidity('')"
+                               }
+                           })
+                                <span style="padding-top: 3%;color:red">&nbsp;*</span>
+                            }
+                            else
+                            {
+                                @Html.EditorFor(model => model.Doctor, new { htmlAttributes = new { @class = "form-control" } })
+
+                            }
+                            @Html.ValidationMessageFor(model => model.Doctor, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(model => model.Type, htmlAttributes: new { })</td>
+                        <td class="requiredTd">
+                            @Html.DropDownList("Type", null, new { @style = "width:100%" })
+                            <span style="padding-top: 3%;color:red">&nbsp;*</span>
+
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>@Html.LabelFor(model => model.radPayType, htmlAttributes: new { @class = "" })</td>
+                        <td style="margin-left: 0px;" class="requiredTd">
+                            <select id="radPayType" name="radPayType" style="width:100%" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity( '@RIS.Resources.Res.alertRequired.ToString()')">
+                                <option></option>
+                                <option value="1" onclick="showReasonField()">@RIS.Resources.Res.patFree</option>
+                                <option value="2" onclick="hideReasonField()">@RIS.Resources.Res.patPayed</option>
+                            </select>
+                            <span style="padding-top: 4%;color:red">&nbsp;*</span>
+                            @* @Html.EditorFor(model => model.gendre, new { htmlAttributes = new { @class = "form-control" } })*@
+                            @Html.ValidationMessageFor(model => model.radPayType, "", new { @class = "text-danger" })
+
+                        </td>
+                    </tr>
+                    <tr id="reasonTable" style="display:none">
+
+                        <td>@Html.LabelFor(model => model.radPayReason, htmlAttributes: new { @class = "" })</td>
+                        <td class="requiredTd">
+                            @Html.EditorFor(model => model.radPayReason, new
+                       {
+                           htmlAttributes = new
+                           {
+                               @class = "form-control",
+                               @Required = "Required",
+                               oninvalid = "this.setCustomValidity('" + RIS.Resources.Res.alertRequired + "')",
+                               oninput = "setCustomValidity('')",
+                               @type = "text"
+                           }
+                       })
+
+                        </td>
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+                </table>
+
+
+                <script>
+                    $('#radPayType').change(function () {
+                        if ($(this).val() == 1)
+                        {
+                            $("#reasonTable").show();
+                            $("#radPayReason").val('');
+
+                        }
+                        else if ($(this).val() == 2)
+                        {
+                            $("#reasonTable").hide();
+                            $("#radPayReason").val('@RIS.Resources.Res.patPayed');
+                        }
+                            
+                    });
+                    function showReasonField() {
+
+                        $("#reasonTable").show();
+                        $("#radPayReason").val('');
+                    }
+                    function hideReasonField() {
+                        $("#reasonTable").hide();
+                        $("#radPayReason").val('@RIS.Resources.Res.patPayed');
+
+                    }
+                </script>
+
+            </div>
+        </center>
+
+
+
+        <table align="center">
+            <tr>
+                @*<td><input type="submit" value=@RIS.Resources.Res.add.ToString() class="btn btn-default" /></td>*@
+                <td><button class="btn btn-default" onclick="standinqueue()">@RIS.Resources.Res.add.ToString()</button></td>
+                <td>@Html.ActionLink(RIS.Resources.Res.regPage.ToString(), "Index", "Patient")</td>
+            </tr>
+        </table>
+        <br /><br />
+    }
+
+</div>
+
+
+
+<script>
+    $("#DepartementName").change(function () {
+        var selectedText = $(this).find("option:selected").text();
+        var selectedValue = $(this).val();
+        //  alert("Selected Text: " + selectedText + " Value: " + selectedValue);
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/Radiology/getDeptModalities',
+
+            data: '{ "dept" : "' + selectedValue + '" }',
+
+            contentType: 'application/json; charset=utf-8',
+
+            dataType: 'json',
+
+
+            success: function (data) {
+                var ddlMod = document.getElementById("ModalityID");
+                ddlMod.innerHTML = "";
+
+                for (var i = 0; i < data.length; i++) {
+                    var option = document.createElement("OPTION");
+
+                    //Set Customer Name in Text part.
+                    option.innerHTML = data[i].name;
+
+                    //Set CustomerId in Value part.
+                    option.value = data[i].num;
+
+                    //Add the Option element to DropDownList.
+                    ddlMod.options.add(option);
+                }
+
+            },
+            error: function () {
+
+            }
+
+        });
+    });
+    $("#ModalityID").change(function () {
+        var selectedText = $(this).find("option:selected").text();
+        var selectedValue = $(this).val();
+        //  alert("Selected Text: " + selectedText + " Value: " + selectedValue);
+        $.ajax({
+
+            type: 'POST',
+
+            url: '/Modality/getModalityQcode',
+
+            data: '{ "modId" : "' + selectedValue + '" }',
+
+            contentType: 'application/json; charset=utf-8',
+
+            dataType: 'json',
+
+
+            success: function (data) {
+                var ModQcode = document.getElementById("Qcode");
+                ModQcode.innerHTML = data;
+
+            },
+            error: function () {
+
+            }
+
+        });
+    });
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#Doctor").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Doctor/DocAutoComplete",
+                    type: "POST",
+                    dataType: "json",
+                    data: { Prefix: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.name, value: item.name };
+                        }))
+
+                    }
+                })
+            },
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+    })
+
+    function standinqueue() {
+        var selectedValue = $("#Qcode").text();
+        var url = "http://10.0.2.252/api.php?name=" + "@ViewData["_Patient"]" + "&code=" + selectedValue + "&id=" + "@ViewData["_PatientNB"]" + "&username=card" + "&password=card";
+        var myW = window.open(url, 'PRINT', 'height=400,width=600');
+
+        window.focus(); // necessary for IE >= 10*/
+        //myW.close();
+
+        var x = document.getElementsByTagName("form");
+        x[0].submit();// Form submission
+
+        return true;
+    }
+</script>
